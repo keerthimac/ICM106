@@ -29,7 +29,7 @@ class Example {
 		;
 		System.out.println("\t||\t\t\t   ___  ___________  ___________  ________  ______\t\t\t||");
 		System.out.println("\t||\t\t\t  / _ \\/_  __/  __/ / ___/   _/ \\/ / __/  \\/  / _ |\t\t\t||");
-		System.out.println("\t||\t\t\t / , _/ / / _\\ \\   / /___ / //    / _// /\\_/ / __ |\t\t\t||");
+		System.out.println("\t||\t\t\t / , _/ / / _\\ \\   / /____/ //    / _// /\\_/ / __ |\t\t\t||");
 		System.out.println("\t||\t\t\t/_/\\_\\ /_/ /___/   \\____/___/_/\\_/___/_/  /_/_/ |_|\t\t\t||");
 		System.out.println("\t||\t\t\t\t\t\t\t\t\t\t\t\t||");
 		System.out.println(
