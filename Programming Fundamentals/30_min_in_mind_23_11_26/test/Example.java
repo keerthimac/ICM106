@@ -3,6 +3,7 @@ import java.util.*;
 class Example{
 	public static void main(String args[]){
 		Scanner input = new Scanner(System.in);
+		
 		System.out.print("Please Enter Kilometers: ");
 		int km = input.nextInt();
 		double hecto = km/10;
