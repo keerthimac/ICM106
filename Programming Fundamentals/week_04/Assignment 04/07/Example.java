@@ -3,23 +3,21 @@ import java.util.*;
 class Example {
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
-		System.out.print(" Enter the Year: ");
-		int year = input.nextInt();
-
+		System.out.print(" First number A : ");
+		int a = input.nextInt();
+		System.out.print(" Second number B : ");
+		int b = input.nextInt();
+		System.out.print(" Third number C : ");
+		int c = input.nextInt();
 		
-		//Leap year check
-		if(year % 4 == 0){
-			if(year % 100 == 0){
-				if(year % 400 == 0){
-					System.out.println(" "+year+" is leap year");
-				}else{
-					System.out.println(" "+year+" is not a leap year");
-				}
-			}else{
-				System.out.println(" "+year+" is leap year");
-			}			
+		//Total calculation
+		
+		if(a>b & a>c){
+			System.out.println(" Maximum number is A = "+a);
+		}else if(b>a & b>c ){
+			System.out.println(" Maximum number is B = "+b);
 		}else{
-			System.out.println(" "+year+" is not a leap year");
+			System.out.println(" Maximum number is C = "+c);
 		}
 	}
 }
