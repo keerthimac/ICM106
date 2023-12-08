@@ -418,6 +418,7 @@ class Example {
 		double dividend = shareNum*6*12;
 			
 		System.out.printf("\tNumber of shares avilable : %1.0f %n",shareNum);
+		System.out.println("\n");
 		System.out.printf("\tAnnual dividend           : %1.2f",dividend);
 			
 	}else if(num==5){
