@@ -20,12 +20,24 @@ class Example2 {
 			System.out.println("\n");
 			System.out.printf("\t\t\t\t %-15s %n","[5] Exit");
 			System.out.println("\n");
-			System.out.print("\t Enter an option to continue -> ");
-			num = input.nextInt();
-			System.out.println("\n\n");
+			// System.out.print("\t Enter an option to continue -> ");
+			// num = input.nextInt();
+			// System.out.println("\n\n");
+			boolean bankOp = false;
+			do{
+				System.out.print("\t Enter an option to continue -> ");
+				char output1 = input.next().charAt(0);
+				if (output1 == '1' || output1 == '2' || output1 == '3' || output1 == '4' || output1 == '5'  ) {
+					num = (int)output1;
+					bankOp = true;
+				} else {
+					bankOp = false;
+					System.out.println("\t Please Enter Valid Input");
+				}
+			}while(bankOp==false);
 	
     
-			if (num == 1) {
+			if (num == 49) {
 				char answer1 = 'Y';
 				do{
 					System.out.println("\t\t\t _____                       _ _   ");
@@ -42,11 +54,24 @@ class Example2 {
 					System.out.println("\n");
 					System.out.printf("\t\t\t\t %-15s %n","[2] Fixed Deposit");
 					System.out.println("\n");
-					System.out.print("\t Enter an option to continue -> ");
-					int depoNum = input.nextInt();
-					System.out.println("\n\n");
+					// System.out.print("\t Enter an option to continue -> ");
+					// int depoNum = input.nextInt();
+					// System.out.println("\n\n");
+					boolean depoOp = false;
+					int depoNum = 0;
+					do{
+						System.out.print("\t Enter an option to continue -> ");
+						char output1 = input.next().charAt(0);
+						if (output1 == '1' || output1 == '2' ) {
+							depoNum = (int)output1;
+							depoOp = true;
+						} else {
+							depoOp = false;
+							System.out.println("\t Please Enter Valid Input");
+						}
+					}while(depoOp==false);
 					
-					if(depoNum==1){
+					if(depoNum==49){
 						System.out.println("\t\t   _____             _                                                 _   ");
 						System.out.println("\t\t  / ____|           (_)                 /\\                            | |  ");
 						System.out.println("\t\t | (___   __ ___   ___ _ __   __ _     /  \\   ___ ___ ___  _   _ _ __ | |_ ");
@@ -69,7 +94,7 @@ class Example2 {
 						System.out.println("\n");
 						System.out.printf("\t\t\t\t The intrest you get per year  : %1.2f %n",intrPeryear);
 			
-					} else if (depoNum == 2) {
+					} else if (depoNum == 50) {
 						System.out.println("\t\t  ______ _              _       _                      _ _   ");
 						System.out.println("\t\t |  ____(_)            | |     | |                    (_) |  ");
 						System.out.println("\t\t | |__   ___  _____  __| |   __| | ___ _ __   ___  ___ _| |_ ");
@@ -96,16 +121,20 @@ class Example2 {
 						System.out.printf("\t\t\t\t Total amount at the end       : %1.2f %n", intrEnd);
 					}
 					System.out.println("\n");
-					System.out.print("\t Do you want to calculate another Deposit? -> ");
-					char output1 = input.next().charAt(0);
-					if (output1 == 'N' || output1 == 'Y') {
-						answer1 = output1;
-					} else {
-						System.out.println("\t Please Enter Valid Input");
-						System.out.println(output1);
-					}
+					boolean ans = false;
+					do{
+						System.out.print("\t Do you want to calculate another Deposit? (Y / N) -> ");
+						char output1 = input.next().charAt(0);
+						if (output1 == 'N' || output1 == 'Y') {
+							answer1 = output1;
+							ans = true;
+						} else {
+							System.out.println("\t Please Enter Valid Input");
+							ans = false;
+						}
+					}while(ans!=true);
 				}while(answer1=='Y');
 			}
-		}while(num!=5);
+		}while(num!=53);
 	}
 }
