@@ -8,7 +8,7 @@ class Example {
 		int num2 = num1;
 		int count = 0;
 		int total = 0;
-		for(;num2>0;){
+		while(num2>0){
 			num2/=10;
 			count++;
 			int num3 =num1%10;
@@ -18,5 +18,3 @@ class Example {
 		System.out.println("Total = "+total);
 	}
 }
-
-
