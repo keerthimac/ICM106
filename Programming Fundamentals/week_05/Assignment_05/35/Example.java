@@ -9,7 +9,7 @@ class Example {
 		int expo = input.nextInt();
 		int answer = 1;
 		for(int i=0;i<expo;i++){
-				answer*=base;
+		answer*=base;
 		}
 		System.out.println("Answe is : "+answer);
 	}
