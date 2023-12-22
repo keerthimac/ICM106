@@ -55,13 +55,17 @@ CREATE TABLE DepartmentInfo(
     CONSTRAINT PRIMARY KEY (DepartmentID)
 );
 
+DESC DepartmentInfo;
+
 CREATE TABLE StudentInfo(
     StudentID INT,
     StudentName VARCHAR(20),
     DepartmentID INT,
-    CONSTRAINT PRIMARY KEY (StudentID)
+    CONSTRAINT PRIMARY KEY (StudentID),
     CONSTRAINT FOREIGN KEY (DepartmentID) REFERENCES DepartmentInfo(DepartmentID)
 );
+
+DESC StudentInfo;
 
 CREATE TABLE CourseInfo(
     CourseID INT,
@@ -70,6 +74,86 @@ CREATE TABLE CourseInfo(
     CONSTRAINT PRIMARY KEY (CourseID),
     CONSTRAINT FOREIGN KEY (DepartmentID) REFERENCES DepartmentInfo(DepartmentID)
 );
+
+DESC CourseInfo;
+
+INSERT INTO DepartmentInfo VALUES
+(101,'Computer Science'),
+(102,'Mathematics'),
+(103,'History');
+
+INSERT INTO StudentInfo VALUES
+(1,'Alice',101),
+(2,'Bob',102),
+(3,'Carol',101),
+(4,'Dave',103);
+
+INSERT INTO CourseInfo VALUES
+(1,'Database Systems',101),
+(2,'Calculus',102),
+(3,'World History',103);
+
+SELECT StudentName, DepartmentName
+FROM StudentInfo
+INNER JOIN DepartmentInfo
+ON
+DepartmentInfo.DepartmentID =  StudentInfo.DepartmentID;
+
+
+SELECT StudentName, DepartmentName
+FROM StudentInfo
+LEFT JOIN DepartmentInfo
+ON
+DepartmentInfo.DepartmentID =  StudentInfo.DepartmentID;
+
+SELECT DepartmentName, StudentName 
+FROM DepartmentInfo
+LEFT JOIN StudentInfo
+ON
+DepartmentInfo.DepartmentID =  StudentInfo.DepartmentID;
+
+SELECT DepartmentName, StudentName 
+FROM DepartmentInfo
+LEFT JOIN StudentInfo
+ON
+DepartmentInfo.DepartmentID =  StudentInfo.DepartmentID;
+
+SELECT DepartmentName,COUNT(*) AS Student_Count
+FROM DepartmentInfo
+LEFT JOIN StudentInfo
+ON
+DepartmentInfo.DepartmentID =  StudentInfo.DepartmentID
+GROUP BY DepartmentName;
+
+SELECT DepartmentName, COUNT(*) AS student_count
+FROM DepartmentInfo
+LEFT JOIN StudentInfo ON DepartmentInfo.DepartmentID = StudentInfo.DepartmentID
+GROUP BY DepartmentName;
+
+SELECT StudentName,CourseName, DepartmentName
+FROM DepartmentInfo
+INNER JOIN CourseInfo ON CourseInfo.DepartmentID = DepartmentInfo.DepartmentID
+INNER JOIN StudentInfo ON DepartmentInfo.DepartmentID = StudentInfo.DepartmentID;
+
+SELECT StudentName AS "Student Enrolled to Computer Science"
+FROM StudentInfo
+INNER JOIN DepartmentInfo ON DepartmentInfo.DepartmentID = StudentInfo.DepartmentID
+WHERE DepartmentName = "Computer Science";
+
+
+SELECT DepartmentName, COUNT(*) AS student_count
+FROM DepartmentInfo
+LEFT JOIN StudentInfo ON DepartmentInfo.DepartmentID = StudentInfo.DepartmentID
+GROUP BY DepartmentName
+HAVING COUNT(*) > 1;
+
+SELECT StudentName AS "Student Who Taking DataBase Systems Course"
+FROM DepartmentInfo
+INNER JOIN StudentInfo ON DepartmentInfo.DepartmentID = StudentInfo.DepartmentID
+INNER JOIN CourseInfo ON CourseInfo.DepartmentID = DepartmentInfo.DepartmentID
+WHERE DepartmentInfo.DepartmentName = "Computer Science" AND CourseInfo.CourseName = "Database Systems";
+
+-----------------------------------------------------------------------------------------------
 
 
 
