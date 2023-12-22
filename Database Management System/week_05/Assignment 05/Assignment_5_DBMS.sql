@@ -155,7 +155,32 @@ WHERE DepartmentInfo.DepartmentName = "Computer Science" AND CourseInfo.CourseNa
 
 -----------------------------------------------------------------------------------------------
 
+CREATE TABLE Author(
+    AuthorID INT,
+    AuthorName VARCHAR(30),
+    Country VARCHAR(20),
+    CONSTRAINT PRIMARY KEY (DepartmentID)
+);
+
+DESC Author;
+
+CREATE TABLE Book(
+    StudentID INT,
+    StudentName VARCHAR(20),
+    DepartmentID INT,
+    CONSTRAINT PRIMARY KEY (StudentID),
+    CONSTRAINT FOREIGN KEY (DepartmentID) REFERENCES DepartmentInfo(DepartmentID)
+);
+
+DESC Book;
+
+CREATE TABLE Reader(
+    CourseID INT,
+    CourseName VARCHAR(30),
+    DepartmentID INT,
+    CONSTRAINT PRIMARY KEY (CourseID),
+    CONSTRAINT FOREIGN KEY (DepartmentID) REFERENCES DepartmentInfo(DepartmentID)
+);
 
 
-
-
+DESC Reader;
