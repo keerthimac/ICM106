@@ -3,7 +3,7 @@ import java.util.*;
 class Example {
 	public static void main(String [] args) {
 		boolean status = true;
-		int num = 1;
+		long num = 1;
 		while(status){
 			int count = 0;
 			for(int i = 1 ; i<=20 ; i++){

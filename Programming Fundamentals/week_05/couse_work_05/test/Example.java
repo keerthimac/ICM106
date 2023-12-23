@@ -244,7 +244,7 @@ class Example {
 				System.out.println("\n\n");
 				System.out.print("\t\tEnter Value of the vehicle   : ");
 				double vehValue = input.nextDouble();
-				ystem.out.println("\n");
+				System.out.println("\n");
 				System.out.print("\t\tEnter number of Month        : ");
 				int vehMonth = input.nextInt();
 				System.out.println("\n");

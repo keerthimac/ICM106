@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Example {
+class Version_01 {
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
 		int num = 0;
@@ -569,10 +569,11 @@ class Example {
 					System.out.printf("\tNumber of shares avilable : %1.0f %n", shareNum);
 					System.out.println("\n");
 					System.out.printf("\tAnnual dividend           : %1.2f", dividend);
-
+					System.out.println("/n/n");
+					System.out.println();
 					boolean shareOp = false;
 					do {
-						System.out.print("\t Do you want to calculate another Share? (Y / N) -> ");
+						System.out.print("\tDo you want to calculate another Share? (Y / N) -> ");
 						char temOut7 = input.next().charAt(0);
 						if (temOut7 == 'N' || temOut7 == 'Y') {
 							answerShare = temOut7;
