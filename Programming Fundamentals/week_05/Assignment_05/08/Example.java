@@ -1,14 +1,25 @@
+Q235 Exercise 7
+============
 import java.util.*;
-
-class Example {
-	public static void main(String args[]) {
-		int num = 4;
-		int fact = 1;
-		for(int i=num ; i>0 ; i--){
-			fact *= i;
-			System.out.print(i+" * ");
+class Example{
+	
+	public static void main(String args[]){
+		for (int i = 0; i < 10; i++){
+			System.out.println(i+" ! : "+fact(i));
 		}
-		System.out.print(num<=0? "0! : 1" : "\b\b = "+fact);
+		
 	}
 }
+/*
+	0 ! : 0
+	1 ! : 1
+	2 ! : 2
+	3 ! : 6
+	4 ! : 24
+	5 ! : 120
+	6 ! : 720
+	
+
+*/
+
 
