@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Example {
-	public static void main(String [] args) {
+	public static void checkNumber() {
 		boolean status = true;
 		long num = 1;
 		while(status){
@@ -18,9 +18,9 @@ class Example {
 			num++;
 		}
 	}
+	
+	public static void main(String args[]) {
+		checkNumber();
+	}
 }
-
-
-
-
 
