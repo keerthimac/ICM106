@@ -49,9 +49,5 @@ class Example{
 		//---------------------------------
 		System.out.println("Total : "+total);
 
-		
-		
-
-
 	}
 }
