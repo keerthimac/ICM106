@@ -8,7 +8,7 @@ CREATE TABLE guest(
     address VARCHAR(20),
     country VARCHAR(20),
     gender ENUM('male','female'),
-    email VARCHAR(10) UNIQUE,
+    email VARCHAR(20) UNIQUE,
     user_name VARCHAR(10),
     password VARCHAR(20),
     CONSTRAINT PRIMARY KEY (guest_id)
