@@ -4,6 +4,7 @@ class Example {
 	public static String[] customerIds=new String[0];
 	public static String[] customerNames=new String[0];
 	public static int[] qty=new int[0];
+	public static double[] totals=new double[0];
 	public static int[] status=new int[0];
 	public static Scanner input = new Scanner(System.in);
 	public static final int PREPARING = 0;
@@ -31,6 +32,7 @@ class Example {
 		String[] tempOrderIds = new String[orderIds.length+1];
 		String[] tempNames = new String[customerNames.length+1];
 		int[] tempQtys = new int[qty.length+1];
+		double[] tempTotals = new double[totals.length+1];
 		int[] tempStatus = new int[status.length+1];
 		
 		for (int i = 0; i < customerIds.length; i++){
@@ -38,15 +40,28 @@ class Example {
 			tempOrderIds[i] = orderIds[i];
 			tempNames[i] = customerNames[i];
 			tempQtys[i] = qty[i];
+			tempTotals[i] = totals[i];			
 			tempStatus[i] = status[i];
 		}
 		
 		customerIds = tempCustIds;
 		orderIds = tempOrderIds;
 		customerNames = tempNames;
+		totals=tempTotals;
 		qty = tempQtys;
 		status = tempStatus;
 	}
+
+	public static int searchOrderIndex(String id){
+		for (int i = 0; i < orderIds.length; i++){
+			if(id.equalsIgnoreCase(orderIds[i])){
+				return i;
+			}
+		}
+		return -1;
+	}
+		
+	
 
 	public static int[] sort(int[] ar){
 		for(int i=0; i<ar.length-1; i++){
@@ -84,11 +99,44 @@ class Example {
 		return null;
 	}
 	
+	public static void searchOrder() {
+		L1:do{
+			clearConsole();
+			System.out.println("-----------------------------------------------------------------");
+			System.out.println("|\t\t\tiSEARCH ORDER DETAILS\t\t\t\t|");
+			System.out.println("-----------------------------------------------------------------");
+			System.out.println();
+			System.out.print("Enter order Id: ");
+			String orderId = input.next();
+			int orderIndex = searchOrderIndex(orderId);
+
+			if(orderIndex==-1){
+				System.out.println("Invalid order ID");
+				System.out.println("Do you want to enter again?");
+				String answer = input.next();
+				do{
+					if(answer.toLowerCase().charAt(0)=='y'){
+						continue L1;
+					}else if(answer.toLowerCase().charAt(0)=='n'){
+						return;
+					}
+				} while (true);
+			}else{
+				System.out.println("-----------------------------------------------------------------");
+				System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %n", "OrderID", "CustomerID","Name","Quantity","OrderValue","OrderStatus");
+				System.out.println("-----------------------------------------------------------------");				
+				System.out.println("Do you want search another order details (y/n)?");
+				String answer = input.next();
+			}			
+		} while (true);
+	}
+	
+	
 	public static void placeOrder() {
 		L1:do{
 			clearConsole();
 			System.out.println("-----------------------------------------------------------------");
-			System.out.println("|\t\t\tiPlace Order\t\t\t\t|");
+			System.out.println("|\t\t\tPLACE ORDER\t\t\t\t|");
 			System.out.println("-----------------------------------------------------------------");
 			System.out.println("\n");
 			String orderId = generateId();
@@ -99,7 +147,7 @@ class Example {
 			String customerId = "0";
 			L2:do{
 				System.out.print("Enter Customer ID (Phone no.) : ");
-				customerId  = input.nextLine();
+				customerId  = input.next();
 				if(customerId.charAt(0)!= '0' || customerId.length()!=10){
 					System.out.println("Please Enter Valid Phone Number");
 					continue L2;
@@ -110,7 +158,7 @@ class Example {
 			String customerName = null;		
 			if(name==null){
 				System.out.print("Customer Name : ");
-				customerName  = input.nextLine();
+				customerName  = input.next();
 			}else{
 				System.out.print("Customer Name : "+name);
 				customerName  = name;
@@ -119,8 +167,8 @@ class Example {
 			System.out.print("Enter Burger Quantity : ");
 			int burgerQty  = input.nextInt();
 			int total = burgerQty*500;
-			System.out.print("Total Value : "+total);
-			System.out.println();
+			input.nextLine();
+			System.out.println("Total Value : "+total);
 			L3:do{
 				System.out.print("Are you confirm order -> ");
 				String answer  = input.next();
@@ -131,6 +179,7 @@ class Example {
 					customerIds[customerIds.length-1]=customerId;
 					customerNames[customerNames.length-1]=customerName;
 					qty[qty.length-1]=burgerQty;
+					totals[totals.length-1]=total;
 					status[status.length-1]=PREPARING;
 					break L3;
 				}else if(answer.toLowerCase().charAt(0)=='n'){
@@ -151,8 +200,6 @@ class Example {
 					System.out.println("Please Enter Valid Input");
 				}								
 			} while (true);			
-
-
 		}while(true);
 	}
 	
@@ -175,8 +222,8 @@ class Example {
 			op = input.nextInt();
 			switch(op){
 			case 1 : placeOrder(); break;
-			//case 2 : loans(); break;
-			//case 3 : tax(); break;
+			//case 2 : searchBestCustomer(); break;
+			case 3 : searchOrder(); break;
 			//case 4 : shareMarket();break;
 			//case 5 : shareMarket();break;
 			//case 6 : shareMarket();break;
