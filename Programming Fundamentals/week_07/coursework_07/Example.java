@@ -10,6 +10,13 @@ class Example {
 	public static final int PREPARING = 0;
 	public static final int DELIVERED = 1;
 	public static final int CANCEL = 2;
+	final static double BURGERPRICE=500;
+	
+	public static void exit(){
+		clearConsole();
+		System.out.println("\n\t\tYou left the program...\n");
+		System.exit(0);
+	}
 
 	
 	public final static void clearConsole() {
@@ -99,22 +106,24 @@ class Example {
 		return null;
 	}
 	
-	public static void searchOrder() {
+	public static void updateOrder() {
 		L1:do{
 			clearConsole();
-			System.out.println("-----------------------------------------------------------------");
-			System.out.println("|\t\t\tiSEARCH ORDER DETAILS\t\t\t\t|");
-			System.out.println("-----------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------");
+			System.out.println("|\t\t\tUPDATE ORDER\t\t\t\t\t|");
+			System.out.println("-------------------------------------------------------------------------");
 			System.out.println();
-			System.out.print("Enter order Id: ");
+			System.out.print("Enter order Id - ");
 			String orderId = input.next();
+			System.out.println();
+			
 			int orderIndex = searchOrderIndex(orderId);
-
+			
 			if(orderIndex==-1){
-				System.out.println("Invalid order ID");
-				System.out.println("Do you want to enter again?");
-				String answer = input.next();
-				do{
+				L2:do{
+					System.out.println("Invalid order ID");
+					System.out.print("Do you want to enter again?");
+					String answer = input.next();
 					if(answer.toLowerCase().charAt(0)=='y'){
 						continue L1;
 					}else if(answer.toLowerCase().charAt(0)=='n'){
@@ -122,11 +131,195 @@ class Example {
 					}
 				} while (true);
 			}else{
-				System.out.println("-----------------------------------------------------------------");
-				System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %n", "OrderID", "CustomerID","Name","Quantity","OrderValue","OrderStatus");
-				System.out.println("-----------------------------------------------------------------");				
-				System.out.println("Do you want search another order details (y/n)?");
+				if(status[orderIndex]==1){
+					System.out.println("This Order is already delevered...You can not update this order...");
+					System.out.println();
+				}else if(status[orderIndex]==2){
+					System.out.println("This Order is cancelled...You can not update this order...");
+					System.out.println();
+				}else if(status[orderIndex]==0){
+					System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
+					System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
+					System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);
+					System.out.printf("%-10s - %-5d %n","Quantity",qty[orderIndex]);
+					System.out.printf("%-10s - %-5.2f %n","OrderValue",totals[orderIndex]);
+					System.out.printf("%-10s - %-5s %n","OrderValue",status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel");
+
+					System.out.println();
+					System.out.println("What do you want to update ?");
+					System.out.println("\t(01) Quantity");
+					System.out.println("\t(02) Status");
+					System.out.println();
+					
+					L3:do{
+						System.out.print("Enter your option : ");
+						int option = input.nextInt();
+						if(option==1){
+							clearConsole();
+							System.out.println("Quantity Update");
+							System.out.println("================");
+							System.out.println();
+							System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
+							System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
+							System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);							
+							System.out.println();
+							System.out.print("Enter your quantity update value - ");
+							int bugQty = input.nextInt();
+							qty[orderIndex] = bugQty;
+							totals[orderIndex] = bugQty*BURGERPRICE;
+							
+							System.out.println();
+							System.out.println("\tupdate order quantity successfully...");
+							System.out.println();
+							System.out.println("new order quantity - "+qty[orderIndex]);
+							System.out.printf("new order quantity - %.2f%n",totals[orderIndex]);
+							System.out.println();
+							break L3;
+						}else if(option==2){
+							clearConsole();
+							System.out.println("Status Update");
+							System.out.println("================");
+							System.out.println();
+							System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
+							System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
+							System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);
+							System.out.println();
+							System.out.println("\t(0)Preparing");
+							System.out.println("\t(1)Devivered");							
+							System.out.println("\t(2)Cancel");						
+							System.out.println();
+							System.out.print("Enter order status - ");
+							int statusUpdate = input.nextInt();
+							status[orderIndex] = statusUpdate;
+							System.out.println();
+							System.out.println("\tupdate order status successfully...");
+							System.out.println();
+							System.out.println("new order Status - "+(status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel"));
+							System.out.println();
+							System.out.println();
+							break L3;							
+						}else{
+							System.out.println("Please Enter Valid Input");
+						}
+					} while (true);								
+				}
+				L4:do{
+					System.out.print("Do you Want to search another Order details(Y/N): ");
+					String answer  = input.next();
+					if(answer.toLowerCase().charAt(0)=='y'){
+						continue L1;
+					}else if(answer.toLowerCase().charAt(0)=='n'){
+						return;
+					}else{
+						System.out.println("Please Enter Valid Input");
+					}								
+				} while (true);					
+			}						
+		} while (true);
+	}	
+	
+	public static void orderCheck(int option) {
+		L1:do{
+			clearConsole();
+			System.out.println("-------------------------------------------------------------------------");
+			System.out.println("|\t\t\t"+(option==0?"PREPARING ORDERS":(option == 1?"DELIVERED ORDERS":"CANCELLED ORDERS"))+"\t\t\t\t|");
+			System.out.println("-------------------------------------------------------------------------");
+			System.out.println();
+			System.out.println();
+			System.out.println("-------------------------------------------------------------------");
+			System.out.printf(" %-10s %-15s %-10s %-10s %15s | %n", "OrderID", "CustomerID","Name","Quantity","OrderValue");
+			System.out.println("-------------------------------------------------------------------");	
+			for (int i = 0; i < status.length; i++){
+				if(status[i]==option){
+					System.out.printf(" %-10s %-15s %-10s %5s %20s | %n", orderIds[i], customerIds[i],customerNames[i],qty[i],totals[i]);
+					System.out.println("-------------------------------------------------------------------");	
+				}
+			}
+			System.out.println();
+			System.out.println();
+			L2:do{
+				System.out.print("Do you Want to go to home page (Y/N): ");
+				String answer  = input.next();
+				if(answer.toLowerCase().charAt(0)=='y'){
+					return;
+				}else if(answer.toLowerCase().charAt(0)=='n'){
+					continue L1;
+				}else{
+					System.out.println("Please Enter Valid Input");
+				}								
+			} while (true);
+		} while (true);
+	}
+	
+	
+
+	public static void viewOrders() {
+		L1:do{
+			clearConsole();
+			System.out.println("-------------------------------------------------------------------------");
+			System.out.println("|\t\t\tVIEW ORDER LIST\t\t\t\t\t|");
+			System.out.println("-------------------------------------------------------------------------");
+			System.out.println();
+			System.out.println("[1] Delevered Order");
+			System.out.println("[2] Preparing Order");
+			System.out.println("[3] Canceled Order");
+			System.out.println("[4] Main Menu");
+			System.out.println();
+			System.out.print("Enter an option to continue : ");
+			int option = input.nextInt();
+			System.out.println();
+
+			switch(option){
+				case 1 : orderCheck(1); break;
+				case 2 : orderCheck(0); break;
+				case 3 : orderCheck(2); break;
+				case 4 : return;
+			}	
+		} while (true);
+	}
+
+	
+	public static void searchOrder() {
+		L1:do{
+			clearConsole();
+			System.out.println("---------------------------------------------------------------------------------");
+			System.out.println("|\t\t\tSEARCH ORDER DETAILS\t\t\t\t\t|");
+			System.out.println("---------------------------------------------------------------------------------");
+			System.out.println();
+			System.out.print("Enter order Id: ");
+			String orderId = input.next();
+			System.out.println();
+			int orderIndex = searchOrderIndex(orderId);
+
+			if(orderIndex==-1){
+				System.out.println("Invalid order ID");
+				System.out.print("Do you want to enter again?");
 				String answer = input.next();
+				L2:do{
+					if(answer.toLowerCase().charAt(0)=='y'){
+						continue L1;
+					}else if(answer.toLowerCase().charAt(0)=='n'){
+						return;
+					}
+				} while (true);
+			}else{
+				System.out.println("-------------------------------------------------------------------------------");
+				System.out.printf(" %-10s %-15s %-10s %-10s %-15s %-10s | %n", "OrderID", "CustomerID","Name","Quantity","OrderValue","OrderStatus");
+				System.out.println("-------------------------------------------------------------------------------");				
+				System.out.printf(" %-10s %-15s %-10s %5d %15.2f %15s  | %n",orderIds[orderIndex] ,customerIds[orderIndex] ,customerNames[orderIndex],qty[orderIndex],totals[orderIndex],status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel");
+				System.out.println("-------------------------------------------------------------------------------");					
+				System.out.println();
+				L3:do{
+					System.out.print("Do you Want to search another Order details(Y/N): ");
+					String answer  = input.next();
+					if(answer.toLowerCase().charAt(0)=='y'){
+						continue L1;
+					}else if(answer.toLowerCase().charAt(0)=='n'){
+						return;
+					}else{
+						System.out.println("Please Enter Valid Input");
+					}								
+				} while (true);					
 			}			
 		} while (true);
 	}
@@ -141,7 +334,7 @@ class Example {
 			System.out.println("\n");
 			String orderId = generateId();
 			System.out.println("ORDER ID - "+orderId);
-			System.out.println("========================");
+			System.out.println("====================");
 			System.out.println();
 			System.out.println();
 			String customerId = "0";
@@ -166,9 +359,9 @@ class Example {
 			}
 			System.out.print("Enter Burger Quantity : ");
 			int burgerQty  = input.nextInt();
-			int total = burgerQty*500;
+			double total = burgerQty*BURGERPRICE;
 			input.nextLine();
-			System.out.println("Total Value : "+total);
+			System.out.printf("Total Value : %.2f%n",total);
 			L3:do{
 				System.out.print("Are you confirm order -> ");
 				String answer  = input.next();
@@ -216,7 +409,8 @@ class Example {
 			System.out.printf("%-35s %-35s %n", "[3] Search Order", "[4] Search Customer");
 			System.out.printf("%-35s %-35s %n", "[5] View Oder", "[6] Update Order Details");
 			System.out.printf("%-35s %n","[7] Exit");
-			System.out.println("\n");
+			System.out.println();
+			
 			int op;
 			System.out.print("Enter an option to continue -> ");
 			op = input.nextInt();
@@ -224,10 +418,10 @@ class Example {
 			case 1 : placeOrder(); break;
 			//case 2 : searchBestCustomer(); break;
 			case 3 : searchOrder(); break;
-			//case 4 : shareMarket();break;
-			//case 5 : shareMarket();break;
-			//case 6 : shareMarket();break;
-			case 7 : return;
+			//case 4 : searchCustomer();break;
+			case 5 : viewOrders();break;
+			case 6 : updateOrder();break;
+			case 7 : exit();
 			}
 		}while(true);
 		
