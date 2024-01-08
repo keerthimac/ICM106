@@ -1,5 +1,8 @@
 import java.util.*;
 class Example {
+
+//----------------Static(global) Varibles-------------------------------
+
 	public static String[] orderIds=new String[0];
 	public static String[] customerIds=new String[0];
 	public static String[] customerNames=new String[0];
@@ -11,14 +14,17 @@ class Example {
 	public static final int DELIVERED = 1;
 	public static final int CANCEL = 2;
 	final static double BURGERPRICE=500;
-	
+
+//================Main Program Methods==================================
+
+//----------------Exit Method-------------------------	
 	public static void exit(){
 		clearConsole();
 		System.out.println("\n\t\tYou left the program...\n");
 		System.exit(0);
 	}
 
-	
+//----------------Clean Console Method----------------------------------		
 	public final static void clearConsole() {
 		try {
 			final String os = System.getProperty("os.name");
@@ -33,7 +39,10 @@ class Example {
 			// Handle any exceptions.
 		}
 	}
+
+//==============Extend Arrays Method====================================
 	
+//--------------Extend Custom String Array------------------------------
 	public static void extendArray(String[] arr){
 		String[] tempArr = new String[arr.length+1];
 		for (int i = 0; i < arr.length; i++){
@@ -42,6 +51,7 @@ class Example {
 		arr=tempArr;
 	}
 
+//--------------Extend Custom int Array---------------------------------
 	public static void extendArray(int[] arr){
 		int[] tempArr = new int[arr.length+1];
 		for (int i = 0; i < arr.length; i++){
@@ -50,19 +60,7 @@ class Example {
 		arr=tempArr;
 	}
 
-	public static String[] searchcusIds(String cusId){
-		int[] cusIdIndexArr = new int[0];
-		for (int i = 0; i < customerIds.length; i++){
-			if(cusId.equalsIgnoreCase(customerIds[i])){
-				int[] newIndexArr = extendArray(cusIdIndexArr);
-				newArr[newArr.length-1] = i;
-				cusIdIndexArr = newArr;
-			} 
-		}
-		return cusIdIndexArr;
-	}
-	
-	
+//-------------Extend all Global Arrays---------------------------------
 	public static void extendAllArrays(){
 		String[] tempCustIds = new String[customerIds.length+1];
 		String[] tempOrderIds = new String[orderIds.length+1];
@@ -88,6 +86,20 @@ class Example {
 		status = tempStatus;
 	}
 
+//===============Search Methods=========================================
+
+	public static int[] searchcusIds(String cusId){
+		int[] cusIdIndexArr = new int[0];
+		for (int i = 0; i < customerIds.length; i++){
+			if(cusId.equalsIgnoreCase(customerIds[i])){
+				extendArray(cusIdIndexArr);
+				cusIdIndexArr[cusIdIndexArr.length-1] = i;
+			} 
+		}
+		return cusIdIndexArr;
+	}
+	
+	
 	public static int searchOrderIndex(String id){
 		for (int i = 0; i < orderIds.length; i++){
 			if(id.equalsIgnoreCase(orderIds[i])){
@@ -96,9 +108,22 @@ class Example {
 		}
 		return -1;
 	}
-		
-	
 
+		
+	public static String searchCustomer(String id) {
+		for (int i = 0; i < customerIds.length; i++){
+			if(id.equalsIgnoreCase(customerIds[i])){
+				return customerNames[i];
+			}
+		}
+		return null;
+	}
+		
+
+
+//===============Algorithms=============================================
+
+//---------------Bubble Sort--------------------------------------------
 	public static int[] sort(int[] ar){
 		for(int i=0; i<ar.length-1; i++){
 			for(int j=0; j<(ar.length-1)-i; j++){
@@ -111,6 +136,25 @@ class Example {
 		}
 		return ar;
 	}
+
+//---------------Selection Sort-----------------------------------------
+	public static int[] sort(int[] ar){ //Selection Sort
+		for (int i = 0; i < ar.length-1; i++){
+			int min = ar[ar.length-1];
+			int index = ar.length-1;
+			for(int j=ar.length-1 ; j>=i ; j--){
+				if(min>ar[j]){
+					min=ar[j];
+					index=j;
+				}		
+			}
+			ar[index]=ar[i];
+			ar[i]=min;				
+		}			
+		return ar;											
+	}
+
+//=================Generate IDs=========================================
 	
 	public static String generateId() {
 		if(orderIds.length==0){
@@ -125,17 +169,13 @@ class Example {
 			return String.format("B%03d",lastDigit+1);		
 		}
 	}
+
+
 	
-	public static String searchCustomer(String id) {
-		for (int i = 0; i < customerIds.length; i++){
-			if(id.equalsIgnoreCase(customerIds[i])){
-				return customerNames[i];
-			}
-		}
-		return null;
-	}
+//=================Main menu Methods====================================
 	
-	
+
+//-----------------Update order-----------------------------------------
 	public static void updateOrder() {
 		L1:do{
 			clearConsole();
@@ -247,7 +287,9 @@ class Example {
 			}						
 		} while (true);
 	}	
-	
+
+
+//-----------------Check order------------------------------------------	
 	public static void orderCheck(int option) {
 		L1:do{
 			clearConsole();
@@ -282,7 +324,7 @@ class Example {
 	}
 	
 	
-
+//-----------------View orders------------------------------------------	
 	public static void viewOrders() {
 		L1:do{
 			clearConsole();
@@ -308,7 +350,7 @@ class Example {
 		} while (true);
 	}
 
-	
+//-----------------Search Orders----------------------------------------
 	public static void searchOrder() {
 		L1:do{
 			clearConsole();
@@ -354,24 +396,24 @@ class Example {
 		} while (true);
 	}
 	
-
-	public static void searchBestCustomer() {
+//-----------------Search Customer--------------------------------------
+	public static void searchCustomer() {
 		L1:do{
 			clearConsole();
 			System.out.println("---------------------------------------------------------------------------------");
-			System.out.println("|\t\t\tBEST CUSTOMER\t\t\t\t\t|");
+			System.out.println("|\t\t\tSEARCH CUSTOMER DETAILS\t\t\t\t\t|");
 			System.out.println("---------------------------------------------------------------------------------");
 			System.out.println();
 			System.out.print("Enter customer Id: ");
 			String cusmId = input.next();
 			System.out.println();
-			int cusIndex = searchCustomer(cusmId);
+			String cusName = searchCustomer(cusmId);
 
-			if(cusIndex==null){
-				System.out.println("Invalid order ID");
-				System.out.print("Do you want to enter again?");
-				String answer = input.next();
+			if(cusName==null){
+				System.out.println("\tThis Customer id not added yet.......");
 				L2:do{
+					System.out.print("Do you want to Search another customer Details?");
+					String answer = input.next();
 					if(answer.toLowerCase().charAt(0)=='y'){
 						continue L1;
 					}else if(answer.toLowerCase().charAt(0)=='n'){
@@ -379,12 +421,67 @@ class Example {
 					}
 				} while (true);
 			}else{
-				// code
-				String[] cusArr = searchcusIds(cusmId);
+				System.out.println();			
+				System.out.println("CustomerID - "+cusmId);
+				System.out.println("Name       - "+cusName);
+				System.out.println();
+				System.out.println("Customer Order Details");
+				System.out.println("=======================");	
+				System.out.println();								
+				System.out.println("-----------------------------------------");
+				System.out.printf(" %-10s %-15s %-10s | %n", "OrderID","Order_Quantity","Total_value");
+				System.out.println("-----------------------------------------");
+				for (int i = 0; i < customerIds.length; i++){
+					if(cusmId.equalsIgnoreCase(customerIds[i])){
+						System.out.printf(" %-10s %-15d %-11.2f | %n", orderIds[i],qty[i],totals[i]);	
+					}	
+				}
+				System.out.println("-----------------------------------------");
+				System.out.println();
+				L2:do{
+					System.out.print("Do you Want to Place Another Order (Y/N): ");
+					String answer  = input.next();
+					if(answer.toLowerCase().charAt(0)=='y'){
+						continue L1;
+					}else if(answer.toLowerCase().charAt(0)=='n'){
+						return;
+					}else{
+						System.out.println("Please Enter Valid Input");
+					}								
+				} while (true);				
 			}			
 		} while (true);
 	}
-	
+
+//-----------------Search Customer--------------------------------------
+	public static void searchBestCustomer() {
+		L1:do{
+			clearConsole();
+			System.out.println("---------------------------------------------------------------------------------");
+			System.out.println("|\t\t\tSEARCH CUSTOMER DETAILS\t\t\t\t\t|");
+			System.out.println("---------------------------------------------------------------------------------");
+			System.out.println();
+			
+			//Codes Here
+			
+			
+
+			L2:do{
+				System.out.print("Do you Want to Place Another Order (Y/N): ");
+				String answer  = input.next();
+				if(answer.toLowerCase().charAt(0)=='y'){
+					continue L1;
+				}else if(answer.toLowerCase().charAt(0)=='n'){
+					return;
+				}else{
+					System.out.println("Please Enter Valid Input");
+				}								
+			} while (true);						
+		} while (true);
+	}
+
+
+//-----------------Place order------------------------------------------	
 	public static void placeOrder() {
 		L1:do{
 			clearConsole();
@@ -478,7 +575,7 @@ class Example {
 			case 1 : placeOrder(); break;
 			//case 2 : searchBestCustomer(); break;
 			case 3 : searchOrder(); break;
-			//case 4 : searchCustomer();break;
+			case 4 : searchCustomer();break;
 			case 5 : viewOrders();break;
 			case 6 : updateOrder();break;
 			case 7 : exit();
