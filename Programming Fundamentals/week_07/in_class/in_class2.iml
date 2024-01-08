@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Exercise 1- overload" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercise 2 - find total 313" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercise 3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercise4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercise5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 4 -default values" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 5 - default val continue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 6 - default val of char" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 7 - default val of string" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 8 - array length" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/case 9 - index error" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex1 - initiating varibles using arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex2 - total using loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex3 - max,min using loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex4 - Student Marks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex5 - Arrary visualization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex6 - Class “Arrays” (java.util.Arrays) - sorting" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex7 - for each" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex8 - for each case" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ex9 - Passing an array into a method" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
