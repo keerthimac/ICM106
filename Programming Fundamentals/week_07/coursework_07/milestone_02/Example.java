@@ -3,12 +3,12 @@ class Example {
 
 //----------------Static(global) Varibles-------------------------------
 
-	public static String[] orderIds={"C001","C002","C001","C002","C003","C001","C002","C004"};
-	public static String[] customerIds={"100","200","100","300","150","210","200","150"};
+	public static String[] orderIds={"B001","B002","B003","B004","B005","B006","B007","B008"};
+	public static String[] customerIds={"0711234567","0759876543","0711234567","0701231234","0743214321","0724545145","0759876543","0743214321"};
 	public static String[] customerNames={"Nimal","Sunil","Nimal","Sunimal","Kamal","Samanmal","Sunil","Kamal"};
-	public static int[] qty=new int[0];
-	public static double[] totals={100.00,200.00,100.00,300.00,150.00,210.00,200.00,150.00};
-	public static int[] status=new int[0];
+	public static int[] qty={3,5,2,4,1,3,1,7};
+	public static double[] totals={1500.00,2500.00,1000.00,2000.00,500.00,1500.00,500.00,3500.00};
+	public static int[] status={0,0,0,1,0,0,0,0};
 	public static Scanner input = new Scanner(System.in);
 	public static final int PREPARING = 0;
 	public static final int DELIVERED = 1;
@@ -177,7 +177,7 @@ class Example {
 			String orderId = input.next();
 			System.out.println();
 			
-			int orderIndex = searchIndex(orderId,customerIds);
+			int orderIndex = searchIndex(orderId,orderIds);
 			
 			if(orderIndex==-1){
 				L2:do{
@@ -351,7 +351,7 @@ class Example {
 			System.out.print("Enter order Id: ");
 			String orderId = input.next();
 			System.out.println();
-			int orderIndex = searchIndex(orderId,customerIds);
+			int orderIndex = searchIndex(orderId,orderIds);
 
 			if(orderIndex==-1){
 				System.out.println("Invalid order ID");
@@ -372,7 +372,7 @@ class Example {
 				System.out.println("-------------------------------------------------------------------------------");					
 				System.out.println();
 				L3:do{
-					System.out.print("Do you Want to search another Order details(Y/N): ");
+					System.out.print("Do you Want to search another Order detail? (Y/N): ");
 					String answer  = input.next();
 					if(answer.toLowerCase().charAt(0)=='y'){
 						continue L1;
@@ -397,7 +397,7 @@ class Example {
 			System.out.print("Enter customer Id: ");
 			String cusmId = input.next();
 			System.out.println();
-			String cusName = searchString(cusmId,customerNames);
+			String cusName = searchString(cusmId,customerIds);
 
 			if(cusName==null){
 				System.out.println("\tThis Customer id not added yet.......");
@@ -429,7 +429,7 @@ class Example {
 				System.out.println("-----------------------------------------");
 				System.out.println();
 				L2:do{
-					System.out.print("Do you Want to Place Another Order (Y/N): ");
+					System.out.print("Do you Want to Search Another Customer Detail? (Y/N): ");
 					String answer  = input.next();
 					if(answer.toLowerCase().charAt(0)=='y'){
 						continue L1;
@@ -504,9 +504,9 @@ class Example {
 				System.out.print("\tDo you Want to go back to main menu? (Y/N): ");
 				String answer  = input.next();
 				if(answer.toLowerCase().charAt(0)=='y'){
-					continue L1;
-				}else if(answer.toLowerCase().charAt(0)=='n'){
 					return;
+				}else if(answer.toLowerCase().charAt(0)=='n'){
+					continue L1;
 				}else{
 					System.out.println("Please Enter Valid Input");
 				}								
