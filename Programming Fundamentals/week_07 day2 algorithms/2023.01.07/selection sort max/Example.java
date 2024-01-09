@@ -14,9 +14,7 @@ class Example{
 			ar[i]=max;
 			System.out.println(Arrays.toString(ar));
 			try{Thread.sleep(500);}catch(Exception ex){}						
-		}
-
-								
+		}				
 	}
 	public static void main(String args[]){
 		int[] ar={70,60,50,10,90,40,20,80,0,30};
