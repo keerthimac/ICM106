@@ -20,7 +20,292 @@ class Example{
 			}
 		}
 		
+		//i Print for Given Dates
+		System.out.println();
+		for (int i = 0; i < months.length; i++){
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if((i==0&&j==16)||(i==2&&j==25)||(i==4&&j==0)||(i==6&&j==20)||(i==10&&j==29))
+				System.out.println("2021-"+(i+1)+"-"+(j+1)+" : "+patientCounts[i][j]);
+			}
+		}
+				
+		//ii Update for Given Dates ant Test
+		System.out.println();
+		for (int i = 0; i <months.length; i++){
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(i==1&&j==15){
+					patientCounts[i][j]=78;
+					System.out.println(patientCounts[i][j]);
+				}else if(i==5&&j==4){
+					patientCounts[i][j]=202;
+					System.out.println(patientCounts[i][j]);					
+				}else if(i==8&&j==8){
+					patientCounts[i][j]=181;
+					System.out.println(patientCounts[i][j]);
+				}else if(i==9&&j==9){
+					patientCounts[i][j]=178;
+					System.out.println(patientCounts[i][j]);
+				}else if(i==11&&j==24){
+					patientCounts[i][j]=84;
+					System.out.println(patientCounts[i][j]);
+				}
+			}
+		}
+		
+		//iii Print for Given Dates ant Test
+		System.out.println();
+		for (int i = 0; i <1; i++){
+			for (int j = 0; j < 10; j++){
+				System.out.println(
+					"Patient Count of 2021-"+(i+1)+"-"+(j+1)+" : "+patientCounts[i][j]
+				);
+			}
+		}
+
+		//iv Find the total number of patients reported in the first week of 2021.
+		System.out.println();
+		int pt1stTenTotal = 0;
+		for (int i = 0; i <1; i++){
+			int total = 0;
+			for (int j = 0; j < 10; j++){
+				total+=patientCounts[i][j];
+			}
+		pt1stTenTotal=total;
+		}
+		System.out.println("Patient Count of first 10 days in 2021 : "+pt1stTenTotal);		
+
+		//v Find the total patient count reported in the first 10 days of March.
+		System.out.println();
+		int marchTenTotal = 0;
+		for (int i = 3; i <4; i++){
+			int total = 0;
+			for (int j = 0; j < 10; j++){
+				total+=patientCounts[i][j];
+			}
+		marchTenTotal=total;
+		}
+		System.out.println("Patient Count of first 10 days in 2021 March : "+marchTenTotal);		
+		
+		//vi Find the total patient count reported in the last 10 days of October.
+		System.out.println();
+		int octTenTotal = 0;
+		for (int i = 2; i <3; i++){
+			int total = 0;
+			for (int j = 0; j < 10; j++){
+				total+=patientCounts[i][j];
+			}
+		octTenTotal=total;
+		}
+		System.out.println("Patient Count of first 10 days in 2021 October : "+octTenTotal);		
+
+		//vii Find the total patient count reported in June.
+		System.out.println();
+		int juneTotal = 0;
+		for (int i = 5; i <6; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+		juneTotal=total;
+		}
+		System.out.println("Patient Count of June : "+juneTotal);		
+
+		//viii Count the number of days in which more than 100 patients reported in January.
+		System.out.println();
+		int patientCount = 0;
+		for (int i = 0; i <1; i++){
+			int count = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>100){
+					count++;
+				}
+			}
+		patientCount=count;
+		}
+		System.out.println("Number of days Repoted more than 100 in January : "+patientCount);	
+
+		//ix Find the total patient count reported in June.
+		System.out.println();
+		for (int i = 0; i <12; i++){
+			for (int j = 0; j < 1; j++){
+				System.out.println("Patient Count 1st of "+months[i]+" : "+patientCounts[i][j]);
+			}
+		}	
+
+		//x Print the number of patients reported on the last day of each month with the month's name.
+		System.out.println();
+		for (int i = 0; i <12; i++){
+			for (int j = daysInMonth[i]-1; j > daysInMonth[i]-2; j--){
+				System.out.println("Patient Count Last day of "+months[i]+" : "+patientCounts[i][j]);
+			}
+		}	
+
+		//xi Print the number of patients reported on the last day of each month with the month's name.
+		System.out.println();
+		int[] totOfTen = new int[12];
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < 10; j++){
+				total+=patientCounts[i][j];
+			}
+			totOfTen[i]=total;
+		}
+		
+		//-----Printing Part----------
+		for (int i = 0; i < totOfTen.length; i++){
+			System.out.println("Total number of patients reported first 10 days in "+months[i]+" : "+totOfTen[i]);
+		}
+		
+		
+		//xii Find the average number of patients reported on the 15th of every month.
+		System.out.println();
+		int totOfFifteen = 0;
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 14; j < 15; j++){
+				total+=patientCounts[i][j];
+			}
+			totOfFifteen+=total;
+		}
+		System.out.println("Patient avarage 15th of every month : "+totOfFifteen/12);
+
+		//xiii Find the total number of patients reported in 2021.
+		System.out.println();
+		int totAllYear = 0;
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+			totAllYear+=total;
+		}
+		System.out.println("Total Patients All year : "+totAllYear);
+		
+		//xiv Find the average number of patients reported in one day in 2021.
+		System.out.println();
+		int[] avgPerDay = new int[12];
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+			avgPerDay[i]=total/daysInMonth[i];
+		}
+		//-----Printing Part----------
+		for (int i = 0; i < totOfTen.length; i++){
+			System.out.println("Average number of patients reported in one day in "+months[i]+" : "+avgPerDay[i]);
+		}
+		
+		//xv Find the first date of patients reported more than 200.
+		System.out.println();
+		L1:for (int i = 0; i <12; i++){
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>200){
+					System.out.println("First date of patients reported more than 200 is : 2021-"+(i+1)+"-"+(j+1));
+					break L1;				
+				}
+			}
+		}
+
+		//xvi Count the number of days in which more than 200 patients were reported.
+		System.out.println();
+		int patientTwoHun = 0;
+		for (int i = 0; i <12; i++){
+			int count = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>200){
+					count++;	
+				}
+			}
+			patientTwoHun+=count;
+		}		
+		System.out.println("Number of days in which more than 200 patients were reported are : "+patientTwoHun);	
+
+		//xvii Print the total number of patients reported in each month with the name of the month.
+		System.out.println();
+		int[] totForEachMo = new int[12];
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+			totForEachMo[i]=total;
+		}
+		//-----Printing Part----------
+		for (int i = 0; i < totForEachMo.length; i++){
+			System.out.println("Total number of patients reported in "+months[i]+" : "+totForEachMo[i]);
+		}		
+		
+		//xviii Days have the number of patients reported in more than 200 of each month
+		System.out.println();
+		int[] totTwHunEachMo = new int[12];
+		for (int i = 0; i <12; i++){
+			int count = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>200)
+				count++;
+			}
+			totTwHunEachMo[i]=count;
+		}
+		//-----Printing Part----------
+		for (int i = 0; i < totTwHunEachMo.length; i++){
+			System.out.println("Total number days reported more than 200 in "+months[i]+" : "+totTwHunEachMo[i]);
+		}
+
+
+		//xix highest number of patients count in April
+		System.out.println();
+		int maxApril = 0;
+		for (int i = 3; i <4; i++){
+			int max = patientCounts[i][0];
+			for (int j = 1; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>max)
+				max=patientCounts[i][j]; 
+			}
+			maxApril=max;
+		}
+		//-----Printing Part----------
+		System.out.println("highest number of patients count in April is : "+maxApril);
+		
+		//xx highest number of patients count in 2021
+		System.out.println();
+		int maxForYear = 0;
+		for (int i = 0; i <12; i++){
+			int max = patientCounts[i][0];
+			for (int j = 1; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>max)
+				max=patientCounts[i][j]; 
+			}
+			maxForYear=max;
+		}
+		//-----Printing Part----------
+		System.out.println("highest number of patients count in 2021 is : "+maxForYear);
+
+		//xxi minimum number of patients count in 2021 reported
+		System.out.println();
+		int[] totForEachMo1 = new int[12];
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+			totForEachMo1[i]=total;
+		}
+		//-----Printing Part----------
+		int minMonth = 15500;
+		int monIndex = 0;
+		for (int i = 0; i < totForEachMo1.length; i++){
+			if(minMonth>totForEachMo1[i]){
+				minMonth = totForEachMo1[i];
+				monIndex = i;
+			}
+		}
+		System.out.println("minimum number of patients count in 2021 reported On "+months[monIndex]);
+		
+		
+	
 		//Print Paitent count for each month
+		System.out.println();
 		System.out.println("-------------------------------------------------------------------------------------------------------------");
 		System.out.println("\t\t\t\tCOVID-19 patient in 2021");
 		System.out.println("-------------------------------------------------------------------------------------------------------------");
@@ -36,9 +321,6 @@ class Example{
 		for (int i = 0; i <31 ; i++){			
 			System.out.printf("%-8d",i+1);			
 			for (int j = 0; j <12 ; j++){
-				for (int i = 28; i < 31; i++){
-					
-				}
 				if ((i==28&&j==1)||(i==29&&j==1)||(i==30&&j==1)||(i==30&&j==3)||(i==30&&j==5)||(i==30&&j==8)||(i==30&&j==10)){
 					System.out.printf("%-10s","");
 				}else{
