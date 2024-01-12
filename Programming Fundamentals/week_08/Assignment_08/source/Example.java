@@ -386,7 +386,7 @@ class Example{
 			}
 		}		
 		//-----Printing Part----------
-		System.out.println("number of patients reported in November");
+		System.out.println("number of patients reported in November decending");
 		for (int i = 0; i < novPatientCount.length; i++){
 			System.out.println("Nov "+(novDates[i]+1)+" - "+novPatientCount[i]);
 		}
@@ -414,14 +414,47 @@ class Example{
 			}
 		}		
 		//-----Printing Part----------
-		System.out.println("number of patients reported in November");
+		System.out.println("number of patients reported in August acending");
 		for (int i = 0; i < augPatientCount.length; i++){
 			System.out.println("Aug "+(augDates[i]+1)+" - "+augPatientCount[i]);
 		}	
 
 
+		//xxvii total number of patients reported in each month in descending order with the name of month.
+		System.out.println();
+		int[] totalForEachMonth = new int[12];
+		int[] totalMo = new int[12];
+		for (int i = 0; i <12; i++){
+			int total = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				total+=patientCounts[i][j];
+			}
+			totalForEachMonth[i]=total;
+			totalMo[i]=i;
+		}
+		//-----Sorting----------------
+		for (int i = totalForEachMonth.length-1; i>0; i--){
+			for(int j = 0 ; j<i ; j++){
+				if(totalForEachMonth[j]<totalForEachMonth[j+1]){
+					int temp1 = totalForEachMonth[j];
+					totalForEachMonth[j] = totalForEachMonth[j+1];
+					totalForEachMonth[j+1]=temp1;
 
-		//Print Paitent count for each month
+					int tempIndex1 = totalMo[j];
+					totalMo[j] = totalMo[j+1];
+					totalMo[j+1]=tempIndex1;
+				}
+			}
+		}
+				
+		//-----Printing Part----------
+		System.out.println();
+		System.out.println("Number of patients reported for Each Month decending");
+		for (int i = 0; i < totalForEachMonth.length; i++){
+			System.out.println(months[totalMo[i]]+" - "+totalForEachMonth[i]);
+		}	
+
+		//xxviii & xxix Graph
 		System.out.println();
 		System.out.println("-------------------------------------------------------------------------------------------------------------");
 		System.out.println("\t\t\t\tCOVID-19 patient in 2021");
