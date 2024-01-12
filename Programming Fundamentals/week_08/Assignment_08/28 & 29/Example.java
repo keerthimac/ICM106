@@ -271,12 +271,10 @@ class Example{
 		System.out.println();
 		int maxForYear = 0;
 		for (int i = 0; i <12; i++){
-			int max = patientCounts[i][0];
 			for (int j = 1; j < daysInMonth[i]; j++){
-				if(patientCounts[i][j]>max)
-				max=patientCounts[i][j]; 
+				if(patientCounts[i][j]>maxForYear)
+				maxForYear=patientCounts[i][j]; 
 			}
-			maxForYear=max;
 		}
 		//-----Printing Part----------
 		System.out.println("highest number of patients count in 2021 is : "+maxForYear);
@@ -292,7 +290,7 @@ class Example{
 			totForEachMo1[i]=total;
 		}
 		//-----Printing Part----------
-		int minMonth = 15500;
+		int minMonth = totForEachMo1[0];
 		int monIndex = 0;
 		for (int i = 0; i < totForEachMo1.length; i++){
 			if(minMonth>totForEachMo1[i]){
@@ -302,7 +300,68 @@ class Example{
 		}
 		System.out.println("minimum number of patients count in 2021 reported On "+months[monIndex]);
 		
-		
+
+		//xxii number of days that have passed to the highest number of patients reported.
+		System.out.println();
+		int maxPatient = 0;
+		int maxday=0;
+		int maxMonth=0;
+		int count=0;
+		for (int i = 0; i <12; i++){
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>maxPatient){
+					maxPatient=patientCounts[i][j];
+					maxMonth=i;
+					maxday =j;
+				}
+			}
+		}
+		int countDays=0;
+		L2:for (int i = 0; i <12 ;i++){
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(i==maxMonth&&j==maxday){
+					break L2;
+				}
+				countDays++;
+			}
+		}
+		System.out.println(countDays+"number of days that have passed to the highest number of patients reported.");	
+
+		//xxiii highest number of patients reported in each month
+		System.out.println();
+		int[] maxPatientCount = new int[12];
+		for (int i = 0; i <12; i++){
+			int maxPerMonth = 0;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]>maxPerMonth){
+					maxPerMonth=patientCounts[i][j];
+				}
+			}
+			maxPatientCount[i]=maxPerMonth;
+		}
+		//-----Printing Part----------
+		for (int i = 0; i < maxPatientCount.length; i++){
+			System.out.println("highest number of patients reported in "+months[i]+" : "+maxPatientCount[i]);
+		}
+
+
+		//xxiv Minimum number of patients reported in each month
+		System.out.println();
+		int[] minPatientCount = new int[12];
+		for (int i = 0; i <12; i++){
+			int minPerMonth = 500;
+			for (int j = 0; j < daysInMonth[i]; j++){
+				if(patientCounts[i][j]<minPerMonth){
+					minPerMonth=patientCounts[i][j];
+				}
+			}
+			minPatientCount[i]=minPerMonth;
+		}
+		//-----Printing Part----------
+		for (int i = 0; i < minPatientCount.length; i++){
+			System.out.println("Minimum number of patients reported in "+months[i]+" : "+minPatientCount[i]);
+		}
+
 	
 		//Print Paitent count for each month
 		System.out.println();
