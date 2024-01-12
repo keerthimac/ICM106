@@ -362,7 +362,65 @@ class Example{
 			System.out.println("Minimum number of patients reported in "+months[i]+" : "+minPatientCount[i]);
 		}
 
-	
+
+		//xxv number of patients reported in November in descending order
+		System.out.println();
+		int[] novPatientCount = new int[30];
+		int[] novDates = new int[30];
+		for (int i = 0; i <novPatientCount.length; i++){
+			novPatientCount[i]=patientCounts[10][i];
+			novDates[i]=i;
+		}
+		//-----Sorting----------------
+		for (int i = novPatientCount.length-1; i>0; i--){
+			for(int j = 0 ; j<i ; j++){
+				if(novPatientCount[j]<novPatientCount[j+1]){
+					int temp = novPatientCount[j];
+					novPatientCount[j] = novPatientCount[j+1];
+					novPatientCount[j+1]=temp;
+
+					int tempIndex = novDates[j];
+					novDates[j] = novDates[j+1];
+					novDates[j+1]=tempIndex;
+				}
+			}
+		}		
+		//-----Printing Part----------
+		System.out.println("number of patients reported in November");
+		for (int i = 0; i < novPatientCount.length; i++){
+			System.out.println("Nov "+(novDates[i]+1)+" - "+novPatientCount[i]);
+		}
+
+		//xxvi number of patients reported in August in ascending order with date.
+		System.out.println();
+		int[] augPatientCount = new int[31];
+		int[] augDates = new int[31];
+		for (int i = 0; i <augPatientCount.length; i++){
+			augPatientCount[i]=patientCounts[7][i];
+			augDates[i]=i;
+		}
+		//-----Sorting----------------
+		for (int i = augPatientCount.length-1; i>0; i--){
+			for(int j = 0 ; j<i ; j++){
+				if(augPatientCount[j]>augPatientCount[j+1]){
+					int temp = augPatientCount[j];
+					augPatientCount[j] = augPatientCount[j+1];
+					augPatientCount[j+1]=temp;
+
+					int tempIndex = augDates[j];
+					augDates[j] = augDates[j+1];
+					augDates[j+1]=tempIndex;
+				}
+			}
+		}		
+		//-----Printing Part----------
+		System.out.println("number of patients reported in November");
+		for (int i = 0; i < augPatientCount.length; i++){
+			System.out.println("Aug "+(augDates[i]+1)+" - "+augPatientCount[i]);
+		}	
+
+
+
 		//Print Paitent count for each month
 		System.out.println();
 		System.out.println("-------------------------------------------------------------------------------------------------------------");
