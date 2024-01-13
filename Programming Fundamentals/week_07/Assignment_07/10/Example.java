@@ -25,10 +25,15 @@ class Example {
 		}
 		System.out.println(countOdd);
 		
-		//III. Search whether the number ‘5’ are rolled.
+		//IV. Search whether the number ‘5’ are rolled.
+		int countFive = 0;
 		for (int i = 0; i < diceResult.length; i++){
-			System.out.println("number 5 " +(diceResult[i]==5?"rolled":"did not rolled"));	
+			if(diceResult[i]==5){
+				countFive++;
+			}
 		}
+		System.out.println(); 
+		System.out.println("number 5 " + ((countFive > 0 ? "rolled " + countFive +" times" : "did not roll")));
 
 	}
 }

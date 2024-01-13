@@ -1,0 +1,39 @@
+/* h1 {
+  color: green;
+  background-color: black;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  background-color: green;
+  text-align: ;
+} */
+
+.header {
+  text-align: center;
+  color: white;
+}
+
+.box {
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}
+
+.box1 {
+  flex-direction: column;
+  background-color: #e49273;
+}
+
+.box2 {
+  flex-direction: column;
+  background-color: #7e3f8f;
+}
+
+.box3 {
+  flex-direction: column;
+  background-color: #b744b8;
+}
