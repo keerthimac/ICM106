@@ -1,7 +1,77 @@
 import java.util.*;
-class Example {
 
+class Order{
+	//final variables for the order info
+	public static final int PREPARING = 0;
+	public static final int DELIVERED = 1;
+	public static final int CANCEL = 2;
+	public static final double BURGERPRICE=500;	
+	
+	//object creation
+	private String orderId;
+	private String customerId;
+	private String customerName;
+	private int qty;
+	private double total;
+	private int status;
+	
+	//Order Constructor
+	public Order(String orderId,String customerId,String customerName,int qty,double total,int status){
+		this.orderId=orderId;
+		this.customerId=customerId;
+		this.customerName=customerName;
+		this.qty=qty;
+		this.total=total;
+		this.status=status;
+	}
+	
+	
+	public String getOrderId(){
+		return orderId;
+	}
+	public String getCustomerId(){
+		return customerId;
+	}
+	public String getCustomerName(){
+		return customerName;
+	}
+	public int getQty(){
+		return qty;
+	}
+	public double getTotal(){
+		return total;
+	}
+	public int getStatus(){
+		return status;
+	}
+	
+	public void setQty(int qty){
+		this.qty = qty;
+	}
+	public void setTotal(double total){
+		this.total = total;
+	}
+	public void setStatus(int status){
+		this.status = status;
+	}
+	
+}
+ 
+ 
+ 
+class Demo {
 //----------------Static(global) Varibles-------------------------------
+
+	public static Order[] orderArray={
+		new Order("B001","0711234567","Nimal",3,1500.00,0),
+		new Order("B002","0759876543","Sunil",5,2500.00,0),
+		new Order("B003","0711234567","Nimal",2,1000.00,0),
+		new Order("B004","0701231234","Sunimal",4,2000.00,1),
+		new Order("B005","0743214321","Kamal",1,500.00,0),
+		new Order("B006","0724545145","Samanmal",3,1500.00,0),
+		new Order("B007","0759876543","Sunil",1,500.00,0),
+		new Order("B008","0743214321","Kamal",7,3500.00,0)
+	};
 
 	public static String[] orderIds={"B001","B002","B003","B004","B005","B006","B007","B008"};
 	public static String[] customerIds={"0711234567","0759876543","0711234567","0701231234","0743214321","0724545145","0759876543","0743214321"};
@@ -62,36 +132,22 @@ class Example {
 		return arr;
 	}
 
-//-------------Extend all Global Arrays---------------------------------
-	public static void extendAllArrays(){
-		String[] tempCustIds = new String[customerIds.length+1];
-		String[] tempOrderIds = new String[orderIds.length+1];
-		String[] tempNames = new String[customerNames.length+1];
-		int[] tempQtys = new int[qty.length+1];
-		double[] tempTotals = new double[totals.length+1];
-		int[] tempStatus = new int[status.length+1];
-		
-		for (int i = 0; i < customerIds.length; i++){
-			tempCustIds[i] = customerIds[i];
-			tempOrderIds[i] = orderIds[i];
-			tempNames[i] = customerNames[i];
-			tempQtys[i] = qty[i];
-			tempTotals[i] = totals[i];			
-			tempStatus[i] = status[i];
+//-------------Extend Order Array---------------------------------------
+
+	public static void extendOrderArray(){
+		Order[] temp = new Order[orderArray.length+1];
+		for(int i = 0; i<orderArray.length; i++){
+			temp[i]=orderArray[i];
 		}
-		
-		customerIds = tempCustIds;
-		orderIds = tempOrderIds;
-		customerNames = tempNames;
-		totals=tempTotals;
-		qty = tempQtys;
-		status = tempStatus;
-	}
+		orderArray=temp;
+	}	
+
+
 
 //===============Search Methods=========================================
 
 	
-//-------------Search Index---------------------------------------------	
+//-------------Old Search Index-----------------------------------------	
 	public static int searchIndex(String id, String[] arr){
 		for (int i = 0; i < arr.length; i++){
 			if(id.equalsIgnoreCase(arr[i])){
@@ -101,7 +157,27 @@ class Example {
 		return -1;
 	}
 
-//-------------Search String--------------------------------------------		
+//-------------Search Customer Index------------------------------------	
+	public static int searchCustomerIndex(String id, Order[] arr){
+		for (int i = 0; i < arr.length; i++){
+			if(id.equalsIgnoreCase(arr[i].getCustomerId())){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+//------------Search Order Index----------------------------------------
+	public static int searchOrderIndex(String id, Order[] arr){
+		for (int i = 0; i < arr.length; i++){
+			if(id.equalsIgnoreCase(arr[i].getOrderId())){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+//-------------old Search String--------------------------------------------		
 	public static String searchString(String id,String[] arr) {
 		for (int i = 0; i < arr.length; i++){
 			if(id.equalsIgnoreCase(arr[i])){
@@ -177,7 +253,7 @@ class Example {
 			String orderId = input.next();
 			System.out.println();
 			
-			int orderIndex = searchIndex(orderId,orderIds);
+			int orderIndex = searchOrderIndex(orderId,orderArray);
 			
 			if(orderIndex==-1){
 				L2:do{
@@ -191,19 +267,19 @@ class Example {
 					}
 				} while (true);
 			}else{
-				if(status[orderIndex]==1){
+				if(orderArray[orderIndex].getStatus()==1){
 					System.out.println("This Order is already delevered...You can not update this order...");
 					System.out.println();
-				}else if(status[orderIndex]==2){
+				}else if(orderArray[orderIndex].getStatus()==2){
 					System.out.println("This Order is cancelled...You can not update this order...");
 					System.out.println();
-				}else if(status[orderIndex]==0){
-					System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
-					System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
-					System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);
-					System.out.printf("%-10s - %-5d %n","Quantity",qty[orderIndex]);
-					System.out.printf("%-10s - %-5.2f %n","OrderValue",totals[orderIndex]);
-					System.out.printf("%-10s - %-5s %n","OrderValue",status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel");
+				}else if(orderArray[orderIndex].getStatus()==0){
+					System.out.printf("%-10s - %-5s %n","OrderID",orderArray[orderIndex].getOrderId());
+					System.out.printf("%-10s - %-5s %n","CustomerID",orderArray[orderIndex].getCustomerId());
+					System.out.printf("%-10s - %-5s %n","Name",orderArray[orderIndex].getCustomerName());
+					System.out.printf("%-10s - %-5d %n","Quantity",orderArray[orderIndex].getQty());
+					System.out.printf("%-10s - %-5.2f %n","OrderValue",orderArray[orderIndex].getTotal());
+					System.out.printf("%-10s - %-5s %n","OrderValue",orderArray[orderIndex].getStatus()==0?"preparing":orderArray[orderIndex].getStatus()==1?"Delevered":"cancel");
 
 					System.out.println();
 					System.out.println("What do you want to update ?");
@@ -219,20 +295,20 @@ class Example {
 							System.out.println("Quantity Update");
 							System.out.println("================");
 							System.out.println();
-							System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
-							System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
-							System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);							
+							System.out.printf("%-10s - %-5s %n","OrderID",orderArray[orderIndex].getOrderId());
+							System.out.printf("%-10s - %-5s %n","CustomerID",orderArray[orderIndex].getCustomerId());
+							System.out.printf("%-10s - %-5s %n","Name",orderArray[orderIndex].getCustomerName());							
 							System.out.println();
 							System.out.print("Enter your quantity update value - ");
 							int bugQty = input.nextInt();
-							qty[orderIndex] = bugQty;
-							totals[orderIndex] = bugQty*BURGERPRICE;
+							orderArray[orderIndex].setQty(bugQty);
+							orderArray[orderIndex].setTotal(bugQty*BURGERPRICE);
 							
 							System.out.println();
 							System.out.println("\tupdate order quantity successfully...");
 							System.out.println();
-							System.out.println("new order quantity - "+qty[orderIndex]);
-							System.out.printf("new order quantity - %.2f%n",totals[orderIndex]);
+							System.out.println("new order quantity - "+orderArray[orderIndex].getQty());
+							System.out.printf("new order quantity - %.2f%n",orderArray[orderIndex].getTotal());
 							System.out.println();
 							break L3;
 						}else if(option==2){
@@ -240,23 +316,30 @@ class Example {
 							System.out.println("Status Update");
 							System.out.println("================");
 							System.out.println();
-							System.out.printf("%-10s - %-5s %n","OrderID",orderIds[orderIndex]);
-							System.out.printf("%-10s - %-5s %n","CustomerID",customerIds[orderIndex]);
-							System.out.printf("%-10s - %-5s %n","Name",customerNames[orderIndex]);
+							System.out.printf("%-10s - %-5s %n","OrderID",orderArray[orderIndex].getOrderId());
+							System.out.printf("%-10s - %-5s %n","CustomerID",orderArray[orderIndex].getCustomerId());
+							System.out.printf("%-10s - %-5s %n","Name",orderArray[orderIndex].getCustomerName());	
 							System.out.println();
 							System.out.println("\t(0)Preparing");
 							System.out.println("\t(1)Devivered");							
 							System.out.println("\t(2)Cancel");						
-							System.out.println();
-							System.out.print("Enter order status - ");
-							int statusUpdate = input.nextInt();
-							status[orderIndex] = statusUpdate;
-							System.out.println();
-							System.out.println("\tupdate order status successfully...");
-							System.out.println();
-							System.out.println("new order Status - "+(status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel"));
-							System.out.println();
-							System.out.println();
+							System.out.println();						
+							L5:do{
+								System.out.print("Enter order status - ");
+								int statusUpdate = input.nextInt();	
+								if (statusUpdate==0 ||statusUpdate==1 || statusUpdate==2){
+									orderArray[orderIndex].setStatus(statusUpdate);										
+									System.out.println();
+									System.out.println("\tupdate order status successfully...");
+									System.out.println();
+									System.out.println("new order Status - "+(orderArray[orderIndex].getStatus()==0?"preparing":orderArray[orderIndex].getStatus()==1?"Delevered":"cancel"));
+									System.out.println();
+									System.out.println();
+									break L5;
+								}else{
+									System.out.println("Please Enter Valid Input");
+								}						
+							} while (true);
 							break L3;							
 						}else{
 							System.out.println("Please Enter Valid Input");
@@ -351,7 +434,7 @@ class Example {
 			System.out.print("Enter order Id: ");
 			String orderId = input.next();
 			System.out.println();
-			int orderIndex = searchIndex(orderId,orderIds);
+			int orderIndex = searchOrderIndex(orderId,orderArray);
 
 			if(orderIndex==-1){
 				System.out.println("Invalid order ID");
@@ -368,7 +451,7 @@ class Example {
 				System.out.println("-------------------------------------------------------------------------------");
 				System.out.printf(" %-10s %-15s %-10s %-10s %-15s %-10s | %n", "OrderID", "CustomerID","Name","Quantity","OrderValue","OrderStatus");
 				System.out.println("-------------------------------------------------------------------------------");				
-				System.out.printf(" %-10s %-15s %-10s %5d %15.2f %15s  | %n",orderIds[orderIndex] ,customerIds[orderIndex] ,customerNames[orderIndex],qty[orderIndex],totals[orderIndex],status[orderIndex]==0?"preparing":status[orderIndex]==1?"Delevered":"cancel");
+				System.out.printf(" %-10s %-15s %-10s %5d %15.2f %15s  | %n",orderArray[orderIndex].getOrderId() ,orderArray[orderIndex].getCustomerId() ,orderArray[orderIndex].getCustomerName(),orderArray[orderIndex].getQty(),orderArray[orderIndex].getTotal(),orderArray[orderIndex].getStatus()==0?"preparing":orderArray[orderIndex].getStatus()==1?"Delevered":"cancel");
 				System.out.println("-------------------------------------------------------------------------------");					
 				System.out.println();
 				L3:do{
@@ -395,11 +478,11 @@ class Example {
 			System.out.println("---------------------------------------------------------------------------------");
 			System.out.println();
 			System.out.print("Enter customer Id: ");
-			String cusmId = input.next();
+			String customerId = input.next();
 			System.out.println();
-			String cusName = searchString(cusmId,customerIds);
-
-			if(cusName==null){
+			int cusIndex = searchCustomerIndex(customerId,orderArray);
+			
+			if(cusIndex==-1){
 				System.out.println("\tThis Customer id not added yet.......");
 				L2:do{
 					System.out.print("Do you want to Search another customer Details?");
@@ -411,9 +494,10 @@ class Example {
 					}
 				} while (true);
 			}else{
+				String customerName = orderArray[cusIndex].getCustomerName();
 				System.out.println();			
-				System.out.println("CustomerID - "+cusmId);
-				System.out.println("Name       - "+cusName);
+				System.out.println("CustomerID - "+customerId);
+				System.out.println("Name       - "+customerName);
 				System.out.println();
 				System.out.println("Customer Order Details");
 				System.out.println("=======================");	
@@ -421,9 +505,9 @@ class Example {
 				System.out.println("-----------------------------------------");
 				System.out.printf(" %-10s %-15s %-10s | %n", "OrderID","Order_Quantity","Total_value");
 				System.out.println("-----------------------------------------");
-				for (int i = 0; i < customerIds.length; i++){
-					if(cusmId.equalsIgnoreCase(customerIds[i])){
-						System.out.printf(" %-10s %-15d %-11.2f | %n", orderIds[i],qty[i],totals[i]);	
+				for (int i = 0; i < orderArray.length; i++){
+					if(customerId.equalsIgnoreCase(orderArray[i].getCustomerId())){
+						System.out.printf(" %-10s %-15d %-11.2f | %n", orderArray[i].getCustomerId(),orderArray[i].getQty(),orderArray[i].getTotal());	
 					}	
 				}
 				System.out.println("-----------------------------------------");
@@ -538,10 +622,11 @@ class Example {
 				}
 				break L2;
 			}while(true);
-			int cusId = searchIndex(customerId,customerIds);
+			int cusId = searchCustomerIndex(customerId,orderArray);
+			System.out.println(cusId);
 			String name = null;
 			if(cusId!=-1){
-				name = customerNames[cusId];
+				name = orderArray[cusId].getCustomerName();
 			}
 			String customerName = null;		
 			if(name==null){
@@ -562,13 +647,8 @@ class Example {
 				String answer  = input.next();
 				if(answer.toLowerCase().charAt(0)=='y'){
 					System.out.println("Your order is enter to the system successfully");
-					extendAllArrays();
-					orderIds[orderIds.length-1]=orderId;
-					customerIds[customerIds.length-1]=customerId;
-					customerNames[customerNames.length-1]=customerName;
-					qty[qty.length-1]=burgerQty;
-					totals[totals.length-1]=total;
-					status[status.length-1]=PREPARING;
+					extendOrderArray();
+					orderArray[orderArray.length-1]=new Order(orderId,customerId,customerName,burgerQty,total,PREPARING);
 					break L3;
 				}else if(answer.toLowerCase().charAt(0)=='n'){
 					break L3;
