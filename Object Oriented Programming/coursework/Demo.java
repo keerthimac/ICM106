@@ -1,12 +1,6 @@
 import java.util.*;
 
 class Order{
-	//final variables for the order info
-	public static final int PREPARING = 0;
-	public static final int DELIVERED = 1;
-	public static final int CANCEL = 2;
-	public static final double BURGERPRICE=500;	
-	
 	//object creation
 	private String orderId;
 	private String customerId;
@@ -25,7 +19,7 @@ class Order{
 		this.status=status;
 	}
 	
-	
+	//Getters
 	public String getOrderId(){
 		return orderId;
 	}
@@ -44,7 +38,8 @@ class Order{
 	public int getStatus(){
 		return status;
 	}
-	
+
+	//Setters	
 	public void setQty(int qty){
 		this.qty = qty;
 	}
@@ -56,12 +51,23 @@ class Order{
 	}
 	
 }
- 
- 
+
  
 class Demo {
+	
+//----------------Initiate Scanner--------------------------------------	
+	public static Scanner input = new Scanner(System.in);
+	
+	
 //----------------Static(global) Varibles-------------------------------
-
+	//final variables for the order info
+	public static final int PREPARING = 0;
+	public static final int DELIVERED = 1;
+	public static final int CANCEL = 2;
+	final static double BURGERPRICE=500;	
+	
+	
+//-----------------Create Orders from Constructor-----------------------
 	public static Order[] orderArray={
 		new Order("B001","0711234567","Nimal",3,1500.00,0),
 		new Order("B002","0759876543","Sunil",5,2500.00,0),
@@ -72,18 +78,6 @@ class Demo {
 		new Order("B007","0759876543","Sunil",1,500.00,0),
 		new Order("B008","0743214321","Kamal",7,3500.00,0)
 	};
-
-	public static String[] orderIds={"B001","B002","B003","B004","B005","B006","B007","B008"};
-	public static String[] customerIds={"0711234567","0759876543","0711234567","0701231234","0743214321","0724545145","0759876543","0743214321"};
-	public static String[] customerNames={"Nimal","Sunil","Nimal","Sunimal","Kamal","Samanmal","Sunil","Kamal"};
-	public static int[] qty={3,5,2,4,1,3,1,7};
-	public static double[] totals={1500.00,2500.00,1000.00,2000.00,500.00,1500.00,500.00,3500.00};
-	public static int[] status={0,0,0,1,0,0,0,0};
-	public static Scanner input = new Scanner(System.in);
-	public static final int PREPARING = 0;
-	public static final int DELIVERED = 1;
-	public static final int CANCEL = 2;
-	final static double BURGERPRICE=500;
 
 //================Main Program Methods==================================
 
@@ -112,27 +106,7 @@ class Demo {
 
 //==============Extend Arrays Method====================================
 	
-//--------------Extend Custom String Array------------------------------
-	public static String[] extendArray(String[] arr){
-		String[] tempArr = new String[arr.length+1];
-		for (int i = 0; i < arr.length; i++){
-			tempArr[i]=arr[i]; 
-		}
-		arr=tempArr;
-		return arr;
-	}
-
-//--------------Extend Custom int Array---------------------------------
-	public static int[] extendArray(int[] arr){
-		int[] tempArr = new int[arr.length+1];
-		for (int i = 0; i < arr.length; i++){
-			tempArr[i]=arr[i]; 
-		}
-		arr=tempArr;
-		return arr;
-	}
-
-//-------------Extend Order Array---------------------------------------
+//-------------Extend Original Order Array------------------------------
 
 	public static void extendOrderArray(){
 		Order[] temp = new Order[orderArray.length+1];
@@ -143,20 +117,20 @@ class Demo {
 	}	
 
 
+//--------------Extend Custom Order Array--------------------------
+	public static Order[] extendCustArray(Order[] arr){
+		Order[] tempArr = new Order[arr.length+1];
+		for (int i = 0; i < arr.length; i++){
+			tempArr[i]=arr[i]; 
+		}
+		arr=tempArr;
+		return arr;
+	}
+
 
 //===============Search Methods=========================================
 
 	
-//-------------Old Search Index-----------------------------------------	
-	public static int searchIndex(String id, String[] arr){
-		for (int i = 0; i < arr.length; i++){
-			if(id.equalsIgnoreCase(arr[i])){
-				return i;
-			}
-		}
-		return -1;
-	}
-
 //-------------Search Customer Index------------------------------------	
 	public static int searchCustomerIndex(String id, Order[] arr){
 		for (int i = 0; i < arr.length; i++){
@@ -177,15 +151,7 @@ class Demo {
 		return -1;
 	}
 
-//-------------old Search String--------------------------------------------		
-	public static String searchString(String id,String[] arr) {
-		for (int i = 0; i < arr.length; i++){
-			if(id.equalsIgnoreCase(arr[i])){
-				return arr[i];
-			}
-		}
-		return null;
-	}
+
 		
 //===============Sorting Algorithms=====================================
 
@@ -206,13 +172,12 @@ class Demo {
 		return ar;											
 	}
 
-
-//-------------Remove Duplicates----------------------------------------		
-	public static String[] removeDuplicates(String[] arr) {
-		String[] dupRemovedArr = new String[0];
+//-------------Remove Duplicate Customer Ids----------------------------------------		
+	public static Order[] removeDupCusId(Order[] arr) {
+		Order[] dupRemovedArr = new Order[0];
 		for (int i = 0; i < arr.length; i++){
-			if(searchIndex(arr[i],dupRemovedArr)==-1){
-				dupRemovedArr = extendArray(dupRemovedArr);
+			if(searchCustomerIndex(arr[i].getCustomerId(),dupRemovedArr)==-1){
+				dupRemovedArr = extendCustArray(dupRemovedArr);
 				dupRemovedArr[dupRemovedArr.length-1] = arr[i];
 			}
 		}
@@ -223,12 +188,12 @@ class Demo {
 //=================Generate IDs=========================================
 	
 	public static String generateId() {
-		if(orderIds.length==0){
+		if(orderArray.length==0){
 			return String.format("B%03d",1);
 		}else{
-			String[] tempIdArray = new String[orderIds.length];
-			for (int i = 0; i < orderIds.length; i++){
-				tempIdArray[i] = orderIds[i];
+			String[] tempIdArray = new String[orderArray.length];
+			for (int i = 0; i < orderArray.length; i++){
+				tempIdArray[i] = orderArray[i].getOrderId();
 			}
 			String lastId=tempIdArray[tempIdArray.length-1];
 			int lastDigit = Integer.parseInt(lastId.substring(1));
@@ -374,9 +339,9 @@ class Demo {
 			System.out.println("-------------------------------------------------------------------");
 			System.out.printf(" %-10s %-15s %-10s %-10s %15s | %n", "OrderID", "CustomerID","Name","Quantity","OrderValue");
 			System.out.println("-------------------------------------------------------------------");	
-			for (int i = 0; i < status.length; i++){
-				if(status[i]==option){
-					System.out.printf(" %-10s %-15s %-10s %5s %20s | %n", orderIds[i], customerIds[i],customerNames[i],qty[i],totals[i]);
+			for (int i = 0; i < orderArray.length; i++){
+				if(orderArray[i].getStatus()==option){
+					System.out.printf(" %-10s %-15s %-10s %5s %20s | %n", orderArray[i].getOrderId(), orderArray[i].getCustomerId(),orderArray[i].getCustomerName(),orderArray[i].getQty(),orderArray[i].getTotal());
 					System.out.println("-------------------------------------------------------------------");	
 				}
 			}
@@ -537,21 +502,20 @@ class Demo {
 			System.out.println();
 			
 			//Remove Duplicates from the Customer Array
-			String[] cusArray = removeDuplicates(customerIds);
-			String[] cusNameArray = removeDuplicates(customerNames);
+			Order[] cusArray = removeDupCusId(orderArray);
 	
 			//calculate totals for this Customers
 			double[] totalForEach = new double[cusArray.length];
 			for (int i = 0; i <cusArray.length ; i++){
 				int total = 0;
-				for (int j = 0; j < customerIds.length; j++){
-					if(cusArray[i].equalsIgnoreCase(customerIds[j])){
-						total+=totals[j];
+				for (int j = 0; j < orderArray.length; j++){
+					if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())){
+						total+=orderArray[j].getTotal();
 					}
 				}
 				totalForEach[i] = total;
 			}
-			
+		
 			//Sort totalForEach and Customer Arrays
 			for (int i = totalForEach.length-1; i>0; i--){
 				for(int j = 0 ; j<i ; j++){
@@ -561,14 +525,10 @@ class Demo {
 						totalForEach[j+1]=temp;
 						
 						//Sort cusId array
-						String tempIdStr = cusArray[j];
+						Order tempIdStr = cusArray[j];
 						cusArray[j] = cusArray[j+1];
 						cusArray[j+1]=tempIdStr;
 						
-						//Sort name array
-						String tempNmStr = cusNameArray[j];
-						cusNameArray[j] = cusNameArray[j+1];
-						cusNameArray[j+1]=tempNmStr;
 					}
 				}
 			}
@@ -578,7 +538,7 @@ class Demo {
 			System.out.printf(" %-15s %-15s %-10s  | %n", "CustomerID","Name","Total");
 			System.out.println("----------------------------------------------");			
 			for(int i=0; i<cusArray.length; i++){
-				System.out.printf(" %-15s %-15s %-11.2f | %n", cusArray[i],cusNameArray[i],totalForEach[i]);			
+				System.out.printf(" %-15s %-15s %-11.2f | %n", cusArray[i].getCustomerId(),cusArray[i].getCustomerName(),totalForEach[i]);			
 				System.out.println("----------------------------------------------");
 			}
 			System.out.println();
@@ -623,7 +583,6 @@ class Demo {
 				break L2;
 			}while(true);
 			int cusId = searchCustomerIndex(customerId,orderArray);
-			System.out.println(cusId);
 			String name = null;
 			if(cusId!=-1){
 				name = orderArray[cusId].getCustomerName();
