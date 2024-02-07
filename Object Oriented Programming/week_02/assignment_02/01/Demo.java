@@ -51,8 +51,8 @@ class Stack{
 	}
 	public int[] toArray(){
 		int[] tempArr = new int[nextIndex];
-		for (int i = nextIndex-1; i >=0; i--){
-			tempArr[i] = dataArray[i];
+		for (int i = 0; i<nextIndex; i++){
+			tempArr[i] = dataArray[(nextIndex-1)-i];
 		}
 		return tempArr;
 	}
