@@ -7,11 +7,14 @@ class Demo{
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.setLocationRelativeTo(null);
 		
-		JButton b1=new JButton();
+		JButton b1 =new JButton();
 		b1.setText("Exit");
-		
 		f1.add(b1);
-				
-		f1.setVisible(true);
+		
+		JTextField t1=new JTextField();
+		f1.add(t1);
+
+		f1.setVisible(true);		
 	}
 }
+ 
