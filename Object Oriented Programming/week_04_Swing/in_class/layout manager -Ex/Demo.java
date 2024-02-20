@@ -10,7 +10,7 @@ class Demo{
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.setLocationRelativeTo(null);
 		
-		//Default LAyout "BorderLayout"
+		//Default Layout "BorderLayout"
 		JButton b1 =new JButton("South");
 		JButton b2 =new JButton("North");
 		JButton b3 =new JButton("East");
