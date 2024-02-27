@@ -1,66 +1,39 @@
 import javax.swing.*;
+import javax.swing.table.*;
 import java.awt.*;
 
-class Notepad extends JFrame{
-	private JTextArea textArea;
-	
-	private JMenuBar mainManu;
-	
-	private JMenu fileMenu;
-	private JMenu editMenu;
-	private JMenu viewMenu;
-	
-	private JMenuItem openMenuItem;
-	private JMenuItem newMenuItem;
-	private JMenuItem saveMenuItem;
-	private JMenuItem saveAsMenuItem;
+class ViewCustomerForm extends JFrame {
+	private JLabel titleLabel;
 
-	private JMenuItem copyMenuItem;
-	private JMenuItem cutMenuItem;
-	private JMenuItem pasteMenuItem;
+	private DefaultTableModel dtm;
+	private JTable tblCustomerDetails;
 
-	
-	Notepad(){
-		setSize(600,400);
-		setTitle("Notepad");
+	ViewCustomerForm() {
+		setTitle("View Customer Form");
+		setSize(600, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-		
-		mainManu = new JMenuBar();
-		
-		
-		fileMenu = new JMenu("File");	
-		
-		openMenuItem = new JMenuItem("Open");
-		fileMenu.add(openMenuItem);
-		newMenuItem = new JMenuItem("New");
-		fileMenu.add(newMenuItem);
-		saveMenuItem = new JMenuItem("Save");
-		fileMenu.add(saveMenuItem);
-		saveAsMenuItem = new JMenuItem("Save As");
-		fileMenu.add(saveAsMenuItem);
-		
-		mainManu.add(fileMenu);
-		
-		
-		editMenu = new JMenu("Edit");
-		
-		copyMenuItem = new JMenuItem("Copy");
-		editMenu.add(openMenuItem);
-		cutMenuItem = new JMenuItem("Cut");
-		editMenu.add(cutMenuItem);
-		pasteMenuItem = new JMenuItem("Paste");
-		editMenu.add(pasteMenuItem);
-		
-		mainManu.add(editMenu);
-		
-		
-		setJMenuBar(mainManu);
-		
+
+		titleLabel = new JLabel("View Customer Form");
+		titleLabel.setFont(new Font("", 1, 30));
+		titleLabel.setHorizontalAlignment(JLabel.CENTER);
+		add("North", titleLabel);
+
+		String[] columnName = { "Customer ID", "Name", "Address", "Salary" };
+		dtm = new DefaultTableModel(columnName, 0);
+
+		tblCustomerDetails = new JTable(dtm);
+
+		JScrollPane tablePane = new JScrollPane(tblCustomerDetails);
+		add("Center", tablePane);
+
+		Object[] rowData = { "C001", "Danapala", "Panadura", 45000 };
+		dtm.addRow(rowData);
 	}
 }
-class Demo{
-	public static void main(String args[]){
-		new Notepad().setVisible(true);
+
+class Demo {
+	public static void main(String args[]) {
+		new ViewCustomerForm().setVisible(true);
 	}
 }
