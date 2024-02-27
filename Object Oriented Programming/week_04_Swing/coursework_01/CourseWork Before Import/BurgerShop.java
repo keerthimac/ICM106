@@ -179,7 +179,7 @@ class OrderList{
 
    //-------------Return Copy of Order Array-----------------------//
 
-	private Order[] copyOrderList(){
+	public Order[] copyOrderList(){
 		Order[] tempArr = new Order[size()];
 		Node temp=first;
 		int count = 0;
@@ -236,6 +236,22 @@ class OrderList{
 			totalForEach[i] = total;
 		}
 		return totalForEach;
+	}
+	
+	public double[] findTotalQtyForEach(){
+		Order[] cusArray = removeDupCusId();
+		Order[] orderArray = copyOrderList();
+		double[] totalQtyForEach = new double[cusArray.length];
+		for (int i = 0; i <cusArray.length;i++){
+			int total = 0;
+			for (int j = 0; j<orderArray.length; j++){
+				if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())&& orderArray[j].getStatus()!=2){
+					total+=orderArray[j].getQty();
+				}
+			}
+			totalQtyForEach[i] = total;
+		}
+		return totalQtyForEach;
 	}
 //-------------Update Order by Index------------------------------------
 	
@@ -359,13 +375,72 @@ class OrderController{
 		db.updateOrderByQty(orderIndex,bugQty,price);
 	}
 	
-	public double[] findTotalForEach(){
-		return db.findTotalForEach();
-	}	
+	//public double[] findTotalForEach(){
+	//	return db.findTotalForEach();
+	//}	
 	
 	public Order[] findBestCustomers(){
-		return db.removeDupCusId();		
+		return db.removeDupCusId();
+		
+			
 	}
+
+	//--------------Extend Custom Order Array---------------------//
+	private Order[] extendCustArray(Order[] arr){
+		Order[] tempArr = new Order[arr.length+1];
+		for (int i = 0; i < arr.length; i++){
+			tempArr[i]=arr[i]; 
+		}
+		arr=tempArr;
+		return arr;
+	}
+
+	
+	public Order[] removeDupCusId() {
+		Order[] dupRemovedArr = new Order[0];
+		Order[] orderArray = db.copyOrderList();
+		for (int i = 0; i < orderArray.length; i++){
+			if(db.searchCustomerIndex(orderArray[i].getCustomerId(),dupRemovedArr)==-1){
+				dupRemovedArr = extendCustArray(dupRemovedArr);
+				dupRemovedArr[dupRemovedArr.length-1] = orderArray[i];
+			}
+		}
+		return dupRemovedArr;
+	}
+
+	public double[] findTotalForEach(){
+		Order[] cusArray = removeDupCusId();
+		Order[] orderArray = db.copyOrderList();
+		double[] totalForEach = new double[cusArray.length];
+		for (int i = 0; i <cusArray.length;i++){
+			int total = 0;
+			for (int j = 0; j<orderArray.length; j++){
+				if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())&& orderArray[j].getStatus()!=2){
+					total+=orderArray[j].getTotal();
+				}
+			}
+			totalForEach[i] = total;
+		}
+		return totalForEach;
+	}
+	
+	public double[] findTotalQtyForEach(){
+		Order[] cusArray = removeDupCusId();
+		Order[] orderArray = db.copyOrderList();
+		double[] totalQtyForEach = new double[cusArray.length];
+		for (int i = 0; i <cusArray.length;i++){
+			int total = 0;
+			for (int j = 0; j<orderArray.length; j++){
+				if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())&& orderArray[j].getStatus()!=2){
+					total+=orderArray[j].getQty();
+				}
+			}
+			totalQtyForEach[i] = total;
+		}
+		return totalQtyForEach;
+	}
+
+	
 	
 }
 
