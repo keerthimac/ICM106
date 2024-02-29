@@ -22,14 +22,14 @@ class OrderList{
 
 
    private void addSampleOrders() {
-        add("B001", "0711234567", "Nimal", 3, 1500.00, 0);
-        add("B002", "0759876543", "Sunil", 5, 2500.00, 0);
-        add("B003", "0711234567", "Nimal", 2, 1000.00, 0);
-        add("B004", "0701231234", "Sunimal", 4, 2000.00, 1);
-        add("B005", "0743214321", "Kamal", 1, 500.00, 0);
-        add("B006", "0724545145", "Samanmal", 3, 1500.00, 0);
-        add("B007", "0759876543", "Sunil", 1, 500.00, 0);
-        add("B008", "0743214321", "Kamal", 7, 3500.00, 0);
+        add(new Order("B001", "0711234567", "Nimal", 3, 1500.00, 0));
+        add(new Order("B002", "0759876543", "Sunil", 5, 2500.00, 0));
+        add(new Order("B003", "0711234567", "Nimal", 2, 1000.00, 0));
+        add(new Order("B004", "0701231234", "Sunimal", 4, 2000.00, 1));
+        add(new Order("B005", "0743214321", "Kamal", 1, 500.00, 0));
+        add(new Order("B006", "0724545145", "Samanmal", 3, 1500.00, 0));
+        add(new Order("B007", "0759876543", "Sunil", 1, 500.00, 0));
+        add(new Order("B008", "0743214321", "Kamal", 7, 3500.00, 0));
     }
 
 	
@@ -55,8 +55,7 @@ class OrderList{
 
 //------------Add Order to List-----------------------------------------
 	
-	public void add(String orderId,String customerId,String customerName,int burgerQty,double total,int status){
-		Order order = new Order(orderId,customerId,customerName,burgerQty,total,status);
+	public void add(Order order){
 		Node n1 = new Node(order);
 		if(first==null){
 			first = n1;
@@ -181,6 +180,7 @@ class OrderList{
 
 	public Order[] copyOrderList(){
 		Order[] tempArr = new Order[size()];
+		Order[] newTempArr = new Order[size()];
 		Node temp=first;
 		int count = 0;
 		while(temp!=null){
@@ -188,16 +188,7 @@ class OrderList{
 			temp=temp.next;
 		}
 		return tempArr;
-	}
-
-	//--------------Extend Custom Order Array---------------------//
-	private Order[] extendCustArray(Order[] arr){
-		Order[] tempArr = new Order[arr.length+1];
-		for (int i = 0; i < arr.length; i++){
-			tempArr[i]=arr[i]; 
-		}
-		arr=tempArr;
-		return arr;
+		
 	}
 
 	//-------------Search Customer Index in Array----------------//	
@@ -209,50 +200,7 @@ class OrderList{
 		}
 		return -1;
 	}
-	
-	public Order[] removeDupCusId() {
-		Order[] dupRemovedArr = new Order[0];
-		Order[] orderArray = copyOrderList();
-		for (int i = 0; i < orderArray.length; i++){
-			if(searchCustomerIndex(orderArray[i].getCustomerId(),dupRemovedArr)==-1){
-				dupRemovedArr = extendCustArray(dupRemovedArr);
-				dupRemovedArr[dupRemovedArr.length-1] = orderArray[i];
-			}
-		}
-		return dupRemovedArr;
-	}
 
-	public double[] findTotalForEach(){
-		Order[] cusArray = removeDupCusId();
-		Order[] orderArray = copyOrderList();
-		double[] totalForEach = new double[cusArray.length];
-		for (int i = 0; i <cusArray.length;i++){
-			int total = 0;
-			for (int j = 0; j<orderArray.length; j++){
-				if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())&& orderArray[j].getStatus()!=2){
-					total+=orderArray[j].getTotal();
-				}
-			}
-			totalForEach[i] = total;
-		}
-		return totalForEach;
-	}
-	
-	public double[] findTotalQtyForEach(){
-		Order[] cusArray = removeDupCusId();
-		Order[] orderArray = copyOrderList();
-		double[] totalQtyForEach = new double[cusArray.length];
-		for (int i = 0; i <cusArray.length;i++){
-			int total = 0;
-			for (int j = 0; j<orderArray.length; j++){
-				if(cusArray[i].getCustomerId().equalsIgnoreCase(orderArray[j].getCustomerId())&& orderArray[j].getStatus()!=2){
-					total+=orderArray[j].getQty();
-				}
-			}
-			totalQtyForEach[i] = total;
-		}
-		return totalQtyForEach;
-	}
 //-------------Update Order by Index------------------------------------
 	
 	public void updateOrderByQty(int orderIndex,int bugQty,double price){
@@ -352,8 +300,8 @@ class OrderController{
 	public Order getOrderInfo(int Index){
 		return db.getOrderInfo(Index);
 	}
-	public void addOrder(String orderId,String customerId,String customerName,int burgerQty,double total,int status){
-		db.add(orderId,customerId,customerName,burgerQty,total,status);
+	public void addOrder(Order order){
+		db.add(order);
 	}
 	
 	public int searchOrderIndex(String orderId){
@@ -375,16 +323,6 @@ class OrderController{
 		db.updateOrderByQty(orderIndex,bugQty,price);
 	}
 	
-	//public double[] findTotalForEach(){
-	//	return db.findTotalForEach();
-	//}	
-	
-	public Order[] findBestCustomers(){
-		return db.removeDupCusId();
-		
-			
-	}
-
 	//--------------Extend Custom Order Array---------------------//
 	private Order[] extendCustArray(Order[] arr){
 		Order[] tempArr = new Order[arr.length+1];
@@ -424,10 +362,10 @@ class OrderController{
 		return totalForEach;
 	}
 	
-	public double[] findTotalQtyForEach(){
+	public int[] findTotalQtyForEach(){
 		Order[] cusArray = removeDupCusId();
 		Order[] orderArray = db.copyOrderList();
-		double[] totalQtyForEach = new double[cusArray.length];
+		int[] totalQtyForEach = new int[cusArray.length];
 		for (int i = 0; i <cusArray.length;i++){
 			int total = 0;
 			for (int j = 0; j<orderArray.length; j++){
@@ -440,7 +378,42 @@ class OrderController{
 		return totalQtyForEach;
 	}
 
-	
+
+	public Order[] findBestCustomers(){
+		Order[] cusArray = removeDupCusId();
+		Order[] tempCusArray = new Order[cusArray.length];
+		double[] totalForEach = findTotalForEach();
+		int[] totalQtyForEach = findTotalQtyForEach();
+		
+		//Sort totalForEach and Customer Arrays
+		for (int i = totalForEach.length-1; i>0; i--){
+			for(int j = 0 ; j<i ; j++){
+				if(totalForEach[j]<totalForEach[j+1]){
+					double temp = totalForEach[j];
+					totalForEach[j] = totalForEach[j+1];
+					totalForEach[j+1]=temp;
+					
+					//Sort cusId array
+					Order tempIdStr = cusArray[j];
+					cusArray[j] = cusArray[j+1];
+					cusArray[j+1]=tempIdStr;
+					
+					//Sort qty array
+					int tempQty = totalQtyForEach[j];
+					totalQtyForEach[j] = totalQtyForEach[j+1];
+					totalQtyForEach[j+1]=tempQty;
+					
+				}
+			}
+		}
+		//Create New Order array for return
+		for (int i = 0; i < cusArray.length; i++){
+			tempCusArray[i] = new Order(cusArray[i].getOrderId(),cusArray[i].getCustomerId(),cusArray[i].getCustomerName(),totalQtyForEach[i],totalForEach[i],cusArray[i].getStatus());
+		}
+		cusArray = tempCusArray;
+		return cusArray;		
+			
+	}	
 	
 }
 
@@ -487,32 +460,14 @@ class OrderView{
 			System.out.println("---------------------------------------------------------------------------------");
 			System.out.println();
 			
-			Order[] cusArray = controller.findBestCustomers();
-			double[] totalForEach = controller.findTotalForEach();
+			Order[] custArray = controller.findBestCustomers();
 					
-			//Sort totalForEach and Customer Arrays
-			for (int i = totalForEach.length-1; i>0; i--){
-				for(int j = 0 ; j<i ; j++){
-					if(totalForEach[j]<totalForEach[j+1]){
-						double temp = totalForEach[j];
-						totalForEach[j] = totalForEach[j+1];
-						totalForEach[j+1]=temp;
-						
-						//Sort cusId array
-						Order tempIdStr = cusArray[j];
-						cusArray[j] = cusArray[j+1];
-						cusArray[j+1]=tempIdStr;
-						
-					}
-				}
-			}
-
 			//Print Result Arrays
 			System.out.println("----------------------------------------------");			
 			System.out.printf(" %-15s %-15s %-10s  | %n", "CustomerID","Name","Total");
 			System.out.println("----------------------------------------------");			
-			for(int i=0; i<cusArray.length; i++){
-				System.out.printf(" %-15s %-15s %-11.2f | %n", cusArray[i].getCustomerId(),cusArray[i].getCustomerName(),totalForEach[i]);			
+			for(int i=0; i<custArray.length; i++){
+				System.out.printf(" %-15s %-15s %-11.2f | %n", custArray[i].getCustomerId(),custArray[i].getCustomerName(),custArray[i].getTotal());			
 				System.out.println("----------------------------------------------");
 			}
 			System.out.println();
@@ -875,7 +830,7 @@ class OrderView{
 				System.out.print("Are you confirm order -> ");
 				String answer  = input.next();
 				if(answer.toLowerCase().charAt(0)=='y'){
-					controller.addOrder(orderId,customerId,customerName,burgerQty,total,PREPARING);
+					controller.addOrder(new Order(orderId,customerId,customerName,burgerQty,total,PREPARING));
 					System.out.println("Your order is enter to the system successfully");
 					break L3;
 				}else if(answer.toLowerCase().charAt(0)=='n'){
