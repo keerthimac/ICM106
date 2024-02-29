@@ -97,16 +97,29 @@ public class PlaceOrderPage extends JFrame {
         btnPlaceOrder.setBounds(400, 100, 150, 25);
         btnPlaceOrder.setFocusable(false);
         btnPlaceOrder.addActionListener(evt->{
-           Order orderObj = new Order(lblOrderIdResult.getText(),txtCustomerId.getText(),txtCustomerName.getText(),Integer.parseInt(txtBurgerQty.getText()),total,PREPARING);
-           int result = JOptionPane.showConfirmDialog(null, "Do you want to proceed this order?", "Confirmation", JOptionPane.YES_NO_OPTION);
-           if (result == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Order Placed Succsess", "Alert", JOptionPane.INFORMATION_MESSAGE);
-            controller.addOrder(orderObj);
+            String customerName = txtCustomerName.getText();
+            String burgerQtyText = txtBurgerQty.getText();
+            
+            if (customerName.isEmpty() || burgerQtyText.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Please fill in all fields.", "Alert", JOptionPane.ERROR_MESSAGE);
+            }
+            int burgerQty;
+            try {
+                burgerQty = Integer.parseInt(burgerQtyText);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Please enter a valid number for burger quantity.", "Alert", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            Order orderObj = new Order(lblOrderIdResult.getText(),txtCustomerId.getText(),txtCustomerName.getText(),burgerQty,burgerQty*BURGERPRICE,PREPARING);
+            int result = JOptionPane.showConfirmDialog(null, "Do you want to proceed this order?", "Confirmation", JOptionPane.YES_NO_OPTION);
+            if (result == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "Order Placed Succsess", "Alert", JOptionPane.INFORMATION_MESSAGE);
+                controller.addOrder(orderObj);
             } else {
-             JOptionPane.showMessageDialog(null, "Cancel place Order", "Alert", JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(null, "Cancel place Order", "Alert", JOptionPane.ERROR_MESSAGE);
             }
             clearText();
-            nextIds();
+            nextIds();                   
         });
         add(btnPlaceOrder);   
         
@@ -192,6 +205,7 @@ public class PlaceOrderPage extends JFrame {
         add(txtCustomerId);
         
         txtCustomerName = new JTextField();
+        txtCustomerName.setText(null);
         txtCustomerName.setEditable(true);
         txtCustomerName.setFont(lblFont);
         txtCustomerName.setBounds(140, 160, 120, 20);
@@ -199,6 +213,7 @@ public class PlaceOrderPage extends JFrame {
 
 
         txtBurgerQty = new JTextField();
+        txtCustomerName.setText(null);
         txtBurgerQty.setFont(lblFont);
         txtBurgerQty.setBounds(140, 190, 120, 20);
         add(txtBurgerQty);        

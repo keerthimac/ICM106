@@ -1,8 +1,10 @@
 
 import View.HomePage;
 import View.PlaceOrderPage;
+import View.SearchCustomerPage;
 import View.SearchOrderPage;
 import View.UpdateOrderPage;
+import View.ViewOrdersPage;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

@@ -14,14 +14,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Keeth
+ * @author ARCH-QS-PC
  */
-public class SearchBestCustomerPage extends JFrame {
+public class PendingOrdersPage extends JFrame {
+    
     private JTable ordersTable;
     private DefaultTableModel dtm;
     private JLabel lblTitle;
@@ -29,29 +29,31 @@ public class SearchBestCustomerPage extends JFrame {
     static OrderController controller = HomePage.getController();
     
     private void loadTable(){
-        Order[] orderArray=controller.findBestCustomers();
+        Order[] orderArray=controller.getOrdersByStatus(0);
         dtm.setRowCount(0);
         for(int i=0;i<orderArray.length;i++){
             Order obj = orderArray[i];
             Object[] rowdata={
+                obj.getOrderId(),
                 obj.getCustomerId(),
                 obj.getCustomerName(),
+                obj.getQty(),
                 obj.getTotal()
             };
             dtm.addRow(rowdata);
         }
     }
-
-    SearchBestCustomerPage(){
-        setTitle("Search Best Customer");
+    
+    PendingOrdersPage(){
+        setTitle("Pending Orders");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);
         setLayout(null); 
         
         lblTitle = new JLabel();
-        lblTitle.setText("Search Best Customer");
-        lblTitle.setFont(new Font("",Font.PLAIN,40));
+        lblTitle.setText("Canceled Orders");
+        lblTitle.setFont(new Font("",Font.PLAIN,30));
         lblTitle.setForeground(Color.white);
         lblTitle.setBounds(0,0,800,70);
         
@@ -60,7 +62,7 @@ public class SearchBestCustomerPage extends JFrame {
         lblTitle.setBackground(new Color(202,64,67,255));
         lblTitle.setOpaque(true);
         
-        String [] columnNames ={"Customer Id","Customer Name","Total"};
+        String [] columnNames ={"Order Id","Customer Id","Name","Order QTY","Total"};
         dtm= new DefaultTableModel(columnNames,0);
         ordersTable=new JTable(dtm);
         
@@ -70,6 +72,6 @@ public class SearchBestCustomerPage extends JFrame {
         add(tblPane,BorderLayout.CENTER);
         add(lblTitle);
         
-        loadTable();        
+        loadTable();
     }
 }

@@ -8,6 +8,7 @@ package View;
 import View.PlaceOrderPage;
 import View.SearchOrderPage;
 import View.UpdateOrderPage;
+import View.SearchBestCustomerPage;
 import Controller.OrderController;
 import java.awt.Color;
 import java.awt.Font;
@@ -55,7 +56,7 @@ public class HomePage extends JFrame {
         homeLbl.setHorizontalAlignment(JLabel.CENTER);
         homeLbl.setBackground(new Color(202,64,67,255));
         homeLbl.setOpaque(true);
-        add(homeLbl);
+        
         
         btnPlaceOrder = new JButton("Place Order");
         btnPlaceOrder.setFont(new Font("", Font.PLAIN,15));
@@ -64,16 +65,16 @@ public class HomePage extends JFrame {
         btnPlaceOrder.addActionListener(evt->{
             new PlaceOrderPage().setVisible(true);
         });
-        add(btnPlaceOrder);
+        
 
         btnSearchBestCustomer = new JButton("Search Best Customer");
         btnSearchBestCustomer.setFont(new Font("", Font.PLAIN,15));
         btnSearchBestCustomer.setBounds(100, 150, 300, 40);
         btnSearchBestCustomer.setFocusable(false);
         btnSearchBestCustomer.addActionListener(evt->{
-            
+            new SearchBestCustomerPage().setVisible(true);
         });
-        add(btnSearchBestCustomer);        
+               
 
         btnSearchOrder = new JButton("Search Order");
         btnSearchOrder.setFont(new Font("", Font.PLAIN,15));
@@ -82,25 +83,25 @@ public class HomePage extends JFrame {
         btnSearchOrder.addActionListener(evt->{
             new SearchOrderPage().setVisible(true);
         });
-        add(btnSearchOrder);         
+                
 
         btnSearchCustomer = new JButton("Search Customer");
         btnSearchCustomer.setFont(new Font("", Font.PLAIN,15));
         btnSearchCustomer.setBounds(100, 250, 300, 40);
         btnSearchCustomer.setFocusable(false);
         btnSearchCustomer.addActionListener(evt->{
-            
+            new SearchCustomerPage().setVisible(true);
         });
-        add(btnSearchCustomer);           
+                  
         
-        btnViewOrder = new JButton("View Order");
+        btnViewOrder = new JButton("View Orders");
         btnViewOrder.setFont(new Font("", Font.PLAIN,15));
         btnViewOrder.setBounds(100, 300, 300, 40);
         btnViewOrder.setFocusable(false);
         btnViewOrder.addActionListener(evt->{
-            
+            new ViewOrdersPage().setVisible(true);
         });        
-        add(btnViewOrder);
+        
         
         btnUpdateOrder = new JButton("Update Order");
         btnUpdateOrder.setFont(new Font("", Font.PLAIN,15));
@@ -109,7 +110,7 @@ public class HomePage extends JFrame {
         btnUpdateOrder.addActionListener(evt->{
             new UpdateOrderPage().setVisible(true);
         });        
-        add(btnUpdateOrder);
+        
         
         btnExit = new JButton("Exit");
         btnExit.setFont(new Font("", Font.PLAIN,15));
@@ -117,7 +118,15 @@ public class HomePage extends JFrame {
         btnExit.setFocusable(false);
         btnExit.addActionListener(evt->{
             System.exit(0);
-        });        
+        });
+        
+        add(homeLbl);
+        add(btnPlaceOrder);
+        add(btnSearchBestCustomer); 
+        add(btnSearchOrder); 
+        add(btnSearchCustomer); 
+        add(btnViewOrder);
+        add(btnUpdateOrder);
         add(btnExit);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon/burger_icon.png")));

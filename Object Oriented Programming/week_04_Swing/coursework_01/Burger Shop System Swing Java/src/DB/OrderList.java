@@ -35,12 +35,12 @@ public class OrderList {
    private void addSampleOrders() {
         add(new Order("B001", "C001", "Nimal", 3, 1500.00, 0));
         add(new Order("B002", "C002", "Sunil", 5, 2500.00, 0));
-        add(new Order("B003", "C003", "Nimal", 2, 1000.00, 0));
-        add(new Order("B004", "C004", "Sunimal", 4, 2000.00, 1));
-        add(new Order("B005", "C005", "Kamal", 1, 500.00, 0));
-        add(new Order("B006", "C006", "Samanmal", 3, 1500.00, 0));
-        add(new Order("B007", "C007", "Sunil", 1, 500.00, 0));
-        add(new Order("B008", "C008", "Kamal", 7, 3500.00, 0));
+        add(new Order("B003", "C001", "Nimal", 2, 1000.00, 0));
+        add(new Order("B004", "C003", "Sunimal", 4, 2000.00, 1));
+        add(new Order("B005", "C004", "Kamal", 1, 500.00, 0));
+        add(new Order("B006", "C005", "Samanmal", 3, 1500.00, 0));
+        add(new Order("B007", "C002", "Sunil", 1, 500.00, 0));
+        add(new Order("B008", "C004", "Kamal", 7, 3500.00, 2));
     }
 
 	
@@ -65,15 +65,19 @@ public class OrderList {
 	}
 
 	public String generateCustomerId() {
+                int lastDigit = 0;
 		if(first==null){
 			return String.format("C%03d",1);
 		}else{
 			Node temp = first;
 			while(temp.next!=null){
+                                if(Integer.parseInt(temp.order.getCustomerId().substring(1))>lastDigit){
+                                    lastDigit = Integer.parseInt(temp.order.getCustomerId().substring(1));
+                                }
 				temp=temp.next;
 			}
-			String lastId = temp.order.getCustomerId();
-			int lastDigit = Integer.parseInt(lastId.substring(1));
+			//String lastId = temp.order.getCustomerId();
+			//int lastDigit = Integer.parseInt(lastId.substring(1));
 			return String.format("C%03d",lastDigit+1);		
 		}
 	}        
