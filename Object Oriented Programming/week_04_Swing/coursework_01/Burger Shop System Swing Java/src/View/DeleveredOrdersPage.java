@@ -52,7 +52,7 @@ public class DeleveredOrdersPage extends JFrame {
         setLayout(null); 
         
         lblTitle = new JLabel();
-        lblTitle.setText("Canceled Orders");
+        lblTitle.setText("Delevered Orders");
         lblTitle.setFont(new Font("",Font.PLAIN,30));
         lblTitle.setForeground(Color.white);
         lblTitle.setBounds(0,0,800,70);

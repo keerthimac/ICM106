@@ -71,13 +71,15 @@ public class OrderList {
 		}else{
 			Node temp = first;
 			while(temp.next!=null){
-                                if(Integer.parseInt(temp.order.getCustomerId().substring(1))>lastDigit){
-                                    lastDigit = Integer.parseInt(temp.order.getCustomerId().substring(1));
-                                }
-				temp=temp.next;
+                            temp=temp.next;                            
+                            if(Integer.parseInt(temp.order.getCustomerId().substring(1))>lastDigit){
+                                lastDigit = Integer.parseInt(temp.order.getCustomerId().substring(1));
+                                System.out.println(lastDigit);
+                            }
 			}
 			//String lastId = temp.order.getCustomerId();
 			//int lastDigit = Integer.parseInt(lastId.substring(1));
+                        //System.out.println(lastDigit);
 			return String.format("C%03d",lastDigit+1);		
 		}
 	}        
@@ -209,13 +211,13 @@ public class OrderList {
 
 	public Order[] copyOrderList(){
 		Order[] tempArr = new Order[size()];
-		Order[] newTempArr = new Order[size()];
 		Node temp=first;
 		int count = 0;
 		while(temp!=null){
 			tempArr[count++]=temp.order;
 			temp=temp.next;
 		}
+                //System.out.println(tempArr);
 		return tempArr;
 		
 	}

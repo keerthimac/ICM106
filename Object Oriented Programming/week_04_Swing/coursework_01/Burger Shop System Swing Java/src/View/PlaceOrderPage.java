@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -57,6 +57,7 @@ public class PlaceOrderPage extends JFrame {
     
     private void clearText(){
         txtCustomerName.setText(null);
+        txtCustomerName.setEditable(true);
         txtBurgerQty.setText(null);
         lblOrderIdResult.setText(null);
         txtCustomerId.setText(null);
@@ -116,10 +117,22 @@ public class PlaceOrderPage extends JFrame {
                 JOptionPane.showMessageDialog(null, "Order Placed Succsess", "Alert", JOptionPane.INFORMATION_MESSAGE);
                 controller.addOrder(orderObj);
             } else {
-                 JOptionPane.showMessageDialog(null, "Cancel place Order", "Alert", JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(null, "you Cancled the Order", "Alert", JOptionPane.ERROR_MESSAGE);
+                 dispose();
+                 return;
             }
-            clearText();
-            nextIds();                   
+
+            int nextResult = JOptionPane.showConfirmDialog(null, "Do you want to Place Abother order?", "Confirmation", JOptionPane.YES_NO_OPTION);
+            if (nextResult == JOptionPane.YES_OPTION) {
+                lblOrderIdResult.setText(controller.generateOrderId()); 
+                txtBurgerQty.setText(null);
+                lblNetTotalResult.setText("0.00");
+                txtCustomerName.setEditable(false);
+            }else{
+                clearText();
+                //System.out.println(controller.generateCustomerId());
+                nextIds();            
+            }             
         });
         add(btnPlaceOrder);   
         
