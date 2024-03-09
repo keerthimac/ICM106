@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Step IX Correct Print Stack" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step IX Print Stack Logical Error" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step VI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step VII Stack push" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step X Stack pop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XI Size &amp; Clear" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XII Contain &amp; Search Right" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XII Contain &amp; Search wrong by me" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XIII Peek" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XIV ToArray" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Step XV Inner Class" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

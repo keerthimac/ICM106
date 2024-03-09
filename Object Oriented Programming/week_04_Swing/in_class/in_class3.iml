@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/JPannel (Mixed)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/addCustomerForm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/adding Text Filed and button" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/eventHandle With JTable Example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/eventHandling" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grid Layout" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grid Layout -ex" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grid Layout -ex Second Method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inharitance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/layout manager" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/layout manager -Ex" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/layout manager -Flow Layout" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/notepad" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
