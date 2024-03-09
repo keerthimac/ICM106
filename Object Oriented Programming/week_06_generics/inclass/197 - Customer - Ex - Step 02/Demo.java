@@ -26,9 +26,13 @@ class Item extends Super{
 	}
 
 	public String toString(){
-		return "["+code+"-"+description+"-"+unitPrice+"-]";
+		return "["+code+"-"+description+"-"+unitPrice+"]";
 	}
 
+	public boolean equals(Super obj){
+		Item t1=(Item)obj;
+		return this.code.equalsIgnoreCase(t1.code);
+	}
 			
 }
 class Customer extends Super{
@@ -40,8 +44,9 @@ class Customer extends Super{
 	public Customer(){
 		
 	}	
-	public boolean equals(Customer customer){
-		return this.id.equalsIgnoreCase(customer.id);
+	public boolean equals(Super obj){
+		Customer c1 = (Customer)obj;
+		return this.id.equalsIgnoreCase(c1.id);
 	}
 	public Customer(String id, String name, int age, double salary){
 		this.id=id;
