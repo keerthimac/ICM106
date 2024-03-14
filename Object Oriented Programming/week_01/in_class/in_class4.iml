@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Ex 01 - Methods in object" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 02 - Paramitarized Method Private" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 02 - Paramitarized Method Private 2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 03 - Declaration Values" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 04 - This Keyword" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 05 - This Keyword - Parameierized copy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 06 - This Keyword - Parameierized privite copy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ex 07 - Returning an Object Copy object" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q10 - This Keyword" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q11 - Static Variables and Static Methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q4 - Paramitarized Method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q5 - Paramitarized Method private" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q6 - Constructor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q7 - Parameterized Constructors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q8 - Parameterized Constructors  Overloading" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Q9 - Declaration Values" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

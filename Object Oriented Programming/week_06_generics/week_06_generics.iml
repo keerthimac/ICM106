@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/inclass/195 - Customer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/196 - Customer - Ex" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/197 - Customer - Ex - Step 02" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/204 - Object Class" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/204 - Object Class - toString" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/212 - Issue 01 with object class - multiple object types" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/213 - Issue 02 with object class - need to cast in retreving" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inclass/Alarm-poly" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

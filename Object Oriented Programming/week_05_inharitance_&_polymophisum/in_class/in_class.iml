@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/171 ex - Inharitance Static blocks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/172 ex - Inharitance Static blocks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/173 - Inharitance  Constructors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/175 - Inharitance Define Conntructors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/176 - Inharitance Define Conntructors compile error" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/180 - Inharitance Method Override" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/181 - Dynamic Method Dispatch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/184 - Dynamic Method Dispatch example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/185 - ex Dynamic Method Dispatch example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/185 - ex2 Dynamic Method Dispatch example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Calculator" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
