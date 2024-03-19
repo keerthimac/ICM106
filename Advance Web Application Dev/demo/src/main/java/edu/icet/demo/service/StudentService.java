@@ -1,6 +1,6 @@
-package edu.icet.demo;
+package edu.icet.demo.service;
 
-import java.util.ArrayList;
+import edu.icet.demo.Student;
 
 public class StudentService {
     public Student getStudent(){
