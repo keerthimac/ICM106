@@ -1,2 +1,4 @@
-package controller;public class DashboardController {
+package controller;
+
+public class DashboardController {
 }
