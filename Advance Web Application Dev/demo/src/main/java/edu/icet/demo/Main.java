@@ -26,8 +26,8 @@ public class Main {
 //        hashSet.add(std);
 //        hashSet.add(std);
 //        hashSet.add(std);
-//        StudentService service = new StudentService();
-//        Student student = service.getStudent();
+//        StudentService edu.icet.demo.service = new StudentService();
+//        Student student = edu.icet.demo.service.getStudent();
 //        System.out.println(student);
 
         SpringApplication.run(Main.class);
