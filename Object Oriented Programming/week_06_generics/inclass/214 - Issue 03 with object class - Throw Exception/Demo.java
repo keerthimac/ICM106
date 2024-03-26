@@ -41,10 +41,10 @@ class Customer{
 	}
 }
 
-class Stack{
+class Stack<T>{
 	private Node top;
 	
-	public void push(Object obj){
+	public void push(T obj){
 		Node n1=new Node(obj);
 		n1.next=top;
 		top=n1;
@@ -54,7 +54,7 @@ class Stack{
 			top=top.next;
 		}
 	}
-	public Object peek(){
+	public T peek(){
 		return top==null ? null : top.obj;
 	}
 	public String toString(){
@@ -66,7 +66,7 @@ class Stack{
 		}
 		return top==null ? "[empty]":list+"\b\b}";
 	}
-	public boolean contains(Object obj){
+	public boolean contains(T obj){
 		Node temp=top;
 		while(temp!=null){
 			if(temp.obj.equals(obj)){
@@ -78,26 +78,33 @@ class Stack{
 	}
 	//------------Inner class---------------
 	class Node{
-		private Object obj;
+		private T obj;
 		private Node next;
-		Node(Object obj){
+		Node(T obj){
 			this.obj=obj;
 		}
 	}
 }
 class Demo{
 	public static void main(String args[]){
-		Stack s1=new Stack();
-		s1.push(new Customer("C001","Danapala",20,45000));
-		s1.push(new Customer("C002","Gunapala",22,75000));
-		s1.push(new Customer("C003","Siripala",21,55000));
-		s1.push(new Customer("C004","Somapala",25,25000));
-		s1.push(new Item("P001","A",45.00));
-		System.out.println(s1);
-		System.out.println();
+		Stack <Customer>customerStack=new Stack<>();
+		customerStack.push(new Customer("C001","Danapala",20,45000));
+		customerStack.push(new Customer("C002","Gunapala",22,75000));
+		customerStack.push(new Customer("C003","Siripala",21,55000));
+		customerStack.push(new Customer("C004","Somapala",25,25000));
+		//s1.push(new Item("P001","A",45.00));
+
+		System.out.println(customerStack); //{[P001-A-50],[P002-B-10],[P003-C-60],[P004-D-40]}
 		
-		Customer c1=(Customer)s1.peek(); //throw an Exception
-		System.out.println(c1);
+		Stack <Item>itemStack=new Stack<>();
+		itemStack.push(new Item("P001","A",50.0));
+		itemStack.push(new Item("P002","B",10.0));
+		itemStack.push(new Item("P003","C",60.0));
+		itemStack.push(new Item("P004","D",40.0));
+		
+		//itemStack.push(new Customer("C004","Somapala",25,25000)); //Illegal, push(Item)
+		
+		System.out.println(itemStack); //{[P001-A-50],[P002-B-10],[P003-C-60],[P004-D-40]}
 		
 	}
 }
