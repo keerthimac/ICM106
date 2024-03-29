@@ -4,6 +4,7 @@ import java.awt.event.*;
 
 class MyFrame extends JFrame{
 	JButton exitButton;
+	JTextField textField;
 	
 	MyFrame(){
 		setSize(300,300);
@@ -11,32 +12,35 @@ class MyFrame extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
 		
+		textField=new JTextField(12);
+		textField.setFont(new Font("",1,25));
+		textField.addKeyListener(new MyClass());
+		add(textField);	
+		
 		exitButton = new JButton("EXIT");
 		exitButton.setFont(new Font("",1,25));
-		
-		exitButton.addMouseListener(new MyClass());
-		
-		
 		add(exitButton);
+		
+		
+		
+	
+
+
 	}
 }
 
-class MyClass implements MouseListener{
-	public void mouseEntered(MouseEvent evt){
-		System.out.println("Mouse Entered");
-	}
-	public void mousePressed(MouseEvent evt){
+class MyClass implements KeyListener{
+	public void keyPressed(KeyEvent evt){
 		System.out.println("Mouse Pressed");
 	}
-	public void mouseReleased(MouseEvent evt){
+	public void keyTyped(KeyEvent evt){
+		System.out.println("Mouse Typed");
+	}
+	public void keyReleased(KeyEvent evt){
 		System.out.println("Mouse Relesed");
 	}
-	public void mouseClicked(MouseEvent evt){
-		System.out.println("Mouse Clicked");
-	} 
-	public void mouseExited(MouseEvent evt){
-		System.out.println("Mouse Exited");
-	}
+
+
 }
 class Demo{ 
 	public static void main(String args[]){
