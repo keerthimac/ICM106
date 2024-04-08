@@ -14,6 +14,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -57,6 +60,25 @@ public class AddCustomerForm implements Initializable {
                 txtPostalCode.getText()
         );
         System.out.println(customer);
+
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement psTm=connection.prepareStatement("INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?)");
+            psTm.setString(1,customer.getId());
+            psTm.setString(2,customer.getTitle());
+            psTm.setString(3,customer.getName());
+            psTm.setObject(4,customer.getDob());
+            psTm.setDouble(5,customer.getSalary());
+            psTm.setString(6,customer.getAddress());
+            psTm.setString(7,customer.getCity());
+            psTm.setString(8,customer.getProvince());
+            psTm.setString(9,customer.getPostal());
+
+            psTm.execute();
+
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
