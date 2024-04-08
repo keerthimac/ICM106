@@ -160,7 +160,7 @@ public class UpdateCustomerForm extends javax.swing.JFrame {
             String SQL = "Update Customer set name=?, address=?, salary=? where id=?";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "mysql");
+            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "0812225201");
             //Statement stm = connection.createStatement();
             PreparedStatement stm = connection.prepareStatement(SQL);
             stm.setObject(1, name);

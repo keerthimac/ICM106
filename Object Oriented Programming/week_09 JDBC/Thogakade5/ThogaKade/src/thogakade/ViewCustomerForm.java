@@ -104,7 +104,7 @@ public class ViewCustomerForm extends javax.swing.JFrame {
         try {
           
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "mysql");
+            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "0812225201");
             Statement stm = connection.createStatement();
             java.sql.ResultSet rst=stm.executeQuery(SQL);
             

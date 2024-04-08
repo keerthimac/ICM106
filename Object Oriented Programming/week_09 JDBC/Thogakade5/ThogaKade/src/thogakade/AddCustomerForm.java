@@ -156,7 +156,7 @@ public class AddCustomerForm extends javax.swing.JFrame {
             String SQL="Insert into Customer Values(?,?,?,?)";
             
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "mysql");
+            Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "0812225201");
             //Statement stm = connection.createStatement();
             PreparedStatement stm = connection.prepareStatement(SQL);
             stm.setObject(1, id);

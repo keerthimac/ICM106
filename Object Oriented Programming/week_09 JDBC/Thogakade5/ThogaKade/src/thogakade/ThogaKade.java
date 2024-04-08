@@ -12,7 +12,7 @@ public class ThogaKade {
             System.out.println("Drvier s/w notg found...");
         }
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "mysql");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/ThogaKade", "root", "0812225201");
             Statement stm = conn.createStatement();
             stm.executeUpdate(sql);
         } catch (SQLException ex) {
