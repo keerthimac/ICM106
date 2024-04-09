@@ -1,4 +1,4 @@
-package edu.icet.thogakade.model;
+package edu.icet.thogakade.model.tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,14 +13,10 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 
-public class Customer {
+public class Table01TM {
     private String id;
     private String title;
     private String name;
     private LocalDate dob;
     private Double salary;
-    private String address;
-    private String city;
-    private String province;
-    private String postal;
 }
