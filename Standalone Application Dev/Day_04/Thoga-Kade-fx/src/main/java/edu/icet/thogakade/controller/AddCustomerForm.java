@@ -1,5 +1,6 @@
 package edu.icet.thogakade.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.thogakade.db.DBConnection;
 import edu.icet.thogakade.model.Customer;
@@ -49,8 +50,12 @@ public class AddCustomerForm implements Initializable {
     public TableColumn colCity;
     public TableColumn colProvince;
     public TableColumn colPostalCode;
+    public JFXButton btnUpdate;
+    public JFXButton btnDelete;
+    public JFXButton btnSearch;
 
     public void btnAddOnAction(ActionEvent actionEvent) throws ParseException {
+        buttonDisable(false);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date = format.parse(dateDob.getValue().toString());
         Customer customer = new Customer(
@@ -83,6 +88,7 @@ public class AddCustomerForm implements Initializable {
             loadCustomers();
             loadTable01();
             loadTable02();
+            clearText();
 
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
@@ -90,17 +96,33 @@ public class AddCustomerForm implements Initializable {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
+        buttonDisable(true);
 
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
-
+        try {
+            boolean execute = DBConnection.getInstance().getConnection().createStatement().execute("DELETE FROM customer WHERE CustId='" + txtCustomerId.getText() + "'");
+            System.out.println(execute);
+            loadCustomers();
+            loadTable01();
+            loadTable02();
+            clearText();
+            if(execute){
+                System.out.println("Customer Deleted");
+            }else{
+                System.out.println("Customer not Deleted");
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
         try {
             Connection connection = DBConnection.getInstance().getConnection();
             ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM customer WHERE CustId='"+txtCustomerId.getText()+"'");
+
             while (resultSet.next()){
                 Customer customer = new Customer(
                         resultSet.getString(1),
@@ -122,7 +144,6 @@ public class AddCustomerForm implements Initializable {
                         txtProvince.setText(customer.getProvince());
                         txtPostalCode.setText(customer.getPostal());
             }
-
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
@@ -144,6 +165,7 @@ public class AddCustomerForm implements Initializable {
         loadCustomers();
         loadTable01();
         loadTable02();
+        buttonDisable(true);
     }
 
     private List<Customer> customerList;
@@ -200,6 +222,25 @@ public class AddCustomerForm implements Initializable {
         }
     }
 
+    private void clearText(){
+        txtCustomerId.setText(null);
+        cmbTitle.setValue(null);
+        txtCustomerName.setText(null);
+        dateDob.setValue(null);
+        txtSalary.setText(null);
+        txtAddress.setText(null);
+        txtCity.setText(null);
+        txtProvince.setText(null);
+        txtPostalCode.setText(null);
+    }
+
+    private void buttonDisable(boolean state){
+        if(state){
+            System.out.println(state);
+            btnDelete.setDisable(state);
+            btnUpdate.setDisable(state);
+        }
+    }
 
     private void loadDropMenu() {
         ObservableList<Object> items= FXCollections.observableArrayList();
