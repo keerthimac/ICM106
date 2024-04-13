@@ -1,0 +1,14 @@
+
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ä¤ô8­Ïä¸í1J$de10a49e-0ca4-4dc5-abe3-3083dcc83b01
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8·Ïä¸í1J$df0197e5-7a42-4ba0-8d02-315254db2bda
+|
+java:S1854"9Remove this useless assignment to local variable "total".(çì€8ßÅè¸í1J$63ef1f49-e729-43c6-9f84-b1301edeec02
+
+java:S1854"9Remove this useless assignment to local variable "total".(ïØŒßıÿÿÿÿ8ßÅè¸í1J$a3867c71-5dd7-40e3-8a6d-96bfaceb27b5
+
+java:S1854"9Remove this useless assignment to local variable "total".(¿Ñêøÿÿÿÿ8°àæ¸í1J$9e0be08a-28a6-43e4-942d-5ed19aec4d18
+r	java:S106"+Replace this use of System.out by a logger.(…Šœüÿÿÿÿ8¼Ïä¸í1J$fde1209e-bd24-4cb5-a782-14aa0b1a3561
+~	java:S125"<This block of commented-out lines of code should be removed.(…¿–Ü8½Ïä¸í1J$b74e81d3-b974-450e-8569-3da636a8741f
+r
+java:S1481"*Remove this unused "total" local variable.(óË üÿÿÿÿ8Ûå¸í1J$492f834c-8745-45c2-b5cb-b2b1f87c4a36
