@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/student_crm
+    username: root
+    password: '0542222175'
+  jpa:
+    hibernate:
+      ddl-auto: update
