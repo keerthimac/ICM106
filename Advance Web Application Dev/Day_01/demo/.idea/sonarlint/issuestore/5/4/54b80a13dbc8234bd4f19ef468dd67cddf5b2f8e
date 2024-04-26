@@ -1,0 +1,9 @@
+
+Š
+java:S1192"GDefine a constant instead of duplicating this literal "Pubudu" 5 times.(•Õ‰ñ8¡·ó«í1J$b2c2b187-b0d4-4c4b-8953-bedae144598a
+³
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(µØ»™8äÄõ«í1J$9ffa6e2d-eb29-4b64-9db3-31f9b294cb65
+{
+java:S1854"8Remove this useless assignment to local variable "std2".(•Õ‰ñ8‚’ó«í1J$4e3c5dea-02ee-4012-a6aa-3d59f3bb4bfe
+l
+java:S1481")Remove this unused "std2" local variable.(•Õ‰ñ8†’ó«í1J$57be79e5-ce41-4c92-9a7b-85a196cd0d1d
