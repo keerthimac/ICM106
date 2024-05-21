@@ -7,12 +7,8 @@ j
 :src/main/java/edu/icet/demo/controller/cityController.java,4\e\4ee61e31b9651e671588ee324fc5bdb0db2f197f
 d
 4src/main/java/edu/icet/demo/service/CityService.java,5\3\5310cbf10061afe0b3637bdbc156bfa7608fb7fa
-h
-8src/main/java/edu/icet/demo/service/CityServiceImpl.java,9\9\99cbb0004625e23b82b9528784b1b93401b80e3a
 l
 <src/main/java/edu/icet/demo/service/CityServiceImpl2023.java,7\0\700bb4de99a1472f412c016959d074bde2591d39
-h
-8src/main/java/edu/icet/demo/service/CityService2024.java,d\4\d48dd1ba73624b736928837f3349e0dbb4c204e0
 l
 <src/main/java/edu/icet/demo/service/CityServiceImpl2024.java,0\8\08e9fd454056c5650730cbf948edd1a3ee78069d
 j
@@ -26,10 +22,6 @@ Q.idea/sonarlint/securityhotspotstore/5/3/5310cbf10061afe0b3637bdbc156bfa7608fb7
 
 Q.idea/sonarlint/securityhotspotstore/e/6/e664cc8ac8337ad15deb07500be82ea50044447a,e\4\e41ee701ecd31db97df9534132339a704a7138b6
 w
-G.idea/sonarlint/issuestore/9/9/99cbb0004625e23b82b9528784b1b93401b80e3a,a\3\a3ffe4f4bc3474ca0b605f28f7df017b3c49082d
-
-Q.idea/sonarlint/securityhotspotstore/9/9/99cbb0004625e23b82b9528784b1b93401b80e3a,b\8\b8a8761093996e0dd24cf5aac9805a23abc4a394
-w
 G.idea/sonarlint/issuestore/0/8/08e9fd454056c5650730cbf948edd1a3ee78069d,9\9\99a8a2690dcbf4cb053127f356857c85412c85b6
 
 Q.idea/sonarlint/securityhotspotstore/4/e/4ee61e31b9651e671588ee324fc5bdb0db2f197f,1\0\102ba1340510d45ab1b700e8f0ad3e98d21f4dac
@@ -42,8 +34,6 @@ Q.idea/sonarlint/securityhotspotstore/0/8/08e9fd454056c5650730cbf948edd1a3ee7806
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 
 Q.idea/sonarlint/securityhotspotstore/7/0/700bb4de99a1472f412c016959d074bde2591d39,b\6\b6eb4d866086f00d01a84e724a33904667227b6b
-
-Q.idea/sonarlint/securityhotspotstore/d/4/d48dd1ba73624b736928837f3349e0dbb4c204e0,5\6\56ba782919e0593ca014b726253f36130f1e21a5
 w
 G.idea/sonarlint/issuestore/e/4/e41ee701ecd31db97df9534132339a704a7138b6,8\6\86090f187aa2a984ff812278571932a632205487
 w
