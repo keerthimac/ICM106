@@ -10,10 +10,11 @@
           name="txt-product-name"
           class="form-control"
           id="txt-product-name"
+          [(ngModel)]="product.name"
         />
       </div>
 
-      <div>
+      <div class="mt-2">
         <label for="txt-product-description" class="form-label">
           Product Description</label
         >
@@ -23,10 +24,11 @@
           name="txt-product-description"
           class="form-control"
           id="txt-product-description"
+          [(ngModel)]="product.description"
         />
       </div>
 
-      <div>
+      <div class="mt-2">
         <label for="select-product-category" class="form-label">
           Category</label
         >
@@ -35,13 +37,26 @@
           class="form-select"
           name="select-product-category"
           id="select-product-category"
+          [(ngModel)]="product.category"
         >
-          <option value="bun">Beverage</option>
+          <option value="beverage">Beverage</option>
           <option value="bun">Bun</option>
         </select>
       </div>
 
-      <button class="btn btn-primary">Register</button>
+      <div class="mt-2">
+        <label for="txt-product-price" class="form-label"> Product price</label>
+        <input
+          title="txt-product-price"
+          type="number"
+          name="txt-product-price"
+          class="form-control"
+          id="txt-product-price"
+          [(ngModel)]="product.price"
+        />
+      </div>
+
+      <button (click)="onClick()" class="btn btn-primary mt-3">Register</button>
     </div>
   </div>
 </div>

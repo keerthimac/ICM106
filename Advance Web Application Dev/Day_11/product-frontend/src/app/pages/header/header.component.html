@@ -3,7 +3,7 @@
     class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
   >
     <a
-      href="/"
+      routerLink="/home"
       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
     >
       <img width="60px" src="header-icon.jpg" alt="burger" />
@@ -11,12 +11,28 @@
 
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">Home</a>
+        <a class="nav-link" routerLink="/home" routerLinkActive="active"
+          >Home</a
+        >
       </li>
-      <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item">
+        <a routerLink="/register" class="nav-link" routerLinkActive="active"
+          >Registration</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/products" class="nav-link" routerLinkActive="active"
+          >Products</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/faq" class="nav-link" routerLinkActive="active">FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" class="nav-link" routerLinkActive="active"
+          >About</a
+        >
+      </li>
     </ul>
   </header>
 </div>
