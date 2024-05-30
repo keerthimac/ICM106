@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.P">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e74c3c" height="85.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="202.0" layoutY="16.0" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="124.0" text="Order ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="152.0" text="Customer ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="182.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="212.0" text="Burger Qty :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="245.0" text="Order Status :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrderId" disable="true" layoutX="152.0" layoutY="124.0" />
+      <TextField fx:id="txtCustomerId" disable="true" layoutX="152.0" layoutY="153.0" />
+      <TextField fx:id="txtName" layoutX="152.0" layoutY="184.0" />
+      <TextField fx:id="txtBurgerQty" layoutX="152.0" layoutY="214.0" />
+      <TextField fx:id="txtOrderStatus" disable="true" layoutX="152.0" layoutY="245.0" />
+      <Button layoutX="437.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="149.0" text="Place Order">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="437.0" layoutY="161.0" mnemonicParsing="false" onAction="#btnMainMenuOnAction" prefHeight="30.0" prefWidth="149.0" text="Back to Main Menu">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="437.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="30.0" prefWidth="149.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnTotalCalOnAction" prefHeight="15.0" prefWidth="21.0" text="+">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="437.0" layoutY="325.0" text="Net Total :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="514.0" layoutY="325.0" text="0.00" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
