@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="522.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.addCustomerForm">
+   <children>
+      <JFXTextField layoutX="39.0" layoutY="125.0" promptText="Customer Id" />
+      <ChoiceBox layoutX="40.0" layoutY="199.0" prefHeight="25.0" prefWidth="135.0" />
+      <JFXTextField layoutX="40.0" layoutY="274.0" promptText="Customer Name" />
+      <DatePicker layoutX="40.0" layoutY="346.0" prefHeight="25.0" prefWidth="135.0" promptText="DOB" />
+      <JFXTextField layoutX="39.0" layoutY="410.0" promptText="Customer Name" text="Salary" />
+      <JFXTextField layoutX="223.0" layoutY="199.0" promptText="Customer Name" text="Address" />
+      <JFXTextField layoutX="223.0" layoutY="274.0" promptText="Customer Name" text="City" />
+      <ChoiceBox layoutX="223.0" layoutY="346.0" prefHeight="25.0" prefWidth="135.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="794.0" />
+      <Label layoutX="252.0" layoutY="23.0" text="Add Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="223.0" layoutY="410.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer Name" text="Postal Code" />
+      <Separator layoutX="202.0" layoutY="185.0" orientation="VERTICAL" prefHeight="259.0" prefWidth="6.0" />
+      <TableView layoutX="380.0" layoutY="87.0" prefHeight="170.0" prefWidth="406.0">
+        <columns>
+          <TableColumn prefWidth="83.0" text="Customer ID" />
+          <TableColumn prefWidth="49.0" text="Title" />
+            <TableColumn prefWidth="114.0" text="Name" />
+            <TableColumn text="DOB" />
+            <TableColumn text="Salary" />
+        </columns>
+      </TableView>
+      <TableView layoutX="380.0" layoutY="272.0" prefHeight="170.0" prefWidth="406.0">
+         <columns>
+            <TableColumn prefWidth="81.0" text="Customer ID" />
+            <TableColumn prefWidth="96.0" text="Address" />
+            <TableColumn prefWidth="71.0" text="City" />
+            <TableColumn prefWidth="71.0" text="Province" />
+            <TableColumn prefWidth="86.0" text="Postal Code" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="36.0" layoutY="470.0" style="-fx-background-color: #2ecc71;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="148.0" layoutY="470.0" style="-fx-background-color: #3498db;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="224.0" layoutY="470.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="197.0" layoutY="125.0" style="-fx-background-color: #e67e22;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
