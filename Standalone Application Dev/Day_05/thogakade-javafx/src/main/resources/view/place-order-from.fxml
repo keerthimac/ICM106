@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="503.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.PlaceOrderFromController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1c40f" height="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="762.0" />
+      <Label layoutX="234.0" layoutY="24.0" text="Place Order Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="45.0" layoutY="136.0" prefHeight="25.0" prefWidth="173.0" promptText="Customer IDs" />
+      <Label layoutX="45.0" layoutY="182.0" text="Name :" />
+      <Label layoutX="45.0" layoutY="206.0" text="Address :" />
+      <Label layoutX="45.0" layoutY="232.0" text="Salary :" />
+      <Label layoutX="45.0" layoutY="259.0" text="City :" />
+      <ComboBox layoutX="45.0" layoutY="306.0" prefHeight="25.0" prefWidth="173.0" promptText="Item IDs" />
+      <Label layoutX="45.0" layoutY="353.0" text="DESC :" />
+      <Label layoutX="45.0" layoutY="382.0" text="Pack Size :" />
+      <Label layoutX="45.0" layoutY="414.0" text="Unit Price :" />
+      <Label layoutX="45.0" layoutY="441.0" text="Qty On Hand :" />
+      <Separator layoutX="255.0" layoutY="141.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="6.0" />
+      <Label layoutX="281.0" layoutY="114.0" text="Time :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="114.0" text="Date :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="114.0" text="Order ID :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="330.0" layoutY="114.0" text="07 : 03 : 45">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="493.0" layoutY="114.0" text="2024-06-07">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="679.0" layoutY="114.0" text="OR#001">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="286.0" layoutY="155.0" prefHeight="4.0" prefWidth="450.0" />
+      <Separator layoutX="424.0" layoutY="115.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+      <Separator layoutX="590.0" layoutY="114.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>
