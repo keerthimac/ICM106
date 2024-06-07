@@ -81,14 +81,14 @@ java:S11045"UMake btnDelete a static final constant or non-public and provide a
 java:S11046"UMake btnSearch a static final constant or non-public and provide accessors if needed.(ã‹—×8ÆÖ®Øş1J$72667a99-719f-4da6-9c8f-001bbe8e3c9e
 j
 java:S2095Æ"GUse try-with-resources or close this "Statement" in a "finally" clause.(êò¾ùÿÿÿÿ8Ã½…‚ÿ1
-q
-java:S2095T"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çßÏ„øÿÿÿÿ8Ã½…‚ÿ1
-k
-java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÍÂ,8Ã½…‚ÿ1
 i
 java:S2095v"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÿôŒ­ıÿÿÿÿ8Ä½…‚ÿ1
 q
 java:S2095>"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ìËü×şÿÿÿÿ8Ä½…‚ÿ1
+k
+java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÍÂ,8Ã½…‚ÿ1
+q
+java:S2095T"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çßÏ„øÿÿÿÿ8Ã½…‚ÿ1
 
 java:S1130:"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(š¯.8Ï½…‚ÿ1
 N
