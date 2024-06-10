@@ -68,7 +68,6 @@ public class AddCustomerFromController implements Initializable {
     private void loadTable01() {
         ObservableList<Table01> tbl01 = FXCollections.observableArrayList();
         ObservableList<Customer> allCustomers = CustomerController.getInstance().getAllCustomers();
-
         allCustomers.forEach(customer -> {
             tbl01.add(
                     new Table01(
