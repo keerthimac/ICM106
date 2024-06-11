@@ -1,0 +1,24 @@
+
+m	java:S106
+"+Replace this use of System.out by a logger.(ØÛã…8˜‘çÙÿ1J$cb19e0d6-69d5-49bc-b66e-d29af4127dc5
+l	java:S106&"+Replace this use of System.out by a logger.(Íæüf8š‘çÙÿ1J$f9e2d14f-6e06-4a8d-80b8-0f89567985f8
+o
+java:S30114",This accessibility update should be removed.(â·Ò8‘çÙÿ1J$ee6f26c1-be23-4cd9-9e35-48b17d9656d7
+o
+java:S30115",This accessibility bypass should be removed.(Ç•Íœ8ğûğÙÿ1J$75d0d69b-ec90-4908-b114-0876ced06b5d
+o
+java:S30117",This accessibility update should be removed.(â·Ò8ñûğÙÿ1J$0cd1fd74-af46-41f5-a5d6-5fe05c053a63
+o
+java:S30118",This accessibility bypass should be removed.(ªÌÕå8‘çÙÿ1J$b074075b-ad54-45f8-bd7a-44925d5a2137
+o
+java:S3011@",This accessibility update should be removed.(«Æªš8‘çÙÿ1J$3bfd4b0a-841b-466b-b87d-c0bedef86d03
+o
+java:S3011C",This accessibility update should be removed.(«Æªš8‘çÙÿ1J$70f137dc-df64-4d9e-8bd5-72ba57ca34fa
+r	java:S106I"+Replace this use of System.out by a logger.(ğ´úÿÿÿÿ8Ÿ‘çÙÿ1J$3f47aa12-b049-491d-8f35-232bc6672a16
+m	java:S106J"+Replace this use of System.out by a logger.(€Ÿ÷¬8áÆñÙÿ1J$2e62927e-e2bf-40bd-8fb1-c384663314d2
+x
+java:S2209J"5Change this instance-reference to a static reference.(€Ÿ÷¬8×ôñÙÿ1J$7083998b-6dde-4381-9701-93c1cc676a99
+{
+java:S1144	"3Remove this unused private "privateMethod2" method.(Ìíõÿÿÿÿÿ8 ‘çÙÿ1J$76f6660b-88d9-4e70-b8ae-30a363ce0056
+u
+java:S1144%"2Remove this unused private "privateMethod" method.(©¼÷¸8 ‘çÙÿ1J$499d98dd-36b3-4c01-b5f9-19bcf8907729

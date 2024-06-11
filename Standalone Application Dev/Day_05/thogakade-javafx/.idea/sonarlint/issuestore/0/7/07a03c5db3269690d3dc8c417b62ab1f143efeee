@@ -1,0 +1,26 @@
+
+	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•şßğÿ1J$30da98a0-cfe8-470f-b55a-b36db5f617c3
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$580fece0-1170-42f9-8213-cc25a014f4ab
+	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$0948ea8d-b685-4125-8a01-cb0be5602eb4
+	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$c0e8c09f-a6eb-400f-b5e4-1def5ab417d3
+	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$8c228024-5815-4fdc-b1f1-04007b97fb42
+v
+java:S1121".Extract the assignment out of this expression.(§¸‰Øùÿÿÿÿ8—şßğÿ1J$1467565e-e1cd-4013-9745-c127903d4c0e
+—
+java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(ş·Ï8˜şßğÿ1J$0e107b38-40a3-4431-b6a0-db24f43fd9a1
+q
+java:S1444".Make this "public static instance" field final(ş·Ï8˜şßğÿ1J$63aa074d-469d-4972-933d-5241897a7e6d
+
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(êò¾ùÿÿÿÿ8¬şßğÿ1J$93773304-6227-4cee-8c58-2cf65ee2c907
+—
+java:S2095I"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çßÏ„øÿÿÿÿ8¬şßğÿ1J$0b5b56cd-1f0c-4600-b846-8ceb47e7298b
+—
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ìËü×şÿÿÿÿ8¬şßğÿ1J$fe60426c-6806-4460-8df4-ceaa884a8187
+
+java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÿôŒ­ıÿÿÿÿ8¬şßğÿ1J$e53b7807-19ee-4a86-855c-8e61604e7bb1
+—
+java:S2095]"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çŠÍ³úÿÿÿÿ8­şßğÿ1J$0af5627b-39db-42e3-a61d-96c7f85d237c
+_
+java:S1116"Remove this empty statement.(†ôİò8°şßğÿ1J$938e477e-1001-459c-9a7b-5aaca78bf50c
+g
+java:S6905"Don't use the query "SELECT *".(êò¾ùÿÿÿÿ8²şßğÿ1J$7ebc719b-6940-454d-be07-6a7a11c91a6e

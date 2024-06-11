@@ -1,0 +1,16 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$dcbc380b-7e64-4633-b0d1-80e7cc7271a8
+	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$63bf9688-9b16-4a45-be59-5b9757c75d05
+	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$a3702ee7-7161-4428-8bc4-de73df31ec8b
+
+java:S2095ß"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8µÖÄıÿ1J$f53f3117-a4cc-488f-8bc8-039616d9feb8
+
+java:S2095£"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÓêıÌûÿÿÿÿ8´ÖÄıÿ1J$d8db3905-a97d-40fe-8ae7-8bd33b07effe
+
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÌŞ¿ßüÿÿÿÿ8µÖÄıÿ1J$cff8477c-4cbe-4390-a241-80ae7f3f6a69
+‹
+java:S2095ê"GUse try-with-resources or close this "Statement" in a "finally" clause.(îÃ³º8µÖÄıÿ1J$7eb408bc-07b6-43bb-ac47-2b3a075b4bb1
+Ê
+java:S1186ˆ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄÉëÀıÿÿÿÿ8¶ÖÄıÿ1J$bb1a7917-3000-4301-82de-d934e48e1fd2
+…
+java:S1858u"B"getValue" returns a string, there's no need to call "toString()".(´ëüí8¼ÖÄıÿ1J$9f331540-ec80-4e9d-a576-42883b797b11
