@@ -1,104 +1,108 @@
 
-a	java:S112µ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-a	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-a	java:S112‡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-a	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-a	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-a	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
-Q
-java:S3740+"/Provide the parametrized type for this generic.(¼èœêüÿÿÿÿ8èîğÿ1
-Q
-java:S3740,"/Provide the parametrized type for this generic.(ÕÍØ¤üÿÿÿÿ8èîğÿ1
-L
-java:S37408"/Provide the parametrized type for this generic.(Şâê8èîğÿ1
-Q
-java:S37409"/Provide the parametrized type for this generic.(Òª„ûÿÿÿÿ8èîğÿ1
-L
-java:S3740:"/Provide the parametrized type for this generic.(îİ§Å8èîğÿ1
-Q
-java:S3740;"/Provide the parametrized type for this generic.(‰å¾…úÿÿÿÿ8èîğÿ1
-L
-java:S3740<"/Provide the parametrized type for this generic.(Õ…¼í8éîğÿ1
-L
-java:S3740="/Provide the parametrized type for this generic.(¨­Ì˜8éîğÿ1
-Q
-java:S3740w"/Provide the parametrized type for this generic.(½Ÿöûÿÿÿÿ8éîğÿ1
-f	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘É’
-n
-java:S1104)"SMake lblDate a static final constant or non-public and provide accessors if needed.(…“À„ÿÿÿÿÿ
-i
-java:S1104*"SMake lblTime a static final constant or non-public and provide accessors if needed.(¿°×•
-u
-java:S1104+"ZMake cmbCustomerIDs a static final constant or non-public and provide accessors if needed.(¼èœêüÿÿÿÿ
+‡	java:S112µ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$7a0744a7-23dc-439c-ba1e-f1eca9d8f145
+‡	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$fa82556d-5266-4894-8390-8491e008182f
+‡	java:S112‡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$cad760b2-35fe-451f-9477-5c49d30bb329
+‡	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$1344722b-52c3-4ea9-8fc4-1abfe5793ee2
+‡	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$37b9080a-bedd-4466-93c2-e475ee0f534c
+‡	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$24f47a2f-5417-4c0f-88d9-6b15c3f1692c
+w
+java:S3740+"/Provide the parametrized type for this generic.(¼èœêüÿÿÿÿ8èîğÿ1J$ee2ffc41-6c59-498e-9b39-fef568cbe4ff
+w
+java:S3740,"/Provide the parametrized type for this generic.(ÕÍØ¤üÿÿÿÿ8èîğÿ1J$977b9c4f-3fd2-4716-b8ef-0b5c1a8f7ba5
 r
-java:S1104,"WMake cmbItemCode a static final constant or non-public and provide accessors if needed.(ÕÍØ¤üÿÿÿÿ
-n
-java:S1104-"SMake lblName a static final constant or non-public and provide accessors if needed.(½Ï®·ıÿÿÿÿ
-q
-java:S1104."VMake lblAddress a static final constant or non-public and provide accessors if needed.(º ´øûÿÿÿÿ
-p
-java:S1104/"UMake lblSalary a static final constant or non-public and provide accessors if needed.(©Àÿÿÿÿÿ
-n
-java:S11040"SMake lblCity a static final constant or non-public and provide accessors if needed.(Ò¬—èûÿÿÿÿ
-n
-java:S11043"SMake lblDesc a static final constant or non-public and provide accessors if needed.(®ªóäÿÿÿÿÿ
+java:S37408"/Provide the parametrized type for this generic.(Şâê8èîğÿ1J$2e6c0f6f-645b-4610-98ca-8118b6e45cea
+w
+java:S37409"/Provide the parametrized type for this generic.(Òª„ûÿÿÿÿ8èîğÿ1J$385982f0-ff92-4be5-af8f-137a790c43c4
 r
-java:S11044"WMake lblPackSize a static final constant or non-public and provide accessors if needed.(ëèéßúÿÿÿÿ
-m
-java:S11045"XMake lblUnitPrice a static final constant or non-public and provide accessors if needed.(°„«
-m
-java:S11046"RMake lblQty a static final constant or non-public and provide accessors if needed.(²´ºëúÿÿÿÿ
-q
-java:S11047"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿ
-i
-java:S11048"SMake tblCart a static final constant or non-public and provide accessors if needed.(Şâê
+java:S3740:"/Provide the parametrized type for this generic.(îİ§Å8èîğÿ1J$f89c61c4-ee3e-4dde-b9d9-1d7e4fa3130d
+w
+java:S3740;"/Provide the parametrized type for this generic.(‰å¾…úÿÿÿÿ8èîğÿ1J$e1292cbf-0905-4f28-acc8-8e21256d7a12
 r
-java:S11049"WMake colItemCode a static final constant or non-public and provide accessors if needed.(Òª„ûÿÿÿÿ
-i
-java:S1104:"SMake colDesc a static final constant or non-public and provide accessors if needed.(îİ§Å
-m
-java:S1104;"RMake colQty a static final constant or non-public and provide accessors if needed.(‰å¾…úÿÿÿÿ
-n
-java:S1104<"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(Õ…¼í
-j
-java:S1104="TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜
-x
-java:S1104>"]Make txtQtyFroCustomer a static final constant or non-public and provide accessors if needed.(¾¹ëªùÿÿÿÿ
+java:S3740<"/Provide the parametrized type for this generic.(Õ…¼í8éîğÿ1J$224bcbd4-d86f-4af7-817e-a338c8b1cdb8
 r
-java:S1104?"WMake lblNetTotal a static final constant or non-public and provide accessors if needed.(Êà£†úÿÿÿÿ
-D
-java:S5411ê"(Use a primitive boolean expression here.(šÉ™ùÿÿÿÿ
+java:S3740="/Provide the parametrized type for this generic.(¨­Ì˜8éîğÿ1J$c7867014-1e47-431d-b708-73ba6868c8d6
+w
+java:S3740w"/Provide the parametrized type for this generic.(½Ÿöûÿÿÿÿ8éîğÿ1J$98fcd9a6-0265-4fb2-a20d-aaa9925643cb
+Œ	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘É’J$48eb079c-74ba-4c24-a859-7f7649df0efe
+”
+java:S1104)"SMake lblDate a static final constant or non-public and provide accessors if needed.(…“À„ÿÿÿÿÿJ$d25ec13b-b279-4d63-bec9-3d6bbaad0ca6
+
+java:S1104*"SMake lblTime a static final constant or non-public and provide accessors if needed.(¿°×•J$78090b2d-0aec-46d2-8c1a-5555c97b2233
+›
+java:S1104+"ZMake cmbCustomerIDs a static final constant or non-public and provide accessors if needed.(¼èœêüÿÿÿÿJ$1e491a6c-939b-435a-a859-d648ab996061
 ˜
-java:S1186Ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŠÜÎ£
-B
-java:S1602N",Remove useless curly braces around statement(¢Àƒ´
-G
-java:S1602Q",Remove useless curly braces around statement(ÄøÛ‰øÿÿÿÿ
-@	java:S106X"+Replace this use of System.out by a logger.(Òà´Ç
-@	java:S106a"+Replace this use of System.out by a logger.(ê¾ú®
-B
-java:S1602m",Remove useless curly braces around statement(½Â‡‡
-B
-java:S1602y",Remove useless curly braces around statement(û³Òº
-@	java:S106}"+Replace this use of System.out by a logger.(Óú„•
-U
-java:S1172»"2Remove this unused method parameter "actionEvent".(Š²Ô¢úÿÿÿÿ8±îğÿ1
-F	java:S106Ã"+Replace this use of System.out by a logger.(÷Ÿ‚‹ıÿÿÿÿ
-U
-java:S1172Ö"2Remove this unused method parameter "actionEvent".(—²Üğøÿÿÿÿ8¸îğÿ1
-F	java:S106î"+Replace this use of System.out by a logger.(ÍÕ§§ùÿÿÿÿ
-U
-java:S1172"2Remove this unused method parameter "actionEvent".(¦òãüşÿÿÿÿ8Àîğÿ1
-\
-java:S2147ˆ"ECombine this catch with the one at line 262, which has the same body.(ıàÑÎ
-F	java:S106ƒ"+Replace this use of System.out by a logger.(ûŒ¥áıÿÿÿÿ
-U
-java:S1172"2Remove this unused method parameter "actionEvent".(íÁ§úøÿÿÿÿ8Åîğÿ1
-\
-java:S2147”"ECombine this catch with the one at line 274, which has the same body.(ıàÑÎ
-A	java:S106"+Replace this use of System.out by a logger.(ßæ‹«
-U
-java:S1172™"2Remove this unused method parameter "actionEvent".(ø•Øøøÿÿÿÿ8Èîğÿ1
-A	java:S106¤"+Replace this use of System.out by a logger.(Ø•Å×
-F	java:S106¯"+Replace this use of System.out by a logger.(˜Š¿Ûüÿÿÿÿ
-@	java:S106³"+Replace this use of System.out by a logger.(ÑûçI
+java:S1104,"WMake cmbItemCode a static final constant or non-public and provide accessors if needed.(ÕÍØ¤üÿÿÿÿJ$a31f8757-60f0-4846-827a-f86b8fe289f9
+”
+java:S1104-"SMake lblName a static final constant or non-public and provide accessors if needed.(½Ï®·ıÿÿÿÿJ$37f95307-325a-4a73-aa90-175c4b220bb7
+—
+java:S1104."VMake lblAddress a static final constant or non-public and provide accessors if needed.(º ´øûÿÿÿÿJ$07c45fbf-af08-4f96-aa0e-b42ba8e23e38
+–
+java:S1104/"UMake lblSalary a static final constant or non-public and provide accessors if needed.(©ÀÿÿÿÿÿJ$23cfffe6-8dd9-4ba3-9e5c-f18e9898e0d8
+”
+java:S11040"SMake lblCity a static final constant or non-public and provide accessors if needed.(Ò¬—èûÿÿÿÿJ$7c9fbae0-44f2-450d-9861-42890bb90134
+”
+java:S11043"SMake lblDesc a static final constant or non-public and provide accessors if needed.(®ªóäÿÿÿÿÿJ$50a8c107-7623-435b-a595-02c26d9edd95
+˜
+java:S11044"WMake lblPackSize a static final constant or non-public and provide accessors if needed.(ëèéßúÿÿÿÿJ$8a7cf084-065a-44e4-ae19-4f066d6b5027
+“
+java:S11045"XMake lblUnitPrice a static final constant or non-public and provide accessors if needed.(°„«J$51c32f5d-b818-492b-a17e-07bd98618ace
+“
+java:S11046"RMake lblQty a static final constant or non-public and provide accessors if needed.(²´ºëúÿÿÿÿJ$a30553c4-0a03-4ef5-866a-d2f0ade0376e
+—
+java:S11047"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿJ$0f1aeb88-a5bf-4fce-8fb2-db960d36603f
+
+java:S11048"SMake tblCart a static final constant or non-public and provide accessors if needed.(ŞâêJ$b0f35de5-3083-4828-8b7d-9d8ec427e031
+˜
+java:S11049"WMake colItemCode a static final constant or non-public and provide accessors if needed.(Òª„ûÿÿÿÿJ$ba3f091b-c3a3-476a-aa23-4bd13689452b
+
+java:S1104:"SMake colDesc a static final constant or non-public and provide accessors if needed.(îİ§ÅJ$cc78de2c-1f56-459a-a1ec-80f09da7e1f3
+“
+java:S1104;"RMake colQty a static final constant or non-public and provide accessors if needed.(‰å¾…úÿÿÿÿJ$662ff109-d004-44ea-8143-7e6ac5889458
+”
+java:S1104<"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(Õ…¼íJ$d382de5c-228e-4b38-b304-37560e10c7d7
+
+java:S1104="TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜J$9852d2a2-819e-457c-bf21-469cdfbea4fe
+
+java:S1104>"]Make txtQtyFroCustomer a static final constant or non-public and provide accessors if needed.(¾¹ëªùÿÿÿÿJ$4b68c3c7-7282-43c2-b5aa-2269cc922632
+˜
+java:S1104?"WMake lblNetTotal a static final constant or non-public and provide accessors if needed.(Êà£†úÿÿÿÿJ$798ccd85-0e00-4188-a146-a2fbba2c5886
+j
+java:S5411ê"(Use a primitive boolean expression here.(šÉ™ùÿÿÿÿJ$60dc28b8-3767-48df-a5d3-ee9bc7be983d
+‹
+java:S2095¤"GUse try-with-resources or close this "Statement" in a "finally" clause.(îÃ³º8«‚×Î2J$27aa3291-c717-40bf-9c5b-2dc65c7a8b94
+
+java:S2095™"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8«‚×Î2J$12b77283-4cd3-4f67-8725-d219a6f9e8ee
+¾
+java:S1186Ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŠÜÎ£J$954f76b3-483c-4305-817f-7d554343d357
+h
+java:S1602N",Remove useless curly braces around statement(¢Àƒ´J$3a8b42e1-1c5f-493e-89fb-4e9a71b68533
+m
+java:S1602Q",Remove useless curly braces around statement(ÄøÛ‰øÿÿÿÿJ$57efff85-84e6-4933-aee3-d6f484228735
+f	java:S106X"+Replace this use of System.out by a logger.(Òà´ÇJ$597b9605-4a2d-448b-bdca-64c204681b40
+f	java:S106a"+Replace this use of System.out by a logger.(ê¾ú®J$f94bb914-b50e-4ce6-aa92-de7c19ccf1c5
+h
+java:S1602m",Remove useless curly braces around statement(½Â‡‡J$7465e61b-974b-474d-8f50-bef3581ca7f4
+h
+java:S1602y",Remove useless curly braces around statement(û³ÒºJ$826005b2-6662-4e67-9ba4-e3489848e5df
+f	java:S106}"+Replace this use of System.out by a logger.(Óú„•J$6beea01a-4c33-4250-ad5b-f25e67e73a35
+{
+java:S1172»"2Remove this unused method parameter "actionEvent".(Š²Ô¢úÿÿÿÿ8±îğÿ1J$48d4eaff-3fbb-4f1a-a60d-6cffba051082
+l	java:S106Ã"+Replace this use of System.out by a logger.(÷Ÿ‚‹ıÿÿÿÿJ$5544f753-f9e1-4421-b045-0697ec93e421
+{
+java:S1172Ö"2Remove this unused method parameter "actionEvent".(—²Üğøÿÿÿÿ8¸îğÿ1J$dc519888-9843-47b7-9d3a-115e4883a94b
+l	java:S106î"+Replace this use of System.out by a logger.(ÍÕ§§ùÿÿÿÿJ$b3509c0b-3528-47d9-8d1b-b50ef46ee352
+{
+java:S1172"2Remove this unused method parameter "actionEvent".(¦òãüşÿÿÿÿ8Àîğÿ1J$670fa2d2-478f-41fe-8d9e-cdf95f518b79
+‚
+java:S2147ˆ"ECombine this catch with the one at line 262, which has the same body.(ıàÑÎJ$17256665-bbeb-488d-a594-4b6a8e35062a
+l	java:S106ƒ"+Replace this use of System.out by a logger.(ûŒ¥áıÿÿÿÿJ$c7f46a82-e6be-4371-8736-119eae5ad425
+{
+java:S1172"2Remove this unused method parameter "actionEvent".(íÁ§úøÿÿÿÿ8Åîğÿ1J$0cda4b0e-264e-4a28-93d1-e93916ee5eb3
+‚
+java:S2147”"ECombine this catch with the one at line 274, which has the same body.(ıàÑÎJ$a59361bb-6d11-4e74-bbe3-c2996949a1f6
+g	java:S106"+Replace this use of System.out by a logger.(ßæ‹«J$d233ae4f-5fb1-45f1-bdfa-4d7770be6091
+{
+java:S1172™"2Remove this unused method parameter "actionEvent".(ø•Øøøÿÿÿÿ8Èîğÿ1J$ec23c9f8-c532-465a-871b-9234e36a1974
+g	java:S106¤"+Replace this use of System.out by a logger.(Ø•Å×J$0c3666a6-e9ac-490a-a1b3-bce399d379da
+s	java:S106¯"+Replace this use of System.out by a logger.(˜Š¿Ûüÿÿÿÿ8ËÀ×Î2J$5af7a60b-69b0-4c49-97d0-22400d09245e
+m	java:S106³"+Replace this use of System.out by a logger.(ÑûçI8ÌĞÛÎ2J$4d298580-4091-4a73-8238-2797ce031269

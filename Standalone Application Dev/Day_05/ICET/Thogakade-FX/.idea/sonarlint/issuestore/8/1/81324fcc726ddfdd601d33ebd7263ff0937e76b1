@@ -1,95 +1,95 @@
 
-	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8Έτυπÿ1J$83c2def5-eaae-4808-ac46-663a5796100a
+	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8Έτυπÿ1J$dc45ec5a-350b-4171-9cd7-1385bb60d802
 r
-java:S3740"/Provide the parametrized type for this generic.(ƒΖΌς8Ήτυπÿ1J$3a068172-dbc3-4969-b7cd-dc538a0db759
+java:S3740"/Provide the parametrized type for this generic.(ƒΖΌς8Ήτυπÿ1J$35d64e52-d8cc-45f8-9729-ea7dc7ffb410
 r
-java:S3740""/Provide the parametrized type for this generic.(Χ’γ8Ήτυπÿ1J$130040aa-500a-455c-8a1e-bbc73abf3aa2
+java:S3740""/Provide the parametrized type for this generic.(Χ’γ8Ήτυπÿ1J$db59884e-de95-4f02-bf38-514da892ffe5
 r
-java:S3740#"/Provide the parametrized type for this generic.(μ¬ƒ8Ήτυπÿ1J$a779eb31-b643-441d-8390-feb0aafe0ede
+java:S3740#"/Provide the parametrized type for this generic.(μ¬ƒ8Ήτυπÿ1J$c3908aaa-c2b1-4ae7-9649-78de944f1105
 w
-java:S3740$"/Provide the parametrized type for this generic.(…Μϊÿÿÿÿ8Ήτυπÿ1J$524bd908-d49a-4dd4-ab49-6e200cb42cad
+java:S3740$"/Provide the parametrized type for this generic.(…Μϊÿÿÿÿ8Ήτυπÿ1J$b72eb5a9-7887-48a4-a0fd-9e7477beb2ee
 w
-java:S3740%"/Provide the parametrized type for this generic.(Ν‘ϊ¨ϋÿÿÿÿ8Ήτυπÿ1J$7657bb45-dc7b-4501-8a95-ac904e0c0c8c
+java:S3740%"/Provide the parametrized type for this generic.(Ν‘ϊ¨ϋÿÿÿÿ8Ήτυπÿ1J$c4104255-3933-406b-9a8e-1c44034f4221
 r
-java:S3740&"/Provide the parametrized type for this generic.(§³Έέ8Ήτυπÿ1J$c80ae7ad-dd14-461d-9b3e-c308bf43a467
+java:S3740&"/Provide the parametrized type for this generic.(§³Έέ8Ήτυπÿ1J$4b8a6b23-591d-44b3-8091-40afb1857dc5
 r
-java:S3740'"/Provide the parametrized type for this generic.(¦²ΨΌ8Ήτυπÿ1J$701606f6-8cb0-44fd-8763-5c5669300ee7
+java:S3740'"/Provide the parametrized type for this generic.(¦²ΨΌ8Ήτυπÿ1J$ff678761-0e33-48aa-ab89-6edec5a8d6f0
 r
-java:S3740("/Provide the parametrized type for this generic.(®Ά²ΐ8Ήτυπÿ1J$e51da327-d96b-4429-9d11-6bf729e09069
+java:S3740("/Provide the parametrized type for this generic.(®Ά²ΐ8Ήτυπÿ1J$d71a91c9-139f-4f27-89c7-0cdb6aca9d8a
 r
-java:S3740)"/Provide the parametrized type for this generic.(Γ‹δΔ8Ήτυπÿ1J$1885b38c-a1a2-4f3b-a10b-55885a3130e5
+java:S3740)"/Provide the parametrized type for this generic.(Γ‹δΔ8Ήτυπÿ1J$db2404d8-638e-4b82-a3b0-becadad14de1
 r
-java:S3740*"/Provide the parametrized type for this generic.(―ÿύ°8Ήτυπÿ1J$4f93a233-b3ee-4d6e-9782-0a102dae12f9
+java:S3740*"/Provide the parametrized type for this generic.(―ÿύ°8Ήτυπÿ1J$38162ae6-fae4-425d-b989-ccc8dfbd27ac
 w
-java:S3740+"/Provide the parametrized type for this generic.(Ωϊδÿÿÿÿÿ8Ήτυπÿ1J$653e2d76-2aaf-40c9-8821-60052b84c401
+java:S3740+"/Provide the parametrized type for this generic.(Ωϊδÿÿÿÿÿ8Ήτυπÿ1J$bdd91e74-3449-4f29-ad77-d3a682d4b51b
 r
-java:S3740,"/Provide the parametrized type for this generic.(®τΆ8Ήτυπÿ1J$8d17309c-c1e8-475d-a8a5-4ae8d58d432a
+java:S3740,"/Provide the parametrized type for this generic.(®τΆ8Ήτυπÿ1J$5b85eaa6-54da-4fb0-8254-8b699d80b7c9
 w
-java:S3740-"/Provide the parametrized type for this generic.(ηΔ©µϊÿÿÿÿ8Ήτυπÿ1J$da8f46b4-626f-4e38-8cd2-408c9210581a
+java:S3740-"/Provide the parametrized type for this generic.(ηΔ©µϊÿÿÿÿ8Ήτυπÿ1J$7daebeb6-18cf-43ce-93f2-a7e1dc23e8d5
 r
-java:S3740i"/Provide the parametrized type for this generic.(•¨8Ίτυπÿ1J$5421cf83-3953-449d-a3ba-18a234a51ad8
+java:S3740i"/Provide the parametrized type for this generic.(•¨8Ίτυπÿ1J$cb8cfc9e-e099-4218-9a13-663138036c2e
 
-java:S1104"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(©ÿη8»τυπÿ1J$f92cfb19-e6a0-430f-be0a-955cabe73125
+java:S1104"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(©ÿη8»τυπÿ1J$13dc5720-5c5a-4c63-b1a9-630ea6715ec5
 
-java:S1104"\Make cmbCustomerTitle a static final constant or non-public and provide accessors if needed.(ƒΖΌς8»τυπÿ1J$9b880587-b573-474e-b897-36fbf5dbcc9b
+java:S1104"\Make cmbCustomerTitle a static final constant or non-public and provide accessors if needed.(ƒΖΌς8»τυπÿ1J$b35f1d4e-1510-4130-9aec-617cf668348d
 £
-java:S1104"[Make txtCustomerName a static final constant or non-public and provide accessors if needed.(μ¨μΡψÿÿÿÿ8»τυπÿ1J$7596a8cc-d711-42ff-a050-a532456007d8
+java:S1104"[Make txtCustomerName a static final constant or non-public and provide accessors if needed.(μ¨μΡψÿÿÿÿ8»τυπÿ1J$1c958deb-1f94-45d6-be83-5ed8ed5571ad
 ›
-java:S1104"SMake dateDob a static final constant or non-public and provide accessors if needed.(βΧΣέώÿÿÿÿ8»τυπÿ1J$0b01adf5-7c02-4ddd-a459-f419e6df8b39
+java:S1104"SMake dateDob a static final constant or non-public and provide accessors if needed.(βΧΣέώÿÿÿÿ8»τυπÿ1J$18d1f6ec-f5bd-4411-ad2f-08c48610e726
 
-java:S1104"UMake txtSalary a static final constant or non-public and provide accessors if needed.(¥ –Ί8»τυπÿ1J$d5490f86-e5c6-4756-94e6-0b4678175557
+java:S1104"UMake txtSalary a static final constant or non-public and provide accessors if needed.(¥ –Ί8»τυπÿ1J$57bfe4b1-ef20-47fe-bd18-bf53a8ffd26e
 ™
-java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(¥ –Ί8»τυπÿ1J$bab7431a-d7ff-425f-8b6a-a2d6e8a7a58c
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(¥ –Ί8»τυπÿ1J$ad3aa4c0-cb63-408c-a989-e59981604718
 –
-java:S1104"SMake txtCity a static final constant or non-public and provide accessors if needed.(Υ•χ8»τυπÿ1J$5b1a93d2-6e7a-4e56-9eeb-31addd9c4f41
+java:S1104"SMake txtCity a static final constant or non-public and provide accessors if needed.(Υ•χ8»τυπÿ1J$2728e5a8-3502-4139-8a50-985a7dfeb18d
 
-java:S1104 "WMake txtProvince a static final constant or non-public and provide accessors if needed.(€Χ΅ξ8»τυπÿ1J$94fe2a56-bdc3-4f65-a70e-2bd4703fd61a
+java:S1104 "WMake txtProvince a static final constant or non-public and provide accessors if needed.(€Χ΅ξ8»τυπÿ1J$049d235c-8e72-44fa-a817-060ee9d7ac5e
 ΅
-java:S1104!"YMake txtPostalCode a static final constant or non-public and provide accessors if needed.(ψ®τ”ωÿÿÿÿ8»τυπÿ1J$a682abfa-881d-4007-90f2-9d1652699ff4
+java:S1104!"YMake txtPostalCode a static final constant or non-public and provide accessors if needed.(ψ®τ”ωÿÿÿÿ8»τυπÿ1J$9784111c-fe76-4800-a5c2-8b23c9ee10af
 ›
-java:S1104""XMake tblCustomer1 a static final constant or non-public and provide accessors if needed.(Χ’γ8»τυπÿ1J$a8bbbe15-22c5-45d4-a9df-25c5736c8a1a
+java:S1104""XMake tblCustomer1 a static final constant or non-public and provide accessors if needed.(Χ’γ8»τυπÿ1J$b49af61c-6cc6-4bdd-8df3-0906c5d621a0
 
-java:S1104#"YMake colCustomerId a static final constant or non-public and provide accessors if needed.(μ¬ƒ8»τυπÿ1J$a4aac237-928b-4dd3-90f5-56970befdd1d
+java:S1104#"YMake colCustomerId a static final constant or non-public and provide accessors if needed.(μ¬ƒ8»τυπÿ1J$a0f07612-2430-40d9-a961-9e502f1ce072
 ¤
-java:S1104$"\Make colCustomerTitle a static final constant or non-public and provide accessors if needed.(…Μϊÿÿÿÿ8»τυπÿ1J$46e33758-965f-4aae-b603-2fb44587774b
+java:S1104$"\Make colCustomerTitle a static final constant or non-public and provide accessors if needed.(…Μϊÿÿÿÿ8»τυπÿ1J$ac37a2e2-d993-40c6-9751-202ccf304d44
 £
-java:S1104%"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Ν‘ϊ¨ϋÿÿÿÿ8»τυπÿ1J$fda37cfb-76a5-4b51-b9ce-8e06ab0b8df6
+java:S1104%"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Ν‘ϊ¨ϋÿÿÿÿ8»τυπÿ1J$ea46980d-2e88-445d-8820-b591c3ab35f6
 •
-java:S1104&"RMake colDob a static final constant or non-public and provide accessors if needed.(§³Έέ8»τυπÿ1J$2c07905d-dba2-49bd-a798-a5dc7119cdc0
+java:S1104&"RMake colDob a static final constant or non-public and provide accessors if needed.(§³Έέ8»τυπÿ1J$52fdd32e-37bb-47ab-abca-ef9b5b823b2a
 ›
-java:S1104'"XMake tblCustomer2 a static final constant or non-public and provide accessors if needed.(¦²ΨΌ8»τυπÿ1J$d3f0bf6f-2da1-4f1d-a8cd-1c3bed7d0b1e
+java:S1104'"XMake tblCustomer2 a static final constant or non-public and provide accessors if needed.(¦²ΨΌ8»τυπÿ1J$f4760058-9313-40c1-b8cf-dfedea794e27
  
-java:S1104("]Make colCustomerIdTbl2 a static final constant or non-public and provide accessors if needed.(®Ά²ΐ8»τυπÿ1J$6ccbbf98-1bc0-43a5-9221-43eebec7eb68
+java:S1104("]Make colCustomerIdTbl2 a static final constant or non-public and provide accessors if needed.(®Ά²ΐ8»τυπÿ1J$f895d364-8d13-4faf-8c2f-470a019f6b03
 
-java:S1104)"UMake colSalary a static final constant or non-public and provide accessors if needed.(Γ‹δΔ8»τυπÿ1J$8f216c37-5f3a-4544-9943-a55aa8d1b985
+java:S1104)"UMake colSalary a static final constant or non-public and provide accessors if needed.(Γ‹δΔ8»τυπÿ1J$cce6ad84-9a68-495c-9afa-9e2d548f76e2
 ™
-java:S1104*"VMake colAddress a static final constant or non-public and provide accessors if needed.(―ÿύ°8»τυπÿ1J$e51b17e2-a8a8-467c-a2cc-4a4c812d5867
+java:S1104*"VMake colAddress a static final constant or non-public and provide accessors if needed.(―ÿύ°8»τυπÿ1J$e683a1fe-1dd6-4802-b69a-d5bb5998635b
 ›
-java:S1104+"SMake colCity a static final constant or non-public and provide accessors if needed.(Ωϊδÿÿÿÿÿ8»τυπÿ1J$a0570ffa-2ed7-450a-bd89-7633004aa28b
+java:S1104+"SMake colCity a static final constant or non-public and provide accessors if needed.(Ωϊδÿÿÿÿÿ8»τυπÿ1J$674434f2-a111-4c45-b186-435fa1f2b6aa
 
-java:S1104,"WMake colProvince a static final constant or non-public and provide accessors if needed.(®τΆ8»τυπÿ1J$3d520b09-1547-459a-9ae0-f20694d7cf98
+java:S1104,"WMake colProvince a static final constant or non-public and provide accessors if needed.(®τΆ8»τυπÿ1J$86567cab-f6ac-4c54-973e-a4b248c679ee
 ΅
-java:S1104-"YMake colPostalCode a static final constant or non-public and provide accessors if needed.(ηΔ©µϊÿÿÿÿ8»τυπÿ1J$c2cec0a7-34bf-4391-bbd2-e54e1d2d45bc
+java:S1104-"YMake colPostalCode a static final constant or non-public and provide accessors if needed.(ηΔ©µϊÿÿÿÿ8»τυπÿ1J$ddb18e59-3119-45a9-8da2-84749642e973
 Ε
-java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“‘8Ντυπÿ1J$8339ca2d-f9b2-48af-8ff2-e2b2c66d96be
+java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“‘8Ντυπÿ1J$97450499-da18-4e03-b7c9-fdf22b6f1565
 Κ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ώε•ψÿÿÿÿ8Ντυπÿ1J$d587fb9e-17ee-48ac-839e-a7bc08fffa9f
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ώε•ψÿÿÿÿ8Ντυπÿ1J$c023829b-74fa-4a30-9025-71a3162f2d26
 k
-java:S1659"(Declare "txtAddress" on a separate line.(¥ –Ί8Ξτυπÿ1J$d17f95d2-155a-4f01-9374-543e592d7e17
+java:S1659"(Declare "txtAddress" on a separate line.(¥ –Ί8Ξτυπÿ1J$0738760f-285a-4d56-bef3-28687c100b84
 o
-java:S1602G",Remove useless curly braces around statement(ϋ³ÒΊ8Ττυπÿ1J$d366a111-e8ce-4e43-a790-17ceedbc08ac
+java:S1602G",Remove useless curly braces around statement(ϋ³ÒΊ8Ττυπÿ1J$7d55ffc7-08a9-4b41-bbf6-a6ebd8246175
 o
-java:S1602X",Remove useless curly braces around statement(ϋ³ÒΊ8Υτυπÿ1J$52bfa56f-56e7-4172-9856-19e2be337c9f
+java:S1602X",Remove useless curly braces around statement(ϋ³ÒΊ8Υτυπÿ1J$9b21ddf0-8d72-44c4-9bac-2ede32db050a
 b
-java:S2129j" Remove this "String" constructor(Δ©ΧD8Χτυπÿ1J$7c471a74-9d25-4499-bc5f-8809dcefa9b2
+java:S2129j" Remove this "String" constructor(Δ©ΧD8Χτυπÿ1J$1c104fe7-1d51-4c0e-a0a2-3f1dec882b64
 h
-java:S2129k" Remove this "String" constructor(λΒ²Òωÿÿÿÿ8Ψτυπÿ1J$c0cc1de1-490c-42f8-b9ba-2280943c2674
+java:S2129k" Remove this "String" constructor(λΒ²Òωÿÿÿÿ8Ψτυπÿ1J$20e7103d-7a65-48d9-a4dc-af1cb15e5ee6
 c
-java:S2129l" Remove this "String" constructor(ΘΒΧθ8Ψτυπÿ1J$4f08525d-d3dd-40e2-b0de-07bbf1b1c5e3
+java:S2129l" Remove this "String" constructor(ΘΒΧθ8Ψτυπÿ1J$a95111c1-1ddf-4aec-bf13-d6032613ed93
 z
-java:S1172p"2Remove this unused method parameter "actionEvent".(άΓθεψÿÿÿÿ8Ωτυπÿ1J$88767f48-ac0f-4fc5-a1a6-c55eaf0f43d3
-„	java:S125‚"<This block of commented-out lines of code should be removed.(°°Θ΄ϊÿÿÿÿ8Ϋτυπÿ1J$de7c8ed7-756d-4a94-83ed-cedda2973e93
-s	java:S106„"+Replace this use of System.out by a logger.(—°ψÿÿÿÿ8άτυπÿ1J$d7b14e7c-1e26-4305-bfd7-b452416c6ab4
+java:S1172p"2Remove this unused method parameter "actionEvent".(άΓθεψÿÿÿÿ8Ωτυπÿ1J$36187588-0892-4fc4-8703-cf61f050e0d3
+„	java:S125‚"<This block of commented-out lines of code should be removed.(°°Θ΄ϊÿÿÿÿ8Ϋτυπÿ1J$f82c5533-2e24-4e9c-8538-38f78ea1b65d
+s	java:S106„"+Replace this use of System.out by a logger.(—°ψÿÿÿÿ8άτυπÿ1J$9e73361e-a4ee-4852-8c15-9373a44873d6
 v
-java:S1172’"2Remove this unused method parameter "actionEvent".(αΔ΄ό8έτυπÿ1J$44fe3c45-4f23-4896-a647-5e53957c648c
-n	java:S106”"+Replace this use of System.out by a logger.(κΎϊ®8ήτυπÿ1J$648af136-be19-48c5-ab15-ebb2d42b1594
+java:S1172’"2Remove this unused method parameter "actionEvent".(αΔ΄ό8έτυπÿ1J$5959808c-3fa5-4cd1-a8e0-f57e947ebd0d
+n	java:S106”"+Replace this use of System.out by a logger.(κΎϊ®8ήτυπÿ1J$65012de8-601c-43ce-af24-b4c45d42f10e

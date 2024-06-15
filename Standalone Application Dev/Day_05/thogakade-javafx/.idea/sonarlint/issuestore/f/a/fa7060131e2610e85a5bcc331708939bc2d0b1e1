@@ -1,16 +1,24 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$dcbc380b-7e64-4633-b0d1-80e7cc7271a8
-	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$63bf9688-9b16-4a45-be59-5b9757c75d05
-	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÄıÿ1J$a3702ee7-7161-4428-8bc4-de73df31ec8b
+	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ïèûÍ2J$e104849f-4a98-4efe-927b-660b7b534153
+	java:S112Â"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ïèûÍ2J$c7fb2fe6-9e25-4482-a07d-ff2788b43c1d
+	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ğèûÍ2J$b94cba41-cea2-475d-890a-1bbc9179f471
+	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ğèûÍ2J$9851da24-e4d5-4480-a216-ae06b93476b8
+l
+java:S5411£"(Use a primitive boolean expression here.(ïÏ¨ 8ĞÌ•Î2J$c9c9a64e-764f-456e-8c28-7cd3c7c69891
 
-java:S2095ß"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8µÖÄıÿ1J$f53f3117-a4cc-488f-8bc8-039616d9feb8
+java:S2095³"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÌŞ¿ßüÿÿÿÿ8œéûÍ2J$649be5c3-abba-4295-b3d5-0c88ad2ea330
 
-java:S2095£"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÓêıÌûÿÿÿÿ8´ÖÄıÿ1J$d8db3905-a97d-40fe-8ae7-8bd33b07effe
-
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÌŞ¿ßüÿÿÿÿ8µÖÄıÿ1J$cff8477c-4cbe-4390-a241-80ae7f3f6a69
+java:S2095È"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÓêıÌûÿÿÿÿ8œéûÍ2J$6728e063-fdbc-4d37-81e9-888617f4f034
 ‹
-java:S2095ê"GUse try-with-resources or close this "Statement" in a "finally" clause.(îÃ³º8µÖÄıÿ1J$7eb408bc-07b6-43bb-ac47-2b3a075b4bb1
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(îÃ³º8œéûÍ2J$8c09bea4-aae9-41be-baca-b34ef9f83b40
+
+java:S2095„"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8œéûÍ2J$7f3c7dab-af9d-4ab7-8720-5acd108e34e4
 Ê
-java:S1186ˆ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄÉëÀıÿÿÿÿ8¶ÖÄıÿ1J$bb1a7917-3000-4301-82de-d934e48e1fd2
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄÉëÀıÿÿÿÿ8éûÍ2J$42959515-c8a4-46dd-8111-bb36ef56ce97
 …
-java:S1858u"B"getValue" returns a string, there's no need to call "toString()".(´ëüí8¼ÖÄıÿ1J$9f331540-ec80-4e9d-a576-42883b797b11
+java:S1858|"B"getValue" returns a string, there's no need to call "toString()".(´ëüí8£éûÍ2J$9cddb70e-2621-4039-bbe2-2a9348cb54fb
+†
+java:S1858š"B"getValue" returns a string, there's no need to call "toString()".(Ú¥üŞ8§éûÍ2J$66b8881b-5e47-4464-b0c6-9938601af090
+s	java:S106¡"+Replace this use of System.out by a logger.(ÍÕ§§ùÿÿÿÿ8¨éûÍ2J$1e363445-17a3-4ded-b3d7-be0ba47b4cdf
+x
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8’Ï2J$5b9e32a6-e5c3-4765-b11e-83b0d63fb03c
