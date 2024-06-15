@@ -1,0 +1,9 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8‰ΆΊΜ2J$c5fe536d-1cad-4e02-997f-4bb269b5cccf
+p
+java:S1121".Extract the assignment out of this expression.(™½ήr8ΆΊΜ2J$6f33196b-e986-409e-84e7-2792fab4b925
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ψήϋ8ΆΊΜ2J$97023f9a-8df1-4fad-927c-afcf99648e3a
+ά
+java:S6548
+"A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨8‘ΆΊΜ2J$47781abf-cb22-49c9-a4c0-6a070da8f158
