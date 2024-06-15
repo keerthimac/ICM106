@@ -2,98 +2,65 @@ package edu.icet.demo.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class addCustomerForm {
-    @FXML
-    private JFXButton btnAddCusOnAction;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML
-    private ChoiceBox<?> choMatStatus;
+public class addCustomerFormController implements Initializable {
 
-    @FXML
-    private ChoiceBox<?> choiceProvince;
+    public JFXTextField txtCusId;
+    public ChoiceBox choMatStatus;
+    public JFXTextField txtCusName;
+    public DatePicker dateDob;
+    public JFXTextField txtSalary;
+    public JFXTextField txtAddress;
+    public JFXTextField txtCity;
+    public ChoiceBox choiceProvince;
+    public JFXTextField txtPostal;
+    public TableView tblCustomer01;
+    public TableColumn colCusId01;
+    public TableColumn colTitle;
+    public TableColumn colName;
+    public TableColumn colDob;
+    public TableColumn colSalary;
+    public TableView tblCustomer02;
+    public TableColumn colCusId02;
+    public TableColumn colAddress;
+    public TableColumn colCity;
+    public TableColumn colProvince;
+    public TableColumn colPostCode;
 
-    @FXML
-    private TableColumn<?, ?> colAddress;
-
-    @FXML
-    private TableColumn<?, ?> colCity;
-
-    @FXML
-    private TableColumn<?, ?> colCusId01;
-
-    @FXML
-    private TableColumn<?, ?> colCusId02;
-
-    @FXML
-    private TableColumn<?, ?> colDob;
-
-    @FXML
-    private TableColumn<?, ?> colName;
-
-    @FXML
-    private TableColumn<?, ?> colPostCode;
-
-    @FXML
-    private TableColumn<?, ?> colProvince;
-
-    @FXML
-    private TableColumn<?, ?> colSalary;
-
-    @FXML
-    private TableColumn<?, ?> colTitle;
-
-    @FXML
-    private DatePicker dateDob;
-
-    @FXML
-    private TableView<?> tblCustomer01;
-
-    @FXML
-    private TableView<?> tblCustomer02;
-
-    @FXML
-    private JFXTextField txtAddress;
-
-    @FXML
-    private JFXTextField txtCity;
-
-    @FXML
-    private JFXTextField txtCusId;
-
-    @FXML
-    private JFXTextField txtCusName;
-
-    @FXML
-    private JFXTextField txtPostal;
-
-    @FXML
-    private JFXTextField txtSalary;
-
-    @FXML
-    void btnDeleteOnAction(ActionEvent event) {
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        String testing = "Hello World.....";
+        System.out.println(testing);
+        loadDropMenu();
     }
 
-    @FXML
-    void btnSearchOnAction(ActionEvent event) {
-
+    private void loadDropMenu() {
+        ObservableList<Object> matStatusDrop = FXCollections.observableArrayList();
+        matStatusDrop.add("Mr");
+        matStatusDrop.add("Mrs");
+        matStatusDrop.add("Miss");
+        choMatStatus.setItems(matStatusDrop);
     }
 
-    @FXML
-    void btnUpdateOnAction(ActionEvent event) {
-
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+    }
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    }
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
     }
 
-    @FXML
-    void dobOnAction(ActionEvent event) {
-
+    public void btnAddCusOnAction(ActionEvent actionEvent) {
     }
-
 }
