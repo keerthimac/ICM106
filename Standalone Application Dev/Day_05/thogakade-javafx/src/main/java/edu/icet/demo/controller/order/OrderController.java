@@ -22,11 +22,13 @@ public class OrderController {
     public Boolean placeOrder(Order order){
         try {
             Connection connection = DBConnection.getInstance().getConnection();
+            connection.setAutoCommit(false);
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO orders VALUE(?,?,?)");
             preparedStatement.setString(1,order.getOrderId());
             preparedStatement.setObject(2,order.getOrderDate());
             preparedStatement.setString(3,order.getCustomerId());
-            preparedStatement.execute();
+            boolean execute = preparedStatement.execute ();
+            System.out.println(execute);
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }

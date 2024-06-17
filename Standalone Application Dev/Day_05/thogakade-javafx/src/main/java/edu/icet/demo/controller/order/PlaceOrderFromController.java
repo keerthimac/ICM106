@@ -158,7 +158,7 @@ public class PlaceOrderFromController implements Initializable {
                 orderDetailList.add(orderDetail);
             }
             Order order = new Order(orderId, orderDate, customerId, orderDetailList);
-            System.out.println(order);
+            //System.out.println(order);
             Boolean isPlaceOrder = OrderController.getInstance().placeOrder(order);
             if(isPlaceOrder) {
                 generateOrderId();

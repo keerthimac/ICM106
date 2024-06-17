@@ -43,8 +43,6 @@ Q.idea/sonarlint/securityhotspotstore/c/f/cfedc7224426e28db3dae2e75bcec68eb8d2a3
 Q.idea/sonarlint/securityhotspotstore/f/a/fa7060131e2610e85a5bcc331708939bc2d0b1e1,7\3\73d8518cdbe903677551ae3a11d4edef88e87b0d
 \
 ,src/main/java/edu/icet/demo/model/Order.java,3\b\3b057ffab5bce28cf8ab170ae8ed07a93c2a4b5d
-a
-1src/main/java/edu/icet/demo/model/OrdrDetail.java,5\9\59e7f397da6692507cefceacb80311a3bc52a041
 b
 2src/main/java/edu/icet/demo/model/OrderDetail.java,1\0\10a9dd380671502c42dcf4aa754d29826d3e676d
 q
@@ -93,3 +91,7 @@ w
 G.idea/sonarlint/issuestore/7/1/71390faa48a3331f8fbcdca05e627d4e45736ea0,3\e\3ec93683be0b9f8d644d7dfdeaa0d1f10b3d1abc
 w
 G.idea/sonarlint/issuestore/2/8/28e8f5d60fcae2c9acd36692aa7707d3d8545549,a\5\a50918a2f6efff59e7f2895df0d488c22bbe8553
+x
+Hsrc/main/java/edu/icet/demo/controller/order/OrderDetailsController.java,6\9\69269617f8f9f91b2c3aa225f7212beda8c826d2
+w
+Gsrc/main/java/edu/icet/demo/controller/order/OrderDetailController.java,8\0\809558d885da54bd7ef9545a31edbaff12c54637
