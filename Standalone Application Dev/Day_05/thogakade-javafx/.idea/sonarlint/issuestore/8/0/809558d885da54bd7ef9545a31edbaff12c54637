@@ -1,14 +1,12 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ƒ’ÆŸ‚2J$2dc6ecbd-f531-4ac1-a569-6dc2774f3689
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥¶¹Ç‚2J$b838a571-4728-463e-bcbc-1025dac8c837
 q
-java:S1121".Extract the assignment out of this expression.(Ã“áÂ8„’ÆŸ‚2J$b08cf6bf-f442-45f3-9e65-38d241a9b661
+java:S1121".Extract the assignment out of this expression.(Ã“áÂ8¦¶¹Ç‚2J$a838547a-479e-492f-8e00-2e51ba503dbd
 œ
-java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(ïŞ³üÿÿÿÿ8…’ÆŸ‚2J$14b08cb9-e0c3-448b-b75d-2d75f8ca65f8
+java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(ïŞ³üÿÿÿÿ8§¶¹Ç‚2J$95fa4b5a-4c18-4ab4-8645-59796575d5b0
 v
-java:S1444".Make this "public static instance" field final(ïŞ³üÿÿÿÿ8†’ÆŸ‚2J$0d53bdcc-71f9-4629-a947-377659736cc9
+java:S1444".Make this "public static instance" field final(ïŞ³üÿÿÿÿ8§¶¹Ç‚2J$4eb32f0b-1a09-469a-a34d-183b463851ce
+’
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¬ïıø8¯¶¹Ç‚2J$cd9fd02c-6646-4c33-bc8c-0022d69206d4
 ~
-java:S1172"6Remove this unused method parameter "orderDetailList".(¨ê³Öûÿÿÿÿ8’ÆŸ‚2J$4a035263-5f4c-42b9-9a24-ce4a53d5288e
-~
-java:S1128"6Remove this unused import 'edu.icet.demo.model.Order'.(€¢¤ïşÿÿÿÿ8’’ÆŸ‚2J$9229d493-eb96-4795-8ae0-27f53f00b6b0
-
-java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8’’ÆŸ‚2J$694e46ac-448f-4fb8-a72f-19e3b6153f27
+java:S1128"6Remove this unused import 'edu.icet.demo.model.Order'.(€¢¤ïşÿÿÿÿ8ÿşÃÊ‚2J$ecd2b596-833c-4c88-9cf7-1b24e23888f5

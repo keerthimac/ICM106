@@ -164,7 +164,7 @@ public class PlaceOrderFromController implements Initializable {
                 generateOrderId();
                 new Alert(Alert.AlertType.INFORMATION, "Order Placed").show();
             }
-        } catch (ParseException e) {
+        } catch (ParseException | SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
