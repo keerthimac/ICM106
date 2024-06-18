@@ -5,6 +5,8 @@ import edu.icet.demo.controller.item.ItemController;
 import edu.icet.demo.db.DBConnection;
 import edu.icet.demo.model.Customer;
 import edu.icet.demo.model.Item;
+import edu.icet.demo.model.Order;
+import edu.icet.demo.model.OrderDetail;
 import edu.icet.demo.model.tableModel.CartTable;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -23,9 +25,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -98,7 +105,7 @@ public class PlaceOrderFromController implements Initializable {
     ObservableList<Customer> allCustomers;
     ObservableList<Item> allItems;
     ObservableList<CartTable> cartList = FXCollections.observableArrayList();
-    Double netTotal=0.0;
+    Double netTotal = 0.0;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -106,8 +113,8 @@ public class PlaceOrderFromController implements Initializable {
         loadCustomerIds();
         loadItems();
         generateOrderId();
-        cmbCustomerId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> searchCustomerOnAction(newValue));
-        cmdItemId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> searchItemOnAction(newValue));
+        cmbCustomerId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> searchCustomerOnAction(newValue));
+        cmdItemId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> searchItemOnAction(newValue));
     }
 
 
@@ -118,11 +125,11 @@ public class PlaceOrderFromController implements Initializable {
         String description = lblDesc.getText();
         Integer qty = Integer.parseInt(txtQty.getText());
         Double unitPrice = Double.parseDouble(lblUnitPrice.getText());
-        Double total = qty*unitPrice;
-        netTotal+=total;
+        Double total = qty * unitPrice;
+        netTotal += total;
         lblNetTotal.setText(String.valueOf(netTotal));
 
-        CartTable cartTable = new CartTable(itemCode, description, qty, unitPrice, total);
+        CartTable cartTable = new CartTable(itemCode, description, qty, unitPrice, total, 0.0);
         cartList.add(cartTable);
         tblCart.setItems(cartList);
         colItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
@@ -137,10 +144,40 @@ public class PlaceOrderFromController implements Initializable {
 
     }
 
+
+    @FXML
+    void btnPlaceOrderOnAction(ActionEvent event) {
+        try {
+            String orderId = lblOrderId.getText();
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            Date orderDate = format.parse(lblDate.getText());
+            String customerId = cmbCustomerId.getValue().toString();
+            List<OrderDetail> orderDetailList = new ArrayList<>();
+            for (CartTable cartTable : cartList) {
+                OrderDetail orderDetail = new OrderDetail(orderId, cartTable.getItemCode(), cartTable.getQty(), cartTable.getDiscount());
+                orderDetailList.add(orderDetail);
+            }
+            Order order = new Order(orderId, orderDate, customerId, orderDetailList);
+            //System.out.println(order);
+            Boolean isPlaceOrder = OrderController.getInstance().placeOrder(order);
+            if(isPlaceOrder) {
+                generateOrderId();
+                new Alert(Alert.AlertType.INFORMATION, "Order Placed").show();
+            }
+        } catch (ParseException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void txtAddToCarOnAction(ActionEvent event) {
+        btnAddToCartOnAction(event);
+    }
+
     private void searchItemOnAction(String itemCode) {
         try {
             ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT * FROM item WHERE ItemCode ='" + itemCode + "'");
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Item item = new Item(
                         resultSet.getString(1),
                         resultSet.getString(2),
@@ -188,7 +225,7 @@ public class PlaceOrderFromController implements Initializable {
     private void loadItems() {
         allItems = ItemController.getInstance().getAllItems();
         ObservableList<String> itemCodes = FXCollections.observableArrayList();
-        for(Item item:allItems){
+        for (Item item : allItems) {
             itemCodes.add(item.getItemCode());
         }
         cmdItemId.setItems(itemCodes);
@@ -198,7 +235,7 @@ public class PlaceOrderFromController implements Initializable {
     private void loadCustomerIds() {
         allCustomers = CustomerController.getInstance().getAllCustomers();
         ObservableList<String> ids = FXCollections.observableArrayList();
-        for(Customer c:allCustomers){
+        for (Customer c : allCustomers) {
             ids.add(c.getId());
         }
         cmbCustomerId.setItems(ids);
@@ -212,7 +249,7 @@ public class PlaceOrderFromController implements Initializable {
         Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, actionEvent -> {
             LocalTime time = LocalTime.now();
             lblTime.setText(time.getHour() + " : " + time.getMinute() + " : " + time.getSecond());
-        }),new KeyFrame(Duration.seconds(1)));
+        }), new KeyFrame(Duration.seconds(1)));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }

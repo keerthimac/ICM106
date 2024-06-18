@@ -82,7 +82,7 @@
       </TableView>
       <JFXButton layoutX="179.0" layoutY="388.0" onAction="#btnAddToCartOnAction" style="-fx-background-color: #27ae60;" text="Add to Cart" textFill="WHITE" />
       <JFXButton layoutX="179.0" layoutY="419.0" onAction="#btnClearCartOnAction" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #2980b9;" text="Clear" textFill="WHITE" />
-      <JFXButton layoutX="636.0" layoutY="460.0" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="636.0" layoutY="460.0" onAction="#btnPlaceOrderOnAction" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -97,6 +97,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtQty" layoutX="179.0" layoutY="359.0" prefHeight="25.0" prefWidth="78.0" promptText="Qty" />
+      <TextField fx:id="txtQty" layoutX="179.0" layoutY="359.0" onAction="#txtAddToCarOnAction" prefHeight="25.0" prefWidth="78.0" promptText="Qty" />
    </children>
 </AnchorPane>

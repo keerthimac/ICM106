@@ -1,0 +1,17 @@
+
+	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…Ô¿Ê‚2J$8950036a-fd5c-46a5-92e9-abcc3dc6e79d
+p
+java:S1121".Extract the assignment out of this expression.(™½Şr8†Ô¿Ê‚2J$939e4b89-74c7-4cc6-9920-27a12a005088
+p
+java:S5411&"(Use a primitive boolean expression here.(÷íÄ€úÿÿÿÿ8‡Ô¿Ê‚2J$ac8c3470-58ab-4c8b-b8ce-c0709cff9afb
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ØŞû8œÔ¿Ê‚2J$1fac1a64-ae8b-4671-9ced-92ee57bdace7
+Ü
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨Œ8Ô¿Ê‚2J$0d321b95-4c0c-476e-8dab-e6ee9e83529c
+m	java:S106""+Replace this use of System.out by a logger.(‡ÂÈú8£Ô¿Ê‚2J$a16772ed-a202-4c80-80e5-a515521a338f
+r	java:S106%"+Replace this use of System.out by a logger.(íºòùÿÿÿÿ8£Ô¿Ê‚2J$2bd4071d-10fe-4061-8c1f-acad9d6d6fbd
+m	java:S106("+Replace this use of System.out by a logger.(¡—®œ8¤Ô¿Ê‚2J$48638cb0-6119-4a2f-ac01-77dbf09a7b61
+m	java:S1064"+Replace this use of System.out by a logger.(ÑÆœö8¥Ô¿Ê‚2J$73de70d8-37e2-4ba6-a760-631571aa9376
+s
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8›ñÀÊ‚2J$8c1a6ebe-9de4-4f28-939d-27bc33e68615

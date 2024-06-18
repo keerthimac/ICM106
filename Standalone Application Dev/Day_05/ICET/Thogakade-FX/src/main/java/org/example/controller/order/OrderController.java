@@ -22,7 +22,7 @@ public class OrderController {
             psTm.setString(3,order.getCustomerID());
 
             boolean isOrderAdd = psTm.execute();
-
+            System.out.println(isOrderAdd);
             if (!isOrderAdd){
                 boolean isOrderDetailAdd = OrderDetailController.getInstance().addOrderDetail(order.getOrderDetailList());
                 if(isOrderDetailAdd){
