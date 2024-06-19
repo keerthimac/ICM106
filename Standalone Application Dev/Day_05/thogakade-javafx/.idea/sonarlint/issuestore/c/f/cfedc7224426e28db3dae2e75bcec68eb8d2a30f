@@ -7,8 +7,8 @@ java:S1121".Extract the assignment out of this expression.(©µÀ8İÂåÈ‚2J$8031c
 java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(¿á¤”8ŞÂåÈ‚2J$15b2a074-c63e-46d8-8a6c-bda25403f9d9
 q
 java:S1444".Make this "public static instance" field final(¿á¤”8ŞÂåÈ‚2J$bf9ac22c-ec57-4aed-979b-0e9a594bd48a
-‘
-java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€¾µ%8éÂåÈ‚2J$b229ad96-154f-4a88-ac87-5ae581ef10ca
 ‰
 java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(¹‘½P8éÂåÈ‚2J$0f532bea-2da4-41cc-a26b-8509fc32f670
+‘
+java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€¾µ%8éÂåÈ‚2J$b229ad96-154f-4a88-ac87-5ae581ef10ca
 r	java:S106="+Replace this use of System.out by a logger.(ş¸üÿÿÿÿ8Ï©ŞÊ‚2J$0c1d16fe-cf3f-46db-ad17-39a8f7a104a8
