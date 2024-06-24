@@ -1,25 +1,19 @@
-package edu.icet.demo.model;
+package edu.icet.demo.dto.tableModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Customer {
+public class Table01 {
     private String id;
     private String title;
     private String name;
     private LocalDate dob;
     private Double salary;
-    private String address;
-    private String city;
-    private String province;
-    private String postal;
 }

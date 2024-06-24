@@ -2,12 +2,11 @@ package edu.icet.demo.controller.order;
 
 import edu.icet.demo.controller.item.ItemController;
 import edu.icet.demo.db.DBConnection;
-import edu.icet.demo.model.Order;
+import edu.icet.demo.dto.Order;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class OrderController {
     private static OrderController instance;

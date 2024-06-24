@@ -1,24 +1,16 @@
 
-	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•şßğÿ1J$d39e7429-7e53-4a29-81c5-d507519b1495
-	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$27a01bb5-51be-4c03-b167-5a3acf76ba70
-	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$c3459148-def6-4338-8fd4-4ca96258aebb
-	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$24b1f2eb-e5e5-4135-a374-f7194ac2e3d0
-	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$d07829de-4a10-462a-b581-7a1c0f4cf6cb
+	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•şßğÿ1J$5ff72c48-ef68-41b0-b8e8-e659f4042ee2
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$2e14f924-70a0-45e4-8aa0-18af69e8a074
+	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$23616930-2a6d-44c7-838d-f98874ea01ff
+	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$d048a542-ad8c-4860-b782-bb93b4143464
+	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$f9e5850c-fe75-406d-92fe-9408375c4b8b
 v
-java:S1121".Extract the assignment out of this expression.(§¸‰Øùÿÿÿÿ8—şßğÿ1J$f0191b3c-9e76-4e0d-8609-842547309a1a
+java:S1121".Extract the assignment out of this expression.(§¸‰Øùÿÿÿÿ8—şßğÿ1J$a2f368ac-328d-4bc8-a078-b5cf79b1873b
 —
-java:S2095I"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çßÏ„øÿÿÿÿ8¬şßğÿ1J$37e602d5-1c29-47dc-9252-3620fc59a509
-
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(êò¾ùÿÿÿÿ8ÒŸ…Ï2J$c2c92b88-13ee-4287-9922-5e368cedc883
-—
-java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ìËü×şÿÿÿÿ8¬şßğÿ1J$9eb1c881-78c4-4f70-9ca3-b2c73ddfe6a8
-—
-java:S2095]"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çŠÍ³úÿÿÿÿ8­şßğÿ1J$ad756801-30cc-4b66-ba18-2d20ba5164aa
-
-java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÿôŒ­ıÿÿÿÿ8ÒŸ…Ï2J$959f57d0-4033-4bd3-a544-3dea3d563df2
-»
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ƒğÄÊûÿÿÿÿ8ÍÅóî‚2
+java:S2095]"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çŠÍ³úÿÿÿÿ8­şßğÿ1J$ce6dc720-83b6-4bd3-aa76-b8a63b3c3ae6
+á
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ƒğÄÊûÿÿÿÿ8ÍÅóî‚2J$9984fd2f-4bd2-47fd-a457-71845f940ee3
 _
-java:S1116"Remove this empty statement.(†ôİò8°şßğÿ1J$042e81c5-943e-4afb-a6df-3590d012898e
+java:S1116"Remove this empty statement.(†ôİò8°şßğÿ1J$b94ef8ab-8ee0-4314-ab5e-d48beadf3e3e
 g
-java:S6905"Don't use the query "SELECT *".(êò¾ùÿÿÿÿ8²şßğÿ1J$00c75621-ed13-4359-9812-c92fc59e495c
+java:S6905"Don't use the query "SELECT *".(êò¾ùÿÿÿÿ8²şßğÿ1J$9ce8c5a7-4c99-488c-8dea-715cbaa8bda6

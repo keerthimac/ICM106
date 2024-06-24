@@ -1,7 +1,7 @@
 package edu.icet.demo.bo.custom.impl;
 
 import edu.icet.demo.bo.custom.CustomerBo;
-import edu.icet.demo.model.Customer;
+import edu.icet.demo.dto.Customer;
 
 public class CustomerBoImpl implements CustomerBo {
 

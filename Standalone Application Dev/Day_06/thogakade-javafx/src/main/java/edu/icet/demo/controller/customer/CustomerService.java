@@ -1,6 +1,6 @@
 package edu.icet.demo.controller.customer;
 
-import edu.icet.demo.model.Customer;
+import edu.icet.demo.dto.Customer;
 import javafx.collections.ObservableList;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package edu.icet.demo.model;
+package edu.icet.demo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

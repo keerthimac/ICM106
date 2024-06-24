@@ -29,3 +29,17 @@ Z
 *src/main/java/org/example/dao/CrudDao.java,0\c\0c86038feff71bb82d6abd646990279c42e74fa1
 ]
 -src/main/java/org/example/dao/DaoFactory.java,3\c\3c0850c782a00f294e2208f8127d7ea1291df5af
+\
+,src/main/java/org/example/util/CrudUtil.java,8\f\8f7a40b6f0f8d3f2a39c6040142b549bc04d0450
+Y
+)src/main/java/org/example/bo/SuperBo.java,8\e\8eb76d6090ca0733698b6d4bf0986cb7c8cf1457
+[
++src/main/java/org/example/bo/BoFactory.java,e\4\e45333206ab402bc5a760b8306303830692bd76c
+c
+3src/main/java/org/example/bo/custom/CustomerBo.java,f\7\f7d3021128099b99cfac1cb4f2ccb9431053557d
+l
+<src/main/java/org/example/bo/custom/impl/CustomerBoImpl.java,2\9\29081a5c0510067a527913abf14f2861ad15455c
+n
+>src/main/java/org/example/dao/custom/impl/CustomerDaoImpl.java,1\4\140ad25a169f13225249337eb70ee050ae775b47
+e
+5src/main/java/org/example/dao/custom/CustomerDao.java,8\2\82f88497e14a4eb0472b57249b88fdd9e95f90d1

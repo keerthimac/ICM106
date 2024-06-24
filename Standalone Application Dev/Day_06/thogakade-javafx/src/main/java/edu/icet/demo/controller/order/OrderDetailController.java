@@ -1,8 +1,7 @@
 package edu.icet.demo.controller.order;
 
 import edu.icet.demo.db.DBConnection;
-import edu.icet.demo.model.Order;
-import edu.icet.demo.model.OrderDetail;
+import edu.icet.demo.dto.OrderDetail;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

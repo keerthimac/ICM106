@@ -3,10 +3,12 @@ package edu.icet.demo.controller.customer;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import edu.icet.demo.db.DBConnection;
-import edu.icet.demo.model.Customer;
-import edu.icet.demo.model.tableModel.Table01;
-import edu.icet.demo.model.tableModel.Table02;
+import edu.icet.demo.bo.BoFactory;
+import edu.icet.demo.bo.custom.CustomerBo;
+import edu.icet.demo.dto.Customer;
+import edu.icet.demo.dto.tableModel.Table01;
+import edu.icet.demo.dto.tableModel.Table02;
+import edu.icet.demo.util.BoType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,11 +20,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class AddCustomerFormController implements Initializable {
@@ -54,6 +51,7 @@ public class AddCustomerFormController implements Initializable {
 
     CustomerService customerService;
 
+    private CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         Customer newCustomer = new Customer(txtCustomerId.getText(), cmbTitle.getValue().toString(), txtCustomerName.getText(), dateDob.getValue(), Double.parseDouble(txtSalary.getText()), txtAddress.getText(), txtCity.getText(), txtProvince.getText(), txtPostalCode.getText());

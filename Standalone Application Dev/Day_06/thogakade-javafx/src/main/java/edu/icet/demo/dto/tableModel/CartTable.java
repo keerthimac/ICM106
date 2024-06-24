@@ -1,4 +1,4 @@
-package edu.icet.demo.model;
+package edu.icet.demo.dto.tableModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +7,11 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @ToString
-public class Item {
+public class CartTable {
     private String itemCode;
     private String description;
-    private String packSize;
-    private Double UnitPrice;
-    private Integer QtyOnHand;
+    private Integer qty;
+    private Double unitPrice;
+    private Double total;
+    private Double discount;
 }

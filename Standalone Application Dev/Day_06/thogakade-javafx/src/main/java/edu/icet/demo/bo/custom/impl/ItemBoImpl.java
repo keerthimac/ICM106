@@ -1,7 +1,7 @@
 package edu.icet.demo.bo.custom.impl;
 
 import edu.icet.demo.bo.custom.ItemBo;
-import edu.icet.demo.model.Item;
+import edu.icet.demo.dto.Item;
 
 public class ItemBoImpl implements ItemBo {
     @Override

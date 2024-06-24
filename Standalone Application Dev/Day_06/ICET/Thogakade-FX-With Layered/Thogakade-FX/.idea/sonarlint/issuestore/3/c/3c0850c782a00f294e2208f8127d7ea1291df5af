@@ -1,7 +1,7 @@
 
-D
-java:S1121".Extract the assignment out of this expression.(Ùûé‘
-¯
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê
-a
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•
+j
+java:S1121".Extract the assignment out of this expression.(Ùûé‘J$bb5ad1f0-7fad-4085-a9a1-41aad41c8ac0
+Õ
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜêJ$2f9e0518-6f1b-41cc-98c0-98f9a493b007
+‡
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•J$6783105c-de16-4f28-ab6d-a599061898f7
