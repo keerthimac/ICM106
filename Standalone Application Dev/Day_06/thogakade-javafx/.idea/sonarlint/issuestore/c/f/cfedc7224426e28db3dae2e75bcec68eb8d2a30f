@@ -3,10 +3,6 @@
 	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÜÂåÈ‚2J$6ce898ef-fbee-44f7-b1bf-c28dd72e5034
 q
 java:S1121".Extract the assignment out of this expression.(©µÀ8İÂåÈ‚2J$72e8055b-112b-4ef5-96b1-a199a89691ff
-‘
-java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€¾µ%8«ôî‚2J$db151972-2497-4189-ac77-6bcde5edc253
-‰
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(¹‘½P8«ôî‚2J$93d6fdb1-3001-4678-8d48-a8e73031ead8
 Ü
 java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ì½ÍÒ8‘«ôî‚2J$d9234d79-5828-4c01-b40d-d4bf063d76ab
 r	java:S106="+Replace this use of System.out by a logger.(ş¸üÿÿÿÿ8Ï©ŞÊ‚2J$a5ac17b3-419c-4b5a-9dc6-974368aafbd7
