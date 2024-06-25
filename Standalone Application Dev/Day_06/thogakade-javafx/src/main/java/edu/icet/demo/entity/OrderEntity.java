@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @ToString
-public class OderEntity {
+public class OrderEntity {
     private String orderId;
     private Date orderDate;
     private String customerId;
