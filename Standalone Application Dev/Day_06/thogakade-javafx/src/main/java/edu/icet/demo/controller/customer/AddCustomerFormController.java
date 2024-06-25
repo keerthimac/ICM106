@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.demo.bo.BoFactory;
+import edu.icet.demo.bo.SuperBo;
 import edu.icet.demo.bo.custom.CustomerBo;
 import edu.icet.demo.dto.Customer;
 import edu.icet.demo.dto.tableModel.Table01;
@@ -50,16 +51,17 @@ public class AddCustomerFormController implements Initializable {
     public JFXButton btnSearch;
 
     CustomerService customerService;
-
-    private CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
+    
+    CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         Customer newCustomer = new Customer(txtCustomerId.getText(), cmbTitle.getValue().toString(), txtCustomerName.getText(), dateDob.getValue(), Double.parseDouble(txtSalary.getText()), txtAddress.getText(), txtCity.getText(), txtProvince.getText(), txtPostalCode.getText());
-        boolean b = customerService.addCustomer(newCustomer);
+        //boolean b = customerService.addCustomer(newCustomer);
+        boolean b = customerBo.saveCustomer(newCustomer);
         if (b) {
-            new Alert(Alert.AlertType.ERROR, "Customer Did Not Added").show();
-        } else {
             new Alert(Alert.AlertType.CONFIRMATION, "Customer Added").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Customer Did Not Added").show();
         }
         loadTable01();
         loadTable02();

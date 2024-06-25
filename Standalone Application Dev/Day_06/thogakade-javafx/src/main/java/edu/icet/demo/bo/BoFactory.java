@@ -2,6 +2,8 @@ package edu.icet.demo.bo;
 
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
 import edu.icet.demo.bo.custom.impl.ItemBoImpl;
+import edu.icet.demo.bo.custom.impl.OrderBoImpl;
+import edu.icet.demo.dto.Order;
 import edu.icet.demo.util.BoType;
 
 public class BoFactory {
@@ -18,6 +20,8 @@ public class BoFactory {
         switch (type) {
             case CUSTOMER:
                 return (T) new CustomerBoImpl();
+            case ORDER:
+                return (T) new OrderBoImpl();
         }
         return null;
     }

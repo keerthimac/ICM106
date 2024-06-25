@@ -1,12 +1,14 @@
 
-	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…Ô¿Ê‚2J$8950036a-fd5c-46a5-92e9-abcc3dc6e79d
+	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…Ô¿Ê‚2J$3e7ae993-91c9-40d7-88b8-6bd9aeebe13b
 p
-java:S1121".Extract the assignment out of this expression.(™½Şr8†Ô¿Ê‚2J$939e4b89-74c7-4cc6-9920-27a12a005088
+java:S1121".Extract the assignment out of this expression.(™½Şr8†Ô¿Ê‚2J$aa047209-860c-486f-9abb-55dfe61a49de
 p
-java:S5411%"(Use a primitive boolean expression here.(÷íÄ€úÿÿÿÿ8‡Ô¿Ê‚2J$ac8c3470-58ab-4c8b-b8ce-c0709cff9afb
+java:S5411%"(Use a primitive boolean expression here.(÷íÄ€úÿÿÿÿ8‡Ô¿Ê‚2J$11932f47-7c4e-4212-b5cb-c6a67ab4b940
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ØŞû8Çûç„2J$d84322a5-e7d0-4e36-9283-277221bce0a9
 Ü
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨Œ8Ô¿Ê‚2J$0d321b95-4c0c-476e-8dab-e6ee9e83529c
-m	java:S106!"+Replace this use of System.out by a logger.(‡ÂÈú8£Ô¿Ê‚2J$a16772ed-a202-4c80-80e5-a515521a338f
-r	java:S106$"+Replace this use of System.out by a logger.(íºòùÿÿÿÿ8£Ô¿Ê‚2J$2bd4071d-10fe-4061-8c1f-acad9d6d6fbd
-m	java:S106'"+Replace this use of System.out by a logger.(¡—®œ8¤Ô¿Ê‚2J$48638cb0-6119-4a2f-ac01-77dbf09a7b61
-m	java:S1063"+Replace this use of System.out by a logger.(ÑÆœö8¥Ô¿Ê‚2J$73de70d8-37e2-4ba6-a760-631571aa9376
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨Œ8Ô¿Ê‚2J$38b2b120-a653-4aac-9481-7627e6b30b4b
+m	java:S106!"+Replace this use of System.out by a logger.(‡ÂÈú8£Ô¿Ê‚2J$536b2b96-b558-49b9-a7f5-cf670115ed35
+r	java:S106$"+Replace this use of System.out by a logger.(íºòùÿÿÿÿ8£Ô¿Ê‚2J$16dad1e4-b43f-40bb-af80-7cdbee40ccfd
+m	java:S106'"+Replace this use of System.out by a logger.(¡—®œ8¤Ô¿Ê‚2J$45afe460-285c-4219-9337-2cfb183b6ee8
+m	java:S1063"+Replace this use of System.out by a logger.(ÑÆœö8¥Ô¿Ê‚2J$f24f12b2-e473-49d8-b5f0-751227531094
