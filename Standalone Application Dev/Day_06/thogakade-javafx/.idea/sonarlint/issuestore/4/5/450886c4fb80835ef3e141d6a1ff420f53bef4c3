@@ -1,0 +1,15 @@
+
+	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÚÄÕ”…2J$62c74158-c1a7-4323-bc26-aa0af776b6cc
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ã´İ”…2J$ba72ff63-4a4b-4297-913c-21928caa3106
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä•¬Ø8ÛÄÕ”…2J$8f5422b0-fabd-495e-acec-04e6b7bd1c28
+…
+java:S11635"=Refactor this code to not throw exceptions in finally blocks.(Ò‚Òéüÿÿÿÿ8ä´İ”…2J$f5809ce1-885c-46db-b3ba-d48b013f8df6
+|
+java:S11435"4Remove this throw statement from this finally block.(Ò‚Òéüÿÿÿÿ8å´İ”…2J$57d42623-9853-42e0-8ee3-a9ac42615c44
+n
+java:S1168"+Return an empty collection instead of null.(¥¹ï8‰œ•…2J$13ba8849-bf4d-45c5-8ea5-5cfbe8aec95a
+r	java:S106"+Replace this use of System.out by a logger.(°şšÜüÿÿÿÿ8¬½œ•…2J$5c0e9f5c-560e-42c1-8315-87c8f1555863
+z
+java:S1128"7Remove this unused import 'edu.icet.demo.dao.SuperDao'.(úÎØá8•‰œ•…2J$94b96ae5-0f9e-4d13-8ddd-328f9e380ef0
+€
+java:S1128"8Remove this unused import 'org.modelmapper.ModelMapper'.(ó¿Ôúÿÿÿÿ8•‰œ•…2J$4954753f-8f1a-4e16-8c86-33dfa059cc5a

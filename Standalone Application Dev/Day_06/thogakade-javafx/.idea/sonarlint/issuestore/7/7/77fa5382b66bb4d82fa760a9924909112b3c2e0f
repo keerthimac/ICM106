@@ -1,0 +1,5 @@
+
+	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ËÁÓç„2J$90e8d243-abef-47e0-91bc-f1ccf612d788
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ş—Á8ÌÁÓç„2J$0a3e3998-a7a0-4af9-a94b-9ba8b958413c
+n
+java:S1168"+Return an empty collection instead of null.(¥¹ï8”ıˆ“…2J$316678a5-e45e-4ca2-8741-9103f377b134
