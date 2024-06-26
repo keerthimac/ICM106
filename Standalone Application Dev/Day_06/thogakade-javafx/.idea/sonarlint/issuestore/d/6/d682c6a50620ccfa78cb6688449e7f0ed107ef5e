@@ -1,9 +1,7 @@
 
 q
-java:S1121".Extract the assignment out of this expression.(Ùûé‘8£Ù¼„2J$a1271c0e-9c89-4135-a3ae-a4a1309c721d
+java:S1121".Extract the assignment out of this expression.(Ùûé‘8 Ÿì…2J$0a4403f7-aa1f-4588-b6da-b98c075b276b
 Ü
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8¢£Ù¼„2J$589597fb-1503-428d-aafb-e4ee2a538053
-
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•8¥£Ù¼„2J$1c3990dc-6587-473e-85ef-307793632a69
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8¥Ÿì…2J$b5346951-1003-4088-90bf-9ce3ac46687a
 ]
-java:S1128";Remove this unused import 'java.security.PrivilegedAction'.(£Şóšùÿÿÿÿ8ÕóÉê„2
+java:S1128	";Remove this unused import 'java.security.PrivilegedAction'.(£Şóšùÿÿÿÿ8®‘Ó•…2

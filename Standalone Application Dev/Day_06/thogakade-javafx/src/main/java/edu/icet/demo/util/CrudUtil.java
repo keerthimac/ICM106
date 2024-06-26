@@ -18,5 +18,17 @@ public class CrudUtil {
         return (T) (Boolean) (psTm.executeUpdate() > 0);
 
     }
+
+    public static void setAutoCommitFalse() throws SQLException, ClassNotFoundException {
+        DBConnection.getInstance().getConnection().setAutoCommit(false);
+    }
+
+    public static void setAutoCommitTrue() throws SQLException, ClassNotFoundException {
+        DBConnection.getInstance().getConnection().setAutoCommit(true);
+    }
+
+    public static void rollback() throws SQLException, ClassNotFoundException {
+        DBConnection.getInstance().getConnection().rollback();
+    }
 }
 

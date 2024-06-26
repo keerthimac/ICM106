@@ -1,5 +1,7 @@
 package edu.icet.demo.controller.order;
 
+import edu.icet.demo.bo.BoFactory;
+import edu.icet.demo.bo.custom.OrderBo;
 import edu.icet.demo.controller.customer.CustomerController;
 import edu.icet.demo.controller.item.ItemController;
 import edu.icet.demo.db.DBConnection;
@@ -8,6 +10,7 @@ import edu.icet.demo.dto.Item;
 import edu.icet.demo.dto.Order;
 import edu.icet.demo.dto.OrderDetail;
 import edu.icet.demo.dto.tableModel.CartTable;
+import edu.icet.demo.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -105,6 +108,7 @@ public class PlaceOrderFromController implements Initializable {
     ObservableList<Item> allItems;
     ObservableList<CartTable> cartList = FXCollections.observableArrayList();
     Double netTotal = 0.0;
+    OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -158,12 +162,13 @@ public class PlaceOrderFromController implements Initializable {
             }
             Order order = new Order(orderId, orderDate, customerId, orderDetailList);
             //System.out.println(order);
-            Boolean isPlaceOrder = OrderController.getInstance().placeOrder(order);
+            //Boolean isPlaceOrder = OrderController.getInstance().placeOrder(order);
+            boolean isPlaceOrder = orderBo.placeOrder(order);
             if(isPlaceOrder) {
                 generateOrderId();
                 new Alert(Alert.AlertType.INFORMATION, "Order Placed").show();
             }
-        } catch (ParseException | SQLException | ClassNotFoundException e) {
+        } catch (ParseException e) {
             throw new RuntimeException(e);
         }
     }

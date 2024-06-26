@@ -1,14 +1,14 @@
 
-	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…Ô¿Ê‚2J$3e7ae993-91c9-40d7-88b8-6bd9aeebe13b
+	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ûã’…2J$3a4bdaf8-2fd2-48b6-bfb8-1f36a8ac2b5f
 p
-java:S1121".Extract the assignment out of this expression.(™½Şr8†Ô¿Ê‚2J$aa047209-860c-486f-9abb-55dfe61a49de
+java:S1121".Extract the assignment out of this expression.(™½Şr8Ûã’…2J$fb25b407-e898-44f8-bab3-d30b6cde41e7
 p
-java:S5411%"(Use a primitive boolean expression here.(÷íÄ€úÿÿÿÿ8‡Ô¿Ê‚2J$11932f47-7c4e-4212-b5cb-c6a67ab4b940
+java:S5411%"(Use a primitive boolean expression here.(÷íÄ€úÿÿÿÿ8Ûã’…2J$e78e6209-eb76-4810-8e6a-95a3013163b1
 ’
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ØŞû8Çûç„2J$d84322a5-e7d0-4e36-9283-277221bce0a9
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ØŞû8¨Ûã’…2J$c9b2802a-b11d-44d6-b2c1-28f89a561237
 Ü
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨Œ8Ô¿Ê‚2J$38b2b120-a653-4aac-9481-7627e6b30b4b
-m	java:S106!"+Replace this use of System.out by a logger.(‡ÂÈú8£Ô¿Ê‚2J$536b2b96-b558-49b9-a7f5-cf670115ed35
-r	java:S106$"+Replace this use of System.out by a logger.(íºòùÿÿÿÿ8£Ô¿Ê‚2J$16dad1e4-b43f-40bb-af80-7cdbee40ccfd
-m	java:S106'"+Replace this use of System.out by a logger.(¡—®œ8¤Ô¿Ê‚2J$45afe460-285c-4219-9337-2cfb183b6ee8
-m	java:S1063"+Replace this use of System.out by a logger.(ÑÆœö8¥Ô¿Ê‚2J$f24f12b2-e473-49d8-b5f0-751227531094
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(™ ¨Œ8ªÛã’…2J$54a565c5-3ec3-4230-84ef-146b6fa8356c
+m	java:S106!"+Replace this use of System.out by a logger.(‡ÂÈú8¯Ûã’…2J$1e650427-c0df-4548-922b-c6b722912532
+r	java:S106$"+Replace this use of System.out by a logger.(íºòùÿÿÿÿ8¯Ûã’…2J$87f6dd76-1557-4b0f-8448-492a7b7e1822
+m	java:S106'"+Replace this use of System.out by a logger.(¡—®œ8°Ûã’…2J$58baf226-5177-46c6-bb75-10afe9aa6111
+m	java:S1063"+Replace this use of System.out by a logger.(ÑÆœö8±Ûã’…2J$80f42eba-42a5-4727-831c-89e0dea8f31f

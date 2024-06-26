@@ -5,8 +5,14 @@ import edu.icet.demo.entity.CustomerEntity;
 import edu.icet.demo.util.CrudUtil;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class CustomerDaoImpl implements CustomerDao {
+    @Override
+    public List<CustomerEntity> get() {
+        return null;
+    }
+
     @Override
     public boolean save(CustomerEntity entity) {
         String SQL = "INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?)";
@@ -29,7 +35,12 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public boolean delete(CustomerEntity id) {
+    public boolean update(CustomerEntity dao) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String id) {
         return false;
     }
 }
