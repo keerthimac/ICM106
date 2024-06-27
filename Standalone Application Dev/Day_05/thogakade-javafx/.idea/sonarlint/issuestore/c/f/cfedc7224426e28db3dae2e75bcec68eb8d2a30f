@@ -1,14 +1,14 @@
 
-	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÛÂåÈ‚2J$c20163df-9c5f-415a-9a15-2f6445517025
-	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÜÂåÈ‚2J$d2edd7fb-a8ee-4baa-9a9b-7b57c97fc712
+ï¿½	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½8ï¿½ï¿½ï¿½È‚2J$c20163df-9c5f-415a-9a15-2f6445517025
+ï¿½	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½8ï¿½ï¿½ï¿½È‚2J$d2edd7fb-a8ee-4baa-9a9b-7b57c97fc712
 q
-java:S1121".Extract the assignment out of this expression.(©µÀ8İÂåÈ‚2J$8031c49e-3a55-4ceb-8030-c1f07812fedb
-—
-java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(¿á¤”8ŞÂåÈ‚2J$15b2a074-c63e-46d8-8a6c-bda25403f9d9
+java:S1121".Extract the assignment out of this expression.(ï¿½ï¿½ï¿½ï¿½8ï¿½ï¿½ï¿½È‚2J$8031c49e-3a55-4ceb-8030-c1f07812fedb
+ï¿½
+java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(ï¿½á¤”8ï¿½ï¿½ï¿½È‚2J$15b2a074-c63e-46d8-8a6c-bda25403f9d9
 q
-java:S1444".Make this "public static instance" field final(¿á¤”8ŞÂåÈ‚2J$bf9ac22c-ec57-4aed-979b-0e9a594bd48a
-‰
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(¹‘½P8éÂåÈ‚2J$0f532bea-2da4-41cc-a26b-8509fc32f670
-‘
-java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€¾µ%8éÂåÈ‚2J$b229ad96-154f-4a88-ac87-5ae581ef10ca
-r	java:S106="+Replace this use of System.out by a logger.(ş¸üÿÿÿÿ8Ï©ŞÊ‚2J$0c1d16fe-cf3f-46db-ad17-39a8f7a104a8
+java:S1444".Make this "public static instance" field final(ï¿½á¤”8ï¿½ï¿½ï¿½È‚2J$bf9ac22c-ec57-4aed-979b-0e9a594bd48a
+ï¿½
+java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ï¿½ï¿½ï¿½%8ï¿½ï¿½ï¿½È‚2J$b229ad96-154f-4a88-ac87-5ae581ef10ca
+ï¿½
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ï¿½ï¿½ï¿½P8ï¿½ï¿½ï¿½È‚2J$0f532bea-2da4-41cc-a26b-8509fc32f670
+r	java:S106="+Replace this use of System.out by a logger.(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½8Ï©ï¿½Ê‚2J$0c1d16fe-cf3f-46db-ad17-39a8f7a104a8
