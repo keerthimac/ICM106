@@ -1,0 +1,24 @@
+
+	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•şßğÿ1J$fb241051-c7a4-4f7c-8078-2b44535a9ea7
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$9c383e8b-5849-45ce-b04d-17341c5ba600
+	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$5eaeeea1-549a-4da6-81e7-0ece49890d7b
+	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$cdddc41b-e3ea-4c8d-b7ee-ec9bee550127
+	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–şßğÿ1J$b662617c-4f2c-4f61-ac50-e9bff1c3c122
+v
+java:S1121".Extract the assignment out of this expression.(§¸‰Øùÿÿÿÿ8—şßğÿ1J$02a9fbf2-0c22-452c-b207-b23174bd2532
+q
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ìËü×şÿÿÿÿ8¯†¶½…2
+q
+java:S2095]"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çŠÍ³úÿÿÿÿ8¯†¶½…2
+i
+java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(ÿôŒ­ıÿÿÿÿ8¯†¶½…2
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(êò¾ùÿÿÿÿ8¯†¶½…2
+q
+java:S2095I"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(çßÏ„øÿÿÿÿ8¯†¶½…2
+á
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ƒğÄÊûÿÿÿÿ8ÍÅóî‚2J$aaad4b78-8a3f-4e44-b678-c2096a74782b
+_
+java:S1116"Remove this empty statement.(†ôİò8°şßğÿ1J$b6119dfc-cd61-4883-a0ba-65c04882f05a
+A
+java:S6905"Don't use the query "SELECT *".(êò¾ùÿÿÿÿ8·†¶½…2

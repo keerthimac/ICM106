@@ -1,0 +1,12 @@
+
+	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Ìş»…2J$53cc0633-f0e5-48a7-9d51-22c10979bcab
+	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8³Ìş»…2J$5beb56ab-8cbc-4dff-8867-4093f11dcfb9
+	java:S112p"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´Ìş»…2J$1957cc40-99c2-494d-abf1-685d6a3d6a26
+	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´Ìş»…2J$ac950517-8d19-4d78-956f-bd8438e900c5
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8µÌş»…2J$43647eb0-fa7f-47ef-86e8-25a3fe956a2f
+˜	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÈîøÿÿÿÿ8µÌş»…2J$ffc54eb8-d344-4d63-a520-02053fe55c29
+˜	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–şÏ±ÿÿÿÿÿ8µÌş»…2J$d5d6ee3e-3f01-4df1-b6d8-fbff213c5a59
+“	java:S117v"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¿òÁ8µÌş»…2J$8758641f-325d-42aa-9693-d33d4fc0b5cb
+ƒ	java:S125M"<This block of commented-out lines of code should be removed.(ùä£¼øÿÿÿÿ8ÙÌş»…2J$62283da9-1a49-4e3f-b8b9-779acf9bc6f6
+Y
+java:S1128"7Remove this unused import 'edu.icet.demo.dto.Customer'.(ö’õÍüÿÿÿÿ8ôúµ½…2

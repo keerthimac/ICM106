@@ -1,0 +1,12 @@
+
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÛÂåÈ‚2J$6c21d31b-4af0-4aea-a0ea-967da80eaa21
+	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÜÂåÈ‚2J$10415264-d7eb-4761-b1a9-0ce1f989ae77
+q
+java:S1121".Extract the assignment out of this expression.(©µÀ8İÂåÈ‚2J$ef971316-eb9a-454d-b843-9ad53dc49afa
+‘
+java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€¾µ%8ğ£ö’…2J$4696e86b-a161-4ec5-806c-754b5de3caa9
+‰
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(¹‘½P8ñ£ö’…2J$fb23fbd9-764d-447a-8697-c0ca516a58b0
+Ü
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Ì½ÍÒ8‘«ôî‚2J$e1c040c6-8046-4cc0-b58e-41d848c2d7ce
+r	java:S106="+Replace this use of System.out by a logger.(ş¸üÿÿÿÿ8Ï©ŞÊ‚2J$9be8329c-4c45-4f74-be5b-091ed1752795

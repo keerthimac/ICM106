@@ -1,0 +1,7 @@
+
+	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Çæ­”…2J$ac54f6d2-044f-4123-ac1b-dabe09d4ec16
+“	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü¸ÜÍ8Èæ­”…2J$007de8fe-85c6-44ba-a3ac-79879cee409e
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8Éÿµ½…2
+Z
+java:S1128"=Remove this unused import 'edu.icet.demo.entity.OrderEntity'.(ÎÆÂ£8Îÿµ½…2

@@ -1,0 +1,12 @@
+
+v
+java:S1121".Extract the assignment out of this expression.(ÒÛÛÅúÿÿÿÿ8Ç†àëƒ2J$36af74e8-75d7-4aac-ba6d-2078b77449f4
+á
+java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(§İüáşÿÿÿÿ8Î†àëƒ2J$e8481afd-e4f3-410b-83f6-fda2d26f975f
+u	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8şüµ½…2
+
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•8Ó†àëƒ2J$2029a0b9-c3d7-43e6-a199-68198699f73b
+f
+java:S1128"DRemove this unused import 'edu.icet.demo.bo.custom.impl.ItemBoImpl'.(ÜÓƒııÿÿÿÿ8‚ıµ½…2
+Q
+java:S1128"4Remove this unused import 'edu.icet.demo.dto.Order'.(ŸÜ“ü8‚ıµ½…2
