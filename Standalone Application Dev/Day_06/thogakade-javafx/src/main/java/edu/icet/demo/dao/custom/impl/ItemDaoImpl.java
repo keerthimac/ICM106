@@ -18,19 +18,24 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
+    public ItemEntity search(String id) {
+        return null;
+    }
+
+    @Override
     public boolean save(ItemEntity dao) {
         return false;
     }
 
     @Override
-    public boolean updateQty(List<OrderDetailEntity> dao) {
-        boolean isItemUpdated = true;
-        while (isItemUpdated){
-            for(OrderDetailEntity orderDetail : dao){
-                updateQty(dao);
+    public boolean updateQty(List<OrderDetailEntity> daoList) {
+        for (OrderDetailEntity orderDetail : daoList) {
+            boolean isItemUpdated = updateQty(orderDetail);
+            if (!isItemUpdated) {
+                return false;
             }
         }
-        return isItemUpdated;
+        return true;
     }
 
     public boolean updateQty(OrderDetailEntity dao) {

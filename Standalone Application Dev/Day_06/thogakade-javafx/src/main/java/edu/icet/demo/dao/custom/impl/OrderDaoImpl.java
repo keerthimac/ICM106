@@ -21,6 +21,11 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public OrderEntity search(String id) {
+        return null;
+    }
+
+    @Override
     public boolean save(OrderEntity dao) {
         System.out.println(dao);
         String SQL = "INSERT INTO orders VALUE(?,?,?)";
@@ -39,6 +44,7 @@ public class OrderDaoImpl implements OrderDao {
                     boolean isStockUpdated = itemDao.updateQty(dao.getOderDetailList());
                     if(isStockUpdated){
                         CrudUtil.setAutoCommitTrue();
+                        return true;
                     }
                 }
             }

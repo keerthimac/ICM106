@@ -51,7 +51,7 @@ public class AddCustomerFormController implements Initializable {
     public JFXButton btnSearch;
 
     CustomerService customerService;
-    
+
     CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void btnAddOnAction(ActionEvent actionEvent) {
@@ -70,12 +70,13 @@ public class AddCustomerFormController implements Initializable {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
-        Customer newCustomer = new Customer(txtCustomerId.getText(), cmbTitle.getValue().toString(), txtCustomerName.getText(), dateDob.getValue(), Double.parseDouble(txtSalary.getText()), txtAddress.getText(), txtCity.getText(), txtProvince.getText(), txtPostalCode.getText());
-        boolean b = customerService.updateCustomer(newCustomer);
+        Customer customer = new Customer(txtCustomerId.getText(), cmbTitle.getValue().toString(), txtCustomerName.getText(), dateDob.getValue(), Double.parseDouble(txtSalary.getText()), txtAddress.getText(), txtCity.getText(), txtProvince.getText(), txtPostalCode.getText());
+        //boolean b = customerService.updateCustomer(newCustomer);
+        boolean b = customerBo.updateCustomer(customer);
         if (b) {
-            new Alert(Alert.AlertType.ERROR, "Customer Did Not Updated").show();
-        } else {
             new Alert(Alert.AlertType.CONFIRMATION, "Customer Updated").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Customer Did Not Updated").show();
         }
         loadTable01();
         loadTable02();
@@ -83,11 +84,12 @@ public class AddCustomerFormController implements Initializable {
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
         String custId = txtCustomerId.getText();
-        boolean b = customerService.deleteCustomer(custId);
+        //boolean b = customerService.deleteCustomer(custId);
+        boolean b = customerBo.deleteCustomer(custId);
         if (b) {
-            new Alert(Alert.AlertType.ERROR, "Customer Did Not Deleted").show();
-        } else {
             new Alert(Alert.AlertType.CONFIRMATION, "Customer Deleted").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Customer Did Not Deleted").show();
         }
         loadTable01();
         loadTable02();
@@ -95,16 +97,26 @@ public class AddCustomerFormController implements Initializable {
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
         String custId = txtCustomerId.getText();
-        for (Customer customer : customerService.searchCustomer(custId)) {
-            cmbTitle.setValue(customer.getTitle());
-            txtCustomerName.setText(customer.getName());
-            dateDob.setValue(customer.getDob());
-            txtSalary.setText(String.valueOf(customer.getSalary()));
-            txtAddress.setText(customer.getAddress());
-            txtCity.setText(customer.getCity());
-            txtProvince.setText(customer.getProvince());
-            txtPostalCode.setText(customer.getPostal());
-        }
+//        for (Customer customer : customerService.searchCustomer(custId)) {
+//            cmbTitle.setValue(customer.getTitle());
+//            txtCustomerName.setText(customer.getName());
+//            dateDob.setValue(customer.getDob());
+//            txtSalary.setText(String.valueOf(customer.getSalary()));
+//            txtAddress.setText(customer.getAddress());
+//            txtCity.setText(customer.getCity());
+//            txtProvince.setText(customer.getProvince());
+//            txtPostalCode.setText(customer.getPostal());
+//        }
+        Customer customer = customerBo.searchCustomer(custId);
+        cmbTitle.setValue(customer.getTitle());
+        txtCustomerName.setText(customer.getName());
+        dateDob.setValue(customer.getDob());
+        txtSalary.setText(String.valueOf(customer.getSalary()));
+        txtAddress.setText(customer.getAddress());
+        txtCity.setText(customer.getCity());
+        txtProvince.setText(customer.getProvince());
+        txtPostalCode.setText(customer.getPostal());
+
     }
 
     @Override
@@ -117,7 +129,8 @@ public class AddCustomerFormController implements Initializable {
 
     private void loadTable02() {
         ObservableList<Table02> table02Data = FXCollections.observableArrayList();
-        ObservableList<Customer> customerList = customerService.getAllCustomers();
+        //ObservableList<Customer> customerList = customerService.getAllCustomers();
+        ObservableList<Customer> customerList = customerBo.getCustomers();
         customerList.forEach(customer -> {
             Table02 table02 = new Table02(
                     customer.getId(),
@@ -138,7 +151,8 @@ public class AddCustomerFormController implements Initializable {
 
     private void loadTable01() {
         ObservableList<Table01> table01Data = FXCollections.observableArrayList();
-        ObservableList<Customer> customerList = customerService.getAllCustomers();
+        //ObservableList<Customer> customerList = customerService.getAllCustomers();
+        ObservableList<Customer> customerList = customerBo.getCustomers();
         customerList.forEach(customer -> {
             Table01 table01 = new Table01(
                     customer.getId(),

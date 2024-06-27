@@ -16,15 +16,19 @@ public class OrderDetailDaoImpl implements OrderDetailDao {
     }
 
     @Override
-    public boolean save(List<OrderDetailEntity> daoList) {
+    public List<OrderDetailEntity> search(String id) {
+        return List.of();
+    }
 
-        boolean isOrderDetailAdd = true;
-        while (isOrderDetailAdd) {
-            for(OrderDetailEntity dao : daoList){
-                isOrderDetailAdd = save(dao);
+    @Override
+    public boolean save(List<OrderDetailEntity> daoList) {
+        for (OrderDetailEntity dao : daoList) {
+            boolean isOrderDetailAdd = save(dao);
+            if (!isOrderDetailAdd) {
+                return false;
             }
         }
-        return isOrderDetailAdd;
+        return true;
     }
 
     @Override
